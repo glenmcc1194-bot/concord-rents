@@ -1,0 +1,7 @@
+{
+  "name": "concord-rents",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Concord Rents — heavy equipment rental site with admin backend"
+}

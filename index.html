@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Concord Rents | Heavy Equipment Rentals Across Michigan | Madison Heights, MI</title>
+<meta name="description" content="Concord Rents delivers telehandlers, boom lifts, bulldozers, excavators, forklifts and more across all of Michigan. Well-maintained fleet, flexible daily/weekly/monthly terms, on-time delivery. Call or text 248-687-4515." />
+<meta name="theme-color" content="#12243f" />
+<meta property="og:title" content="Concord Rents | Heavy Equipment Rentals Across Michigan" />
+<meta property="og:description" content="Telehandlers, boom lifts, dozers, excavators, forklifts & more — delivered across Michigan. Call or text 248-687-4515." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2237%20113%20316%20285%22%3E%3Cpath%20fill%3D%22%23ffb100%22%20d%3D%22M116%20116%2037%20250%2038%20255%2041%20258%2053%20280%2064%20297%2085%20335%2099%20357%2099%20359%20108%20372%20116%20387%20276%20387%20339%20278%20249%20278%20245%20285%20233%20298%20220%20306%20207%20310%20182%20309%20173%20306%20162%20300%20151%20290%20146%20283%20140%20271%20137%20256%20138%20239%20140%20235%20140%20231%20146%20219%20160%20204%20173%20196%20188%20192%20207%20192%20215%20194%20228%20200%20242%20212%20249%20223%20339%20223%20338%20220%20316%20185%20310%20173%20276%20116Z%22%2F%3E%3C%2Fsvg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#12243f; --ink-2:#182f4f; --steel:#1d3454; --steel-2:#274268;
+    --amber:#ffb100; --amber-2:#ff8a00; --amber-ink:#1a1200;
+    --paper:#f5f6f8; --card:#ffffff; --text:#14243f; --muted:#5b6b82;
+    --line:#e4e7ec; --line-d:rgba(255,255,255,.12);
+    --ring:rgba(255,177,0,.35);
+    --maxw:1200px;
+    --shadow:0 1px 2px rgba(18,36,63,.06),0 8px 24px rgba(18,36,63,.08);
+    --shadow-lg:0 24px 60px rgba(18,36,63,.28);
+    --radius:0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--text);
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Oswald','Inter',sans-serif;font-weight:700;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;margin:0}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-weight:600;font-size:.78rem;color:var(--amber-2)}
+  .btn{display:inline-flex;align-items:center;gap:.55em;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:.95rem;padding:.85em 1.4em;border-radius:0;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-amber{background:linear-gradient(180deg,var(--amber),var(--amber-2));color:var(--amber-ink);box-shadow:0 8px 22px rgba(255,138,0,.32)}
+  .btn-ghost{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.08)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-outline{background:#fff;border-color:var(--line);color:var(--text)}
+  .btn-lg{padding:1.05em 1.7em;font-size:1.02rem}
+  .icon{width:1.1em;height:1.1em;fill:currentColor;flex:none}
+
+  .util{background:var(--ink);color:#cfd6df;font-size:.82rem;border-bottom:1px solid var(--line-d)}
+  .util .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px;flex-wrap:wrap}
+  .util a{color:#e7ecf2;font-weight:600}
+  .util .u-left{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+  .util .dot{display:inline-flex;align-items:center;gap:.4em}
+  .util .dot svg{width:15px;height:15px;fill:var(--amber)}
+  .util .u-flag{color:var(--amber);font-weight:700;letter-spacing:.04em;font-family:'Oswald',sans-serif;text-transform:uppercase}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(18,36,63,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
+  header.site .wrap{display:flex;align-items:center;gap:20px;min-height:70px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .brand .logo-img{height:44px;width:auto;display:block}
+  nav.main{margin-left:auto;display:flex;align-items:center;gap:26px}
+  nav.main a{color:#d5dce4;font-weight:600;font-size:.94rem;position:relative;padding:4px 0}
+  nav.main a:hover{color:#fff}
+  nav.main a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:var(--amber);transition:right .25s ease}
+  nav.main a:hover::after{right:0}
+  .header-cta{display:flex;align-items:center;gap:10px}
+  .menu-btn{display:none;margin-left:auto;background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:0;padding:8px;cursor:pointer}
+  .menu-btn svg{width:22px;height:22px;fill:#fff;display:block}
+
+  .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.34;filter:grayscale(.15) contrast(1.05)}
+  .hero::after{content:"";position:absolute;inset:0;background:
+     radial-gradient(1200px 600px at 78% -10%,rgba(255,177,0,.16),transparent 60%),
+     linear-gradient(90deg,rgba(18,36,63,.96) 0%,rgba(18,36,63,.82) 42%,rgba(18,36,63,.42) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding:clamp(56px,9vw,116px) 22px clamp(50px,7vw,92px)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.6rem);letter-spacing:.005em}
+  .hero h1 .hl{color:var(--amber)}
+  .hero p.lead{font-size:clamp(1.05rem,1.6vw,1.28rem);color:#c9d2dd;max-width:44ch;margin:22px 0 30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--line-d)}
+  .hero-badges .b{display:flex;align-items:center;gap:10px;color:#dbe2ea;font-size:.9rem;font-weight:600}
+  .hero-badges .b svg{width:22px;height:22px;fill:var(--amber);flex:none}
+  .hero-card{background:linear-gradient(180deg,rgba(38,58,90,.92),rgba(20,38,64,.92));border:1px solid var(--line-d);border-radius:0;padding:22px;box-shadow:var(--shadow-lg)}
+  .hero-card h3{font-size:1.05rem;color:#fff;margin-bottom:4px;letter-spacing:.04em}
+  .hero-card .sub{color:#a9b3bf;font-size:.85rem;text-transform:none;font-family:'Inter';font-weight:500;margin-bottom:16px}
+  .quick-list{display:grid;gap:10px}
+  .quick-list a{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.04);border:1px solid var(--line-d);border-radius:0;padding:11px 13px;color:#eef2f6;font-weight:600;font-size:.92rem;transition:background .15s,border-color .15s,transform .15s}
+  .quick-list a:hover{background:rgba(255,177,0,.12);border-color:var(--ring);transform:translateX(3px)}
+  .quick-list a .ic{width:34px;height:34px;border-radius:0;background:rgba(255,177,0,.14);display:grid;place-items:center;flex:none}
+  .quick-list a .ic svg{width:22px;height:22px;fill:var(--amber)}
+  .quick-list a .go{margin-left:auto;color:var(--amber);font-family:'Oswald';font-size:.8rem}
+
+  .strip{background:var(--steel);color:#fff;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
+  .strip .wrap{display:flex;align-items:center;gap:12px 40px;flex-wrap:wrap;justify-content:center;padding:16px 22px}
+  .strip .label{font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:#8a95a3}
+  .strip .brands{display:flex;gap:26px;flex-wrap:wrap;align-items:center;justify-content:center}
+  .strip .brands b{font-family:'Oswald';font-weight:600;letter-spacing:.05em;color:#e6ebf1;opacity:.9;font-size:1.02rem}
+
+  section{padding:clamp(52px,7vw,88px) 0}
+  .sec-head{max-width:70ch;margin-bottom:38px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,3rem);margin:10px 0 14px}
+  .sec-head p{color:var(--muted);font-size:1.06rem;margin:0}
+
+  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .cat{position:relative;background:var(--card);border:1px solid var(--line);border-radius:0;overflow:hidden;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease,border-color .18s}
+  .cat:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#d3d8df}
+  .cat .ph{position:relative;aspect-ratio:16/10;background:#e9edf1 center/cover no-repeat;overflow:hidden}
+  .cat .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,36,63,0) 40%,rgba(18,36,63,.62))}
+  .cat.model .ph{display:grid;place-items:center;background:
+     radial-gradient(120% 120% at 50% 0%,#2a3f61,#10203a)}
+  .cat.model .ph svg.big{width:54%;height:54%;fill:var(--amber);opacity:.92;position:relative;z-index:1}
+  .cat.model .ph::before{content:"MODEL VIEW";position:absolute;bottom:12px;left:14px;z-index:2;font-family:'Oswald';font-size:.66rem;letter-spacing:.2em;color:#8ea0b4}
+  .cat .badge{position:absolute;top:12px;left:12px;z-index:3;width:46px;height:46px;border-radius:0;background:rgba(18,36,63,.72);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.18);display:grid;place-items:center}
+  .cat .badge svg{width:30px;height:30px;fill:var(--amber)}
+  .cat .body{padding:16px 18px 18px}
+  .cat h3{font-size:1.22rem;letter-spacing:.03em}
+  .cat p{color:var(--muted);font-size:.9rem;margin:6px 0 14px;min-height:2.4em}
+  .cat .go{display:inline-flex;align-items:center;gap:.5em;font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:.86rem;font-weight:600;color:var(--text)}
+  .cat .go svg{width:16px;height:16px;fill:var(--amber-2);transition:transform .18s}
+  .cat:hover .go svg{transform:translateX(4px)}
+  .cat .cap{position:absolute;bottom:0;left:0;z-index:3;color:#fff;font-family:'Oswald';font-size:.72rem;letter-spacing:.14em;padding:0 0 10px 16px;opacity:.85;text-transform:uppercase}
+
+  .fleet{background:var(--ink);color:#fff}
+  .fleet .sec-head p{color:#aab4c0}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .feat{background:linear-gradient(180deg,#1c3355,#10203a);border:1px solid var(--line-d);border-radius:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+  .feat:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .feat .ph{aspect-ratio:4/3;background:#12243f center/cover no-repeat;border-bottom:1px solid var(--line-d)}
+  .feat .body{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
+  .feat .tag{font-family:'Oswald';font-size:.68rem;letter-spacing:.18em;color:var(--amber);text-transform:uppercase}
+  .feat h3{font-size:1.24rem;margin:8px 0 12px;color:#fff}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .chips span{font-size:.76rem;font-weight:600;color:#d7dee6;background:rgba(255,255,255,.06);border:1px solid var(--line-d);border-radius:0;padding:5px 11px}
+  .feat .btn{margin-top:auto}
+
+  .coverage{background:linear-gradient(180deg,#fff,#eef1f4)}
+  .cov-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .map-card{position:relative;background:var(--ink);border-radius:0;box-shadow:var(--shadow-lg);overflow:hidden;border:1px solid var(--line-d)}
+  .map-card .mi-map{width:100%;height:440px;border:0;display:block}
+  .map-card .map-cap{display:flex;align-items:center;gap:9px;background:var(--ink);color:#fff;font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:.8rem;padding:13px 16px;border-top:1px solid var(--line-d)}
+  .map-card .map-cap svg{width:16px;height:16px;fill:var(--amber);flex:none}
+  .cov-list{display:grid;gap:16px;margin:26px 0 30px}
+  .cov-list li{list-style:none;display:flex;gap:14px;align-items:flex-start}
+  .cov-list .ic{width:42px;height:42px;border-radius:0;background:var(--ink);display:grid;place-items:center;flex:none}
+  .cov-list .ic svg{width:24px;height:24px;fill:var(--amber)}
+  .cov-list h4{font-family:'Oswald';text-transform:uppercase;letter-spacing:.03em;font-size:1.02rem;margin:2px 0 3px}
+  .cov-list p{margin:0;color:var(--muted);font-size:.95rem}
+  .ship-note{background:#fff;border:1px dashed var(--amber-2);border-left:5px solid var(--amber-2);border-radius:0;padding:16px 18px;color:var(--text);font-size:.96rem}
+  .ship-note b{font-family:'Oswald';letter-spacing:.03em}
+
+  .vp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .vp{background:var(--card);border:1px solid var(--line);border-radius:0;padding:24px 22px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+  .vp:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .vp .ic{width:52px;height:52px;border-radius:0;background:linear-gradient(180deg,var(--amber),var(--amber-2));display:grid;place-items:center;margin-bottom:16px;box-shadow:0 8px 18px rgba(255,138,0,.28)}
+  .vp .ic svg{width:30px;height:30px;fill:var(--amber-ink)}
+  .vp h3{font-size:1.12rem;margin-bottom:8px;letter-spacing:.03em}
+  .vp p{color:var(--muted);font-size:.94rem;margin:0}
+
+  .steps{background:var(--steel);color:#fff}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+  .step{position:relative;background:rgba(255,255,255,.03);border:1px solid var(--line-d);border-radius:0;padding:28px 24px}
+  .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:'Oswald';font-size:2.6rem;color:var(--amber);opacity:.9;line-height:1;display:block;margin-bottom:12px}
+  .step h3{color:#fff;font-size:1.16rem;margin-bottom:8px}
+  .step p{color:#aab4c0;font-size:.95rem;margin:0}
+
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:0;padding:18px;text-align:center;box-shadow:var(--shadow)}
+  .stat b{display:block;font-family:'Oswald';font-size:2rem;color:var(--amber-2);line-height:1}
+  .stat span{font-size:.82rem;color:var(--muted);font-weight:600}
+  .about-photo{border-radius:0;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+  .about-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+
+  .contact{background:var(--ink);color:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .contact h2{color:#fff}
+  .contact .sec-head p{color:#aab4c0}
+  .info-list{display:grid;gap:14px;margin:8px 0 26px}
+  .info{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.03);border:1px solid var(--line-d);border-radius:0;padding:16px 18px}
+  .info .ic{width:44px;height:44px;border-radius:0;background:rgba(255,177,0,.14);display:grid;place-items:center;flex:none}
+  .info .ic svg{width:24px;height:24px;fill:var(--amber)}
+  .info h4{font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:.82rem;color:#9aa5b2;margin:0 0 3px}
+  .info a,.info p{margin:0;color:#fff;font-weight:600;font-size:1.02rem}
+  .info a:hover{color:var(--amber)}
+  form.qf{background:linear-gradient(180deg,#1c3355,#10203a);border:1px solid var(--line-d);border-radius:0;padding:26px;box-shadow:var(--shadow-lg)}
+  form.qf label{display:block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:#9aa5b2;margin:0 0 6px}
+  form.qf .row{margin-bottom:16px}
+  form.qf input,form.qf textarea,form.qf select{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:0;padding:12px 14px;color:#fff;font-family:inherit;font-size:.96rem;transition:border-color .15s,box-shadow .15s}
+  form.qf input:focus,form.qf textarea:focus,form.qf select:focus{outline:none;border-color:var(--amber-2);box-shadow:0 0 0 3px var(--ring)}
+  form.qf textarea{resize:vertical;min-height:120px}
+  form.qf .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form.qf .btn{width:100%;justify-content:center;margin-top:4px}
+  .map-embed{border:0;width:100%;height:260px;border-radius:0;margin-top:20px;filter:grayscale(.2)}
+
+  footer.site{background:#0c1a30;color:#9aa5b2;padding:56px 0 28px;border-top:1px solid var(--line-d)}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px}
+  footer h5{font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:#fff;margin:0 0 14px}
+  footer ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+  footer a:hover{color:var(--amber)}
+  footer .about-blurb{font-size:.9rem;margin:16px 0 0;max-width:34ch}
+  .foot-bottom{border-top:1px solid var(--line-d);margin-top:38px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem}
+  .foot-bottom .flag{color:var(--amber);font-family:'Oswald';letter-spacing:.06em;text-transform:uppercase}
+
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-card{order:2}
+    .cat-grid{grid-template-columns:repeat(2,1fr)}
+    .feat-grid{grid-template-columns:1fr}
+    .vp-grid{grid-template-columns:repeat(2,1fr)}
+    .step-grid{grid-template-columns:1fr}
+    .cov-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    nav.main,.header-cta .btn{display:none}
+    .menu-btn{display:block}
+    nav.main.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--ink);padding:16px 22px;gap:14px;border-bottom:1px solid var(--line-d)}
+    header.site .wrap{position:relative}
+  }
+  @media (max-width:560px){
+    .cat-grid{grid-template-columns:1fr}
+    .vp-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    form.qf .two{grid-template-columns:1fr}
+    .util .u-left{gap:14px}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7L4.5 7h15z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 4 2.3-1 1.7-5-2.9V6h2z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M13 5l7 7-7 7-1.4-1.4L16.2 13H4v-2h12.2l-4.6-4.6z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 5h11a1 1 0 0 1 1 1v3h3l3 4v4h-2a2.5 2.5 0 0 1-5 0H9a2.5 2.5 0 0 1-5 0H2V6a1 1 0 0 1 1-1zm12 6h4l-1.6-2H15zM6.5 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path d="M7 2v2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2zm12 8v9H5v-9z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5zm-1 13-3.5-3.5L9 10l2 2 4-4 1.5 1.5z"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h1v-7H5v-1a7 7 0 0 1 14 0v1h-2v7h1a3 3 0 0 0 3-3v-5a9 9 0 0 0-9-9z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></symbol>
+    <symbol id="e-telehandler" viewBox="0 0 64 64"><circle cx="15" cy="52" r="6.5"/><circle cx="31" cy="52" r="6.5"/><rect x="8" y="39" width="30" height="9" rx="2"/><rect x="10" y="27" width="12" height="13" rx="2"/><polygon points="22,33 52,17 57,21 27,40"/><rect x="51" y="14" width="3" height="12"/><rect x="50" y="24" width="13" height="2.4"/><rect x="50" y="28" width="13" height="2.4"/></symbol>
+    <symbol id="e-boom" viewBox="0 0 64 64"><circle cx="15" cy="52" r="6.5"/><circle cx="29" cy="52" r="6.5"/><rect x="8" y="41" width="28" height="9" rx="2"/><rect x="15" y="36" width="12" height="7" rx="1"/><polygon points="19,40 23,36 45,14 49,17 25,42"/><rect x="42" y="9" width="14" height="8" rx="1.5"/></symbol>
+    <symbol id="e-scissor" viewBox="0 0 64 64"><circle cx="15" cy="52" r="5.5"/><circle cx="31" cy="52" r="5.5"/><rect x="8" y="44" width="30" height="6" rx="1.5"/><rect x="7" y="13" width="34" height="6" rx="1.5"/><polygon points="13,44 22,19 26,19 17,44"/><polygon points="33,44 24,19 28,19 37,44"/></symbol>
+    <symbol id="e-dozer" viewBox="0 0 64 64"><rect x="10" y="45" width="34" height="8" rx="4"/><rect x="18" y="30" width="22" height="15" rx="2"/><rect x="26" y="23" width="11" height="9" rx="2"/><rect x="5" y="31" width="5" height="20" rx="1.5"/><polygon points="9,41 19,37 19,41 9,45"/></symbol>
+    <symbol id="e-excavator" viewBox="0 0 64 64"><rect x="8" y="46" width="30" height="7" rx="3.5"/><rect x="10" y="31" width="21" height="15" rx="2"/><rect x="13" y="24" width="11" height="9" rx="2"/><polygon points="27,37 31,33 45,16 49,19 32,41"/><polygon points="46,17 51,33 47,35 42,20"/><polygon points="44,32 53,33 50,42 46,41"/></symbol>
+    <symbol id="e-loader" viewBox="0 0 64 64"><circle cx="17" cy="50" r="8"/><circle cx="39" cy="50" r="8"/><rect x="12" y="32" width="27" height="12" rx="2"/><rect x="28" y="25" width="11" height="10" rx="2"/><polygon points="12,38 4,43 4,47 12,43"/><polygon points="2,41 12,41 12,50 0,50"/></symbol>
+    <symbol id="e-forklift" viewBox="0 0 64 64"><circle cx="17" cy="50" r="6"/><circle cx="33" cy="50" r="6"/><rect x="10" y="30" width="21" height="16" rx="2"/><rect x="12" y="19" width="17" height="12" rx="2"/><rect x="34" y="15" width="3.4" height="33"/><rect x="37" y="45" width="13" height="2.6"/><rect x="37" y="30" width="2.4" height="16"/></symbol>
+    <symbol id="e-heavyfork" viewBox="0 0 64 64"><circle cx="15" cy="52" r="6"/><circle cx="26" cy="52" r="6"/><circle cx="40" cy="52" r="6"/><rect x="8" y="30" width="27" height="20" rx="2"/><rect x="10" y="18" width="21" height="13" rx="2"/><rect x="38" y="13" width="4" height="39"/><rect x="42" y="49" width="15" height="2.8"/><rect x="42" y="30" width="2.6" height="21"/></symbol>
+    <symbol id="e-grader" viewBox="0 0 64 64"><circle cx="12" cy="50" r="5"/><circle cx="45" cy="50" r="5"/><circle cx="53" cy="50" r="5"/><rect x="10" y="37" width="45" height="5" rx="2"/><rect x="42" y="25" width="13" height="13" rx="2"/><polygon points="22,50 35,43 37,46 24,53"/><rect x="27" y="41" width="2.6" height="8"/></symbol>
+    <g id="logo"><path fill="#ffb100" d="M116 116 37 250 38 255 41 258 53 280 64 297 85 335 99 357 99 359 108 372 116 387 276 387 339 278 249 278 245 285 233 298 220 306 207 310 182 309 173 306 162 300 151 290 146 283 140 271 137 256 138 239 140 235 140 231 146 219 160 204 173 196 188 192 207 192 215 194 228 200 242 212 249 223 339 223 338 220 316 185 310 173 276 116Z"/><path fill="#f5f7fa" d="M1044 315 1043 316 1043 337 1066 337 1068 339 1067 340 1067 394 1094 394 1094 338 1095 337 1119 337 1119 315ZM876 316 876 394 878 395 879 394 902 394 902 356 903 355 932 395 933 394 939 394 940 395 941 394 957 394 957 316 956 315 932 315 931 316 931 351 930 352 906 320 904 319 903 316 900 315 880 315 879 316 878 315ZM720 316 721 317 721 391 720 394 721 395 722 394 768 394 769 395 785 394 786 395 787 394 787 375 747 375 746 374 746 365 748 363 782 363 782 347 781 346 749 347 746 345 746 336 749 334 751 335 752 334 785 334 786 335 787 334 787 316 786 315 784 316 783 315 724 315ZM556 315 556 394 557 395 558 394 559 395 560 394 578 394 579 395 580 394 580 370 583 368 584 369 590 369 592 371 606 395 607 394 627 394 628 395 632 394 633 395 634 394 617 366 626 359 631 349 632 338 631 333 627 325 622 320 616 317 608 315ZM580 334 581 333 600 333 605 336 606 346 600 351 581 351 580 350ZM1216 318 1208 325 1204 334 1204 343 1207 351 1212 356 1222 361 1245 367 1248 370 1248 373 1245 376 1242 377 1235 377 1224 374 1216 368 1212 367 1199 384 1208 390 1215 393 1228 396 1248 396 1252 394 1257 394 1261 391 1263 391 1271 383 1272 378 1274 375 1274 365 1271 358 1264 351 1260 349 1233 341 1230 338 1230 336 1233 333 1244 333 1248 335 1251 335 1260 341 1272 324 1263 318 1258 317 1255 315 1248 315 1247 314 1228 314ZM1382 116 1382 276 1383 277 1471 277 1472 276 1491 274 1494 272 1499 271 1511 264 1524 250 1531 233 1532 222 1533 221 1533 168 1529 150 1521 136 1508 125 1494 119 1489 119 1487 117 1480 117 1479 116ZM1432 163 1463 162 1472 165 1480 173 1483 181 1483 210 1480 218 1475 224 1470 227 1463 229 1432 229 1431 228 1431 164ZM1206 116 1206 277 1254 277 1255 276 1255 224 1256 223 1281 223 1314 277 1370 277 1370 275 1336 219 1337 216 1345 212 1354 203 1359 194 1363 181 1364 166 1363 165 1362 152 1358 142 1347 128 1336 121 1318 116ZM1255 152 1256 151 1301 151 1307 154 1313 162 1314 165 1313 178 1305 187 1300 189 1256 189 1255 188ZM906 127 892 142 885 156 880 174 880 183 879 184 880 216 882 220 884 231 892 248 897 255 909 266 925 274 929 274 934 276 941 276 942 277 1010 277 1011 276 1010 275 1010 230 1011 229 956 229 948 227 944 225 938 219 935 213 934 203 933 202 933 192 934 191 935 178 940 170 945 166 952 163 1010 163 1010 116 934 116 924 119 920 119ZM707 116 707 276 708 277 757 277 757 196 759 195 776 219 813 276 815 277 865 277 865 116 815 116 815 197 814 198 811 195 774 138 760 119 759 116ZM410 127 401 135 391 150 385 168 384 183 383 184 383 208 384 209 385 222 390 239 398 253 414 268 427 274 431 274 436 276 443 276 444 277 513 277 514 276 514 229 458 229 449 226 443 221 438 211 437 207 437 184 442 172 447 167 455 163 513 163 514 162 514 116 438 116 420 121ZM1093 113 1072 118 1058 125 1048 132 1034 147 1025 163 1020 181 1021 216 1025 229 1035 246 1048 260 1056 266 1072 274 1082 277 1087 277 1092 279 1117 279 1122 277 1135 275 1150 268 1159 262 1173 248 1183 231 1188 215 1189 203 1190 202 1189 181 1186 168 1179 153 1172 143 1157 129 1151 125 1133 117 1113 113ZM1096 161 1112 161 1119 163 1130 171 1135 177 1139 186 1140 199 1138 207 1135 213 1127 222 1121 226 1113 229 1100 230 1089 227 1083 224 1074 215 1069 204 1068 192 1070 184 1073 178 1083 167ZM596 113 591 115 581 116 566 122 552 131 537 147 532 155 532 157 530 159 525 171 524 179 522 184 522 207 525 221 531 235 543 252 554 262 567 270 582 276 591 277 596 279 619 279 642 273 656 266 668 257 679 244 687 229 692 213 693 200 694 199 692 176 688 163 678 145 665 132 655 125 645 120 629 115 623 115 617 113ZM593 163 600 161 615 161 619 163 622 163 629 167 637 175 642 184 643 200 640 210 629 223 622 227 615 229 599 229 595 227 592 227 584 222 579 217 573 207 571 199 571 192 573 185 579 174 585 168Z"/></g>
+  </defs>
+</svg>
+
+<div class="util">
+  <div class="wrap">
+    <div class="u-left">
+      <span class="u-flag">★ Serving All of Michigan</span>
+      <a class="dot" href="tel:12486874515"><svg><use href="#i-phone"/></svg> 248-687-4515</a>
+      <span class="dot"><svg><use href="#i-clock"/></svg> Mon–Fri, 9AM–5PM</span>
+    </div>
+    <div class="u-right">
+      <a class="dot" href="mailto:ch@concord-equipment.com"><svg><use href="#i-mail"/></svg> Email us</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Concord Rents home">
+      <svg class="logo-img" viewBox="37 113 1498 285" role="img" aria-label="Concord Rents"><use href="#logo"/></svg>
+    </a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg><use href="#i-menu"/></svg></button>
+    <nav class="main" id="nav">
+      <a href="#equipment">Equipment</a>
+      <a href="#fleet">Featured Fleet</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#why">Why Concord</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-amber" href="tel:12486874515"><svg class="icon"><use href="#i-phone"/></svg> Call / Text</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top" style="padding:0">
+  <div class="bg" style="background-image:url('/img/hero.webp')"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Madison Heights · Metro Detroit · Statewide</span>
+        <h1>Heavy Equipment,<br><span class="hl">Ready to Work</span><br>Across Michigan.</h1>
+        <p class="lead">Telehandlers, boom lifts, dozers, excavators and forklifts — well-maintained machines from brands you trust, delivered on time and priced to win your project.</p>
+        <div class="hero-cta">
+          <button type="button" class="btn btn-amber btn-lg" onclick="openReq('quote')"><svg class="icon"><use href="#i-arrow"/></svg> Request a Quote</button>
+          <a class="btn btn-ghost btn-lg" href="/equipment/"><svg class="icon"><use href="#i-truck"/></svg> Browse Equipment</a>
+        </div>
+        <div class="hero-badges">
+          <div class="b"><svg><use href="#i-truck"/></svg> Delivery statewide</div>
+          <div class="b"><svg><use href="#i-cal"/></svg> Daily · Weekly · Monthly</div>
+          <div class="b"><svg><use href="#i-shield"/></svg> Fleet-maintained machines</div>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>Rent by Category</h3>
+        <div class="sub">Jump straight to the machine you need.</div>
+        <div class="quick-list">
+          <a href="/equipment/"><span class="ic"><svg><use href="#e-telehandler"/></svg></span> Telehandlers <span class="go">›</span></a>
+          <a href="/equipment/"><span class="ic"><svg><use href="#e-boom"/></svg></span> Boom Lifts <span class="go">›</span></a>
+          <a href="/equipment/"><span class="ic"><svg><use href="#e-dozer"/></svg></span> Bulldozers <span class="go">›</span></a>
+          <a href="/equipment/"><span class="ic"><svg><use href="#e-heavyfork"/></svg></span> Heavy Forklifts <span class="go">›</span></a>
+          <a href="/equipment/"><span class="ic"><svg><use href="#i-arrow"/></svg></span> View Full Fleet <span class="go">›</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span class="label">Trusted Fleet Brands</span>
+    <div class="brands">
+      <b>Caterpillar</b><b>JLG</b><b>Genie</b><b>SkyTrak</b><b>Lull</b><b>Brute</b><b>John Deere</b>
+    </div>
+  </div>
+</div>
+
+<section id="equipment">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The Fleet</span>
+      <h2>Rent the Right Machine for the Job</h2>
+      <p>Nine equipment categories, real photos of our fleet, and a clean path to reserve. Browse the full catalog and request a quote or availability in seconds.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat" href="/equipment/">
+        <div class="ph" style="background-image:url('/img/cat-telehandlers.jpg')">
+          <span class="badge"><svg><use href="#e-telehandler"/></svg></span><span class="cap">6K – 10K lb · up to 56 ft</span>
+        </div>
+        <div class="body"><h3>Telehandlers</h3><p>Reach forklifts for lifting and placing loads at height on site.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="cat" href="/equipment/">
+        <div class="ph" style="background-image:url('/img/cat-boom.jpg')">
+          <span class="badge"><svg><use href="#e-boom"/></svg></span><span class="cap">Articulating & straight</span>
+        </div>
+        <div class="body"><h3>Boom Lifts</h3><p>Elevated access for maintenance, install and hard-to-reach work.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="cat" href="/equipment/">
+        <div class="ph" style="background-image:url('/img/cat-bulldozers.jpg')">
+          <span class="badge"><svg><use href="#e-dozer"/></svg></span><span class="cap">Grading & pushing</span>
+        </div>
+        <div class="body"><h3>Bulldozers</h3><p>Move earth, clear sites and grade with dependable dozer power.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="cat" href="/equipment/">
+        <div class="ph" style="background-image:url('/img/cat-excavators.jpg')">
+          <span class="badge"><svg><use href="#e-excavator"/></svg></span><span class="cap">Digging & trenching</span>
+        </div>
+        <div class="body"><h3>Excavators</h3><p>Dig footings, trenches and utilities with precision and reach.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="cat" href="/equipment/">
+        <div class="ph" style="background-image:url('/img/cat-heavyfork.jpg')">
+          <span class="badge"><svg><use href="#e-heavyfork"/></svg></span><span class="cap">Up to 120,000 lb</span>
+        </div>
+        <div class="body"><h3>Heavy Forklifts</h3><p>High-capacity forklifts for industrial loads and steel handling.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="cat" href="/equipment/">
+        <div class="ph" style="background-image:url('/img/cat-forklifts.jpg')">
+          <span class="badge"><svg><use href="#e-forklift"/></svg></span><span class="cap">Warehouse & yard</span>
+        </div>
+        <div class="body"><h3>Forklifts</h3><p>Standard-capacity forklifts for material handling and logistics.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="cat" href="/equipment/">
+        <div class="ph" style="background-image:url('/img/cat-scissor.jpg')">
+          <span class="badge"><svg><use href="#e-scissor"/></svg></span><span class="cap">Vertical platform</span>
+        </div>
+        <div class="body"><h3>Scissor Lifts</h3><p>Stable elevated platforms for indoor and outdoor access work.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="cat" href="/equipment/">
+        <div class="ph" style="background-image:url('/img/cat-graders.jpg')">
+          <span class="badge"><svg><use href="#e-grader"/></svg></span><span class="cap">Precision grading</span>
+        </div>
+        <div class="body"><h3>Graders</h3><p>Fine-grade roads, pads and lots to spec with motor graders.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="cat model" href="/equipment/">
+        <div class="ph">
+          <svg class="big" viewBox="0 0 64 64"><use href="#e-loader"/></svg>
+          <span class="badge"><svg><use href="#e-loader"/></svg></span><span class="cap">Loading & hauling</span>
+        </div>
+        <div class="body"><h3>Wheel Loaders</h3><p>Scoop, carry and load material fast across the job site.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="fleet" id="fleet">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--amber)">In the Yard Now</span>
+      <h2>Featured Machines</h2>
+      <p>A look at some of the workhorses ready to reserve today. Ask about availability for your dates.</p>
+    </div>
+    <div class="feat-grid">
+      <article class="feat">
+        <div class="ph" style="background-image:url('/img/feat-cat-d4k2.jpg')"></div>
+        <div class="body">
+          <span class="tag">Bulldozer</span>
+          <h3>Caterpillar D4K2 Dozer</h3>
+          <div class="chips"><span>Track dozer</span><span>Grading & clearing</span><span>Cat reliability</span></div>
+          <button type="button" class="btn btn-amber" onclick="openReq('availability','Caterpillar D4K2 Dozer')">Check Availability <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+      <article class="feat">
+        <div class="ph" style="background-image:url('/img/feat-jlg.jpg')"></div>
+        <div class="body">
+          <span class="tag">Telehandler</span>
+          <h3>JLG / Lull 9443 Telehandler</h3>
+          <div class="chips"><span>9,000 lb capacity</span><span>42 ft reach</span><span>Rough terrain</span></div>
+          <button type="button" class="btn btn-amber" onclick="openReq('availability','JLG / Lull 9443 Telehandler')">Check Availability <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+      <article class="feat">
+        <div class="ph" style="background-image:url('/img/feat-brute.jpg')"></div>
+        <div class="body">
+          <span class="tag">Heavy Forklift</span>
+          <h3>Brute BT120 Forklift</h3>
+          <div class="chips"><span>120,000 lb capacity</span><span>Industrial lifting</span><span>Steel & machinery</span></div>
+          <button type="button" class="btn btn-amber" onclick="openReq('availability','Brute BT120 Forklift')">Check Availability <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="coverage" id="coverage">
+  <div class="wrap">
+    <div class="cov-grid">
+      <div class="map-card">
+        <iframe class="mi-map" title="Concord Rents service area — all of Michigan" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Michigan,+USA&output=embed"></iframe>
+        <div class="map-cap"><svg><use href="#i-pin"/></svg> Based in Madison Heights — delivering across all of Michigan</div>
+      </div>
+      <div>
+        <span class="eyebrow">Where We Deliver</span>
+        <h2 style="font-size:clamp(1.9rem,4vw,3rem);margin:10px 0 8px">All of Michigan — Delivered to Your Site</h2>
+        <p style="color:var(--muted);margin:0 0 6px">Based in Madison Heights and serving the entire state, from Metro Detroit to the U.P. Pick up from our yard, or let us handle drop-off and pick-up on your schedule.</p>
+        <ul class="cov-list">
+          <li><span class="ic"><svg><use href="#i-pin"/></svg></span><div><h4>Statewide Coverage</h4><p>We rent and deliver across all of Michigan — job sites large and small.</p></div></li>
+          <li><span class="ic"><svg><use href="#i-truck"/></svg></span><div><h4>Pickup or Delivery</h4><p>Come to our Madison Heights yard, or we'll drop off and pick up for you.</p></div></li>
+        </ul>
+        <div class="ship-note">
+          <b>Need it shipped farther than Michigan?</b> We can often arrange out-of-state delivery — this requires a <b>special request</b>, so just call or email and we'll work out logistics and a quote.
+        </div>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <button type="button" class="btn btn-dark" onclick="openReq('delivery')"><svg class="icon"><use href="#i-truck"/></svg> Can you deliver to my location?</button>
+          <button type="button" class="btn btn-outline" onclick="openReq('availability')"><svg class="icon"><use href="#i-cal"/></svg> Check availability</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Why Concord Rents</span>
+      <h2>Big-Fleet Quality, Local Service &amp; Pricing</h2>
+      <p>The reliability and range you expect from the national names — backed by a Michigan team that actually answers the phone and fights for the best deal on your rental.</p>
+    </div>
+    <div class="vp-grid">
+      <div class="vp"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Top-Tier Equipment</h3><p>Well-maintained, high-performance machinery from trusted brands like Caterpillar and JLG.</p></div>
+      <div class="vp"><div class="ic"><svg><use href="#i-cal"/></svg></div><h3>Flexible Terms</h3><p>Daily, weekly, and monthly rentals that fit your project timeline and budget.</p></div>
+      <div class="vp"><div class="ic"><svg><use href="#i-truck"/></svg></div><h3>On-Time Delivery</h3><p>Reliable drop-off and pick-up across Michigan so you stay on schedule.</p></div>
+      <div class="vp"><div class="ic"><svg><use href="#i-headset"/></svg></div><h3>Expert Support</h3><p>A knowledgeable team that helps you spec the right machine for the job.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--amber)">Simple Process</span>
+      <h2 style="color:#fff">Renting Is Easy</h2>
+    </div>
+    <div class="step-grid">
+      <div class="step"><h3>Pick Your Machine</h3><p>Browse the fleet by category and find the equipment that fits your job.</p></div>
+      <div class="step"><h3>Confirm Dates &amp; Price</h3><p>Call, text, or message for availability, a quote, and flexible rental terms.</p></div>
+      <div class="step"><h3>Pick Up or Get It Delivered</h3><p>Grab it from our Madison Heights yard, or we deliver anywhere in Michigan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">Who We Are</span>
+        <h2 style="font-size:clamp(1.9rem,4vw,3rem);margin:10px 0 14px">Southeast Michigan's Heavy Equipment Partner</h2>
+        <p style="color:var(--muted);margin:0">Concord Rents is a heavy equipment rental business based in Madison Heights, serving Metro Detroit and all of Michigan. Our goal is simple: give customers the best deals on quality rental equipment, and back every rental with the kind of customer service that keeps you coming back. We pride ourselves on making sure every need is met — from the first quote to final pickup.</p>
+        <div class="stat-row">
+          <div class="stat"><b>9+</b><span>Equipment Categories</span></div>
+          <div class="stat"><b>MI</b><span>Statewide Delivery</span></div>
+          <div class="stat"><b>120K</b><span>lb Max Lift Capacity</span></div>
+        </div>
+        <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-dark" href="/equipment/"><svg class="icon"><use href="#i-arrow"/></svg> Browse the Fleet</a>
+          <button type="button" class="btn btn-outline" onclick="openReq('quote')"><svg class="icon"><use href="#i-arrow"/></svg> Request a Quote</button>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="/img/about.jpg" alt="Concord Rents equipment fleet in Michigan" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--amber)">Get a Quote</span>
+        <h2 style="font-size:clamp(1.9rem,4vw,3rem);margin:10px 0 18px">Let's Get Your Equipment Booked</h2>
+        <p style="color:#aab4c0;margin:0 0 22px">Call or text for the fastest answer on availability and pricing. Prefer to write? Send a message and we'll get right back to you.</p>
+        <div class="info-list">
+          <div class="info"><span class="ic"><svg><use href="#i-headset"/></svg></span><div><h4>Fleet Rental Manager</h4><p>Carlton Hewines</p></div></div>
+          <div class="info"><span class="ic"><svg><use href="#i-phone"/></svg></span><div><h4>Call or Text</h4><a href="tel:12486874515">248-687-4515</a></div></div>
+          <div class="info"><span class="ic"><svg><use href="#i-mail"/></svg></span><div><h4>Email</h4><a href="mailto:ch@concord-equipment.com">ch@concord-equipment.com</a></div></div>
+          <div class="info"><span class="ic"><svg><use href="#i-pin"/></svg></span><div><h4>Yard / Location</h4><p>31440 Stephenson Hwy, Madison Heights, MI 48071</p></div></div>
+          <div class="info"><span class="ic"><svg><use href="#i-clock"/></svg></span><div><h4>Hours</h4><p>Mon–Fri, 9:00 AM – 5:00 PM · Showroom by appointment</p></div></div>
+        </div>
+        <iframe class="map-embed" title="Concord Rents location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=31440+Stephenson+Hwy,+Madison+Heights,+MI+48071&output=embed"></iframe>
+      </div>
+      <div>
+        <form class="qf" id="quoteForm" onsubmit="return submitRequest(event,'quoteForm')">
+          <div class="row"><label for="q_type">How can we help?</label>
+            <select id="q_type" name="type">
+              <option value="quote">Request a custom quote</option>
+              <option value="availability">Check availability</option>
+              <option value="delivery">Ask about delivery to my location</option>
+            </select>
+          </div>
+          <div class="row two">
+            <div><label for="q_name">Name</label><input id="q_name" name="name" required placeholder="Your name" /></div>
+            <div><label for="q_phone">Phone</label><input id="q_phone" name="phone" placeholder="Best number" /></div>
+          </div>
+          <div class="row"><label for="q_email">Email</label><input id="q_email" type="email" name="email" placeholder="you@company.com" /></div>
+          <div class="row two">
+            <div><label for="q_equip">Equipment</label>
+              <select id="q_equip" name="equipment">
+                <option value="">Select / not sure</option>
+                <option>Telehandler</option><option>Boom Lift</option><option>Scissor Lift</option><option>Bulldozer</option><option>Excavator</option><option>Wheel Loader</option><option>Forklift</option><option>Heavy Forklift</option><option>Grader</option>
+              </select>
+            </div>
+            <div><label for="q_dates">Rental dates</label><input id="q_dates" name="dates" placeholder="e.g. Jun 3–10" /></div>
+          </div>
+          <div class="row"><label for="q_location">Delivery location (city or ZIP)</label><input id="q_location" name="location" placeholder="e.g. Grand Rapids, MI 49503" /></div>
+          <div class="row"><label for="q_msg">Project details</label><textarea id="q_msg" name="message" placeholder="Tell us about the job…"></textarea></div>
+          <input type="text" name="company" id="q_company" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn-amber" type="submit" id="q_submit">Send Request <svg class="icon"><use href="#i-arrow"/></svg></button>
+          <p id="q_status" style="font-size:.82rem;margin:12px 0 0;text-align:center;color:#aab4c0">Fastest response: call or text <a href="tel:12486874515" style="color:var(--amber)">248-687-4515</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="color:#fff">
+          <svg class="logo-img" viewBox="37 113 1498 285" role="img" aria-label="Concord Rents" style="height:40px"><use href="#logo"/></svg>
+        </a>
+        <p class="about-blurb">Quality heavy equipment rentals based in Madison Heights, serving Metro Detroit and all of Michigan with the best deals and dependable service.</p>
+      </div>
+      <div>
+        <h5>Equipment</h5>
+        <ul>
+          <li><a href="/equipment/">Telehandlers</a></li>
+          <li><a href="/equipment/">Boom Lifts</a></li>
+          <li><a href="/equipment/">Bulldozers</a></li>
+          <li><a href="/equipment/">Heavy Forklifts</a></li>
+          <li><a href="/equipment/">View All →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">Why Concord</a></li>
+          <li><a href="#coverage">Service Area</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get In Touch</h5>
+        <ul>
+          <li><a href="tel:12486874515">📞 248-687-4515</a></li>
+          <li><a href="mailto:ch@concord-equipment.com">✉ ch@concord-equipment.com</a></li>
+          <li>📍 31440 Stephenson Hwy,<br>Madison Heights, MI 48071</li>
+          <li>🕘 Mon–Fri, 9AM–5PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Concord Rents · Heavy Equipment Rentals · Madison Heights, MI</span>
+      <span class="flag">★ Serving All of Michigan — Farther by Special Request</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .cr-modal{position:fixed;inset:0;background:rgba(18,36,63,.62);display:none;align-items:flex-start;justify-content:center;z-index:100;overflow:auto;padding:5vh 16px}
+  .cr-modal.show{display:flex}
+  .cr-modal-box{background:linear-gradient(180deg,#1c3355,#10203a);border:1px solid var(--line-d);max-width:560px;width:100%;padding:28px;position:relative;box-shadow:var(--shadow-lg)}
+  .cr-modal-box h3{font-family:'Oswald';text-transform:uppercase;color:#fff;margin:0 0 4px;font-size:1.3rem;letter-spacing:.03em}
+  .cr-x{position:absolute;top:12px;right:12px;background:transparent;border:1px solid var(--line-d);color:#fff;width:34px;height:34px;cursor:pointer;font-size:16px}
+  .cr-modal-box label{display:block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;color:#9aa5b2;margin:0 0 5px}
+  .cr-modal-box input,.cr-modal-box textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:0;padding:11px 13px;color:#fff;font-family:inherit;font-size:.95rem}
+  .cr-modal-box input:focus,.cr-modal-box textarea:focus{outline:none;border-color:var(--amber-2);box-shadow:0 0 0 3px var(--ring)}
+  .cr-modal-box .row{margin-bottom:12px}
+  .cr-modal-box .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:520px){.cr-modal-box .two{grid-template-columns:1fr}}
+</style>
+<div class="cr-modal" id="crModal" onclick="if(event.target===this)closeReq()">
+  <div class="cr-modal-box">
+    <button class="cr-x" onclick="closeReq()" aria-label="Close">✕</button>
+    <h3 id="crm_title">Request a Quote</h3>
+    <p id="crm_sub" style="color:#aab4c0;font-size:.9rem;margin:0 0 18px"></p>
+    <form id="crForm" onsubmit="return submitRequest(event,'crForm')">
+      <input type="hidden" id="crm_type" name="type" value="quote" />
+      <div class="row two">
+        <div><label>Name</label><input name="name" required placeholder="Your name" /></div>
+        <div><label>Phone</label><input name="phone" placeholder="Best number" /></div>
+      </div>
+      <div class="row"><label>Email</label><input type="email" name="email" placeholder="you@company.com" /></div>
+      <div class="row two">
+        <div><label>Equipment</label><input name="equipment" id="crm_equip" placeholder="e.g. 42 ft telehandler" /></div>
+        <div><label>Dates</label><input name="dates" placeholder="e.g. Jun 3–10" /></div>
+      </div>
+      <div class="row" id="crm_locrow"><label>Delivery location (city or ZIP)</label><input name="location" placeholder="e.g. Traverse City, MI" /></div>
+      <div class="row"><label>Details</label><textarea name="message" rows="2" placeholder="Anything else we should know?"></textarea></div>
+      <input type="text" name="company" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button class="btn btn-amber" type="submit" style="width:100%;justify-content:center">Send Request <svg class="icon"><use href="#i-arrow"/></svg></button>
+      <p id="crm_status" style="font-size:.8rem;text-align:center;color:#aab4c0;margin:12px 0 0"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+
+  function openReq(type, equipment){
+    type = type || 'quote';
+    document.getElementById('crm_type').value = type;
+    var titles = {quote:'Request a Quote', availability:'Check Availability', delivery:'Delivery to Your Location'};
+    var subs = {
+      quote:"Tell us what you need — Carlton will send pricing and availability.",
+      availability:"Give us the machine and dates and we'll confirm availability.",
+      delivery:"Tell us where the job is and we'll confirm delivery and cost."
+    };
+    document.getElementById('crm_title').textContent = titles[type] || 'Request';
+    document.getElementById('crm_sub').textContent = subs[type] || '';
+    document.getElementById('crm_equip').value = equipment || '';
+    document.getElementById('crm_status').textContent = '';
+    document.getElementById('crModal').classList.add('show');
+    setTimeout(function(){ var n=document.querySelector('#crForm [name=name]'); if(n) n.focus(); }, 60);
+  }
+  function closeReq(){ document.getElementById('crModal').classList.remove('show'); }
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeReq(); });
+
+  async function submitRequest(ev, formId){
+    ev.preventDefault();
+    var form = document.getElementById(formId);
+    var data = Object.fromEntries(new FormData(form).entries());
+    var statusEl = form.querySelector('[id$="status"]');
+    var btn = form.querySelector('button[type=submit]');
+    if(!data.name || (!data.phone && !data.email)){
+      if(statusEl){ statusEl.style.color='#ffcaca'; statusEl.textContent='Please add your name and a phone or email.'; }
+      return false;
+    }
+    if(btn){ btn.disabled=true; btn.dataset.t=btn.innerHTML; btn.textContent='Sending…'; }
+    try{
+      var r = await fetch('/api/requests',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      var d = await r.json();
+      if(r.ok){
+        form.reset();
+        if(statusEl){ statusEl.style.color='#8fe3a6'; statusEl.textContent='✓ Thanks! Carlton will get right back to you.'; }
+      } else {
+        if(statusEl){ statusEl.style.color='#ffcaca'; statusEl.textContent=(d && d.error) || 'Something went wrong — please call 248-687-4515.'; }
+      }
+    }catch(e){
+      if(statusEl){ statusEl.style.color='#ffcaca'; statusEl.textContent='Network error — please call 248-687-4515.'; }
+    }finally{
+      if(btn){ btn.disabled=false; btn.innerHTML=btn.dataset.t || 'Send Request'; }
+    }
+    return false;
+  }
+</script>
+</body>
+</html>

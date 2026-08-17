@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { "source": "/collections", "destination": "/equipment", "permanent": true },
+    { "source": "/collections/:path*", "destination": "/equipment", "permanent": true },
+    { "source": "/products/:path*", "destination": "/equipment", "permanent": true },
+    { "source": "/pages/:path*", "destination": "/", "permanent": true },
+    { "source": "/blog/:path*", "destination": "/", "permanent": true }
+  ]
+}

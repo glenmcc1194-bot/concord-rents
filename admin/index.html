@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Concord Rents — Admin</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--ink:#12243f;--ink-2:#182f4f;--steel:#1d3454;--amber:#ffb100;--amber-2:#ff8a00;--amber-ink:#1a1200;--paper:#eef1f5;--card:#fff;--text:#14243f;--muted:#5b6b82;--line:#dde2ea;--line-d:rgba(255,255,255,.12);--ok:#1c7c4a;--bad:#b23b3b}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:'Inter',system-ui,Segoe UI,Arial,sans-serif;font-size:15px}
+  h1,h2,h3,.dsp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;margin:0}
+  a{color:var(--amber-2)}
+  .top{background:var(--ink);color:#fff;padding:14px 22px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:20}
+  .top .logo{width:26px;height:26px;background:linear-gradient(180deg,var(--amber),var(--amber-2));display:grid;place-items:center;color:var(--amber-ink);font-family:'Oswald';font-weight:700;font-size:15px}
+  .top b{font-family:'Oswald';font-size:1.15rem;letter-spacing:.04em}
+  .top .sp{margin-left:auto;display:flex;gap:8px;align-items:center;font-size:.82rem;color:#aab4c0;flex-wrap:wrap}
+  .pill{font-size:.7rem;font-family:'Oswald';letter-spacing:.06em;padding:3px 8px;border:1px solid var(--line-d);text-transform:uppercase}
+  .pill.on{color:#093;background:rgba(20,140,74,.18);border-color:rgba(20,140,74,.5)}
+  .pill.off{color:#f2b8b8;background:rgba(178,59,59,.18);border-color:rgba(178,59,59,.5)}
+  .btn{font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-weight:600;border:1px solid transparent;padding:.6em 1.1em;cursor:pointer;font-size:.86rem}
+  .btn-amber{background:linear-gradient(180deg,var(--amber),var(--amber-2));color:var(--amber-ink)}
+  .btn-ghost{background:transparent;border-color:var(--line-d);color:#fff}
+  .btn-outline{background:#fff;border-color:var(--line);color:var(--text)}
+  .btn-danger{background:#fff;border-color:#e2b4b4;color:var(--bad)}
+  .btn:disabled{opacity:.5;cursor:default}
+  .wrap{max-width:1100px;margin:0 auto;padding:22px}
+  .tabs{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap}
+  .tab{font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;padding:.55em 1.1em;background:#fff;border:1px solid var(--line);cursor:pointer;font-weight:600;color:var(--muted)}
+  .tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .card{background:var(--card);border:1px solid var(--line);padding:18px;margin-bottom:16px}
+  table{width:100%;border-collapse:collapse}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;font-size:.88rem}
+  th{font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:.72rem;color:var(--muted)}
+  .thumb{width:56px;height:42px;object-fit:cover;background:#dbe2ea;border:1px solid var(--line)}
+  .tag{display:inline-block;font-size:.68rem;font-family:'Oswald';letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--line);color:var(--muted)}
+  .tag.q{color:#8a5a00;border-color:#e8c98a;background:#fff7e6}
+  .tag.availability{color:#155e9c;border-color:#a9cbe8;background:#eef6fd}
+  .tag.delivery{color:#1c7c4a;border-color:#a7d8bf;background:#eef8f2}
+  .tag.new{color:var(--amber-2);border-color:#f0c98a;background:#fff7e6}
+  .tag.handled{color:var(--muted)}
+  label{display:block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:.68rem;color:var(--muted);margin:0 0 4px}
+  input,textarea,select{width:100%;padding:9px 11px;border:1px solid var(--line);font-family:inherit;font-size:.9rem;background:#fff;color:var(--text)}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--amber-2);box-shadow:0 0 0 3px rgba(255,177,0,.25)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .row{margin-bottom:12px}
+  .muted{color:var(--muted)}
+  .backdrop{position:fixed;inset:0;background:rgba(18,36,63,.55);display:none;align-items:flex-start;justify-content:center;z-index:40;overflow:auto;padding:30px 16px}
+  .backdrop.show{display:flex}
+  .modal{background:#fff;border:1px solid var(--line);max-width:720px;width:100%;padding:22px}
+  .modal h2{margin-bottom:14px}
+  .specrow{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-bottom:8px}
+  .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .right{margin-left:auto}
+  .note{background:#fff7e6;border:1px solid #f0d59a;padding:10px 12px;font-size:.85rem;margin-bottom:14px}
+  .login{max-width:380px;margin:8vh auto;background:#fff;border:1px solid var(--line);padding:26px}
+  .hidden{display:none}
+  .small{font-size:.8rem}
+  @media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top">
+  <span class="logo">C</span><b>Concord Rents · Admin</b>
+  <div class="sp" id="statusBar"></div>
+  <button class="btn btn-ghost hidden" id="logoutBtn" onclick="logout()">Log out</button>
+</div>
+
+<!-- LOGIN -->
+<div id="loginView">
+  <div class="login">
+    <h2 style="margin-bottom:6px">Fleet Manager Login</h2>
+    <p class="muted small" style="margin:0 0 16px">Enter the admin password to manage listings and requests.</p>
+    <div class="row"><label>Password</label><input id="pw" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()" /></div>
+    <button class="btn btn-amber" style="width:100%" onclick="doLogin()">Log in</button>
+    <p id="loginErr" class="small" style="color:var(--bad);margin:12px 0 0"></p>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="appView" class="wrap hidden">
+  <div class="tabs">
+    <div class="tab active" data-tab="equipment" onclick="switchTab('equipment')">Equipment</div>
+    <div class="tab" data-tab="requests" onclick="switchTab('requests')">Requests</div>
+    <div class="tab" data-tab="setup" onclick="switchTab('setup')">Setup</div>
+  </div>
+
+  <!-- EQUIPMENT -->
+  <div id="tab-equipment">
+    <div class="flex" style="margin-bottom:12px">
+      <h2>Equipment Listings</h2>
+      <button class="btn btn-amber right" onclick="openEditor()">+ Add Equipment</button>
+    </div>
+    <div id="dbWarn" class="note hidden">⚠ Database not connected yet — you're seeing seed listings and edits can't be saved. Add Upstash/KV keys in Vercel (see the <b>Setup</b> tab).</div>
+    <div class="card"><table><thead><tr><th></th><th>Name</th><th>Category</th><th>Status</th><th>Featured</th><th></th></tr></thead><tbody id="eqBody"></tbody></table></div>
+  </div>
+
+  <!-- REQUESTS -->
+  <div id="tab-requests" class="hidden">
+    <h2 style="margin-bottom:12px">Incoming Requests</h2>
+    <div class="card"><table><thead><tr><th>When</th><th>Type</th><th>Contact</th><th>Details</th><th></th></tr></thead><tbody id="reqBody"></tbody></table></div>
+  </div>
+
+  <!-- SETUP -->
+  <div id="tab-setup" class="hidden">
+    <h2 style="margin-bottom:12px">Setup Status</h2>
+    <div class="card" id="setupBody"></div>
+  </div>
+</div>
+
+<!-- EDITOR MODAL -->
+<div class="backdrop" id="editorBackdrop">
+  <div class="modal">
+    <h2 id="editorTitle">Add Equipment</h2>
+    <input type="hidden" id="f_id" />
+    <div class="grid2">
+      <div class="row"><label>Name *</label><input id="f_name" /></div>
+      <div class="row"><label>Category *</label><select id="f_category"></select></div>
+    </div>
+    <div class="grid3">
+      <div class="row"><label>Brand</label><input id="f_brand" placeholder="Caterpillar" /></div>
+      <div class="row"><label>Status</label><select id="f_status"><option value="available">Available</option><option value="unavailable">Unavailable</option><option value="hidden">Hidden</option></select></div>
+      <div class="row"><label>Featured</label><select id="f_featured"><option value="false">No</option><option value="true">Yes</option></select></div>
+    </div>
+    <div class="row"><label>Short description</label><input id="f_shortDesc" placeholder="One-line summary shown on cards" /></div>
+    <div class="row"><label>Full description</label><textarea id="f_description" rows="3"></textarea></div>
+    <div class="row"><label>Main image URL</label><input id="f_image" placeholder="https://…" /></div>
+    <div class="grid3">
+      <div class="row"><label>Day rate</label><input id="f_day" placeholder="$" /></div>
+      <div class="row"><label>Week rate</label><input id="f_week" placeholder="$" /></div>
+      <div class="row"><label>Month rate</label><input id="f_month" placeholder="$" /></div>
+    </div>
+    <div class="row"><label>External link (optional — spec sheet, etc.)</label><input id="f_bookUrl" placeholder="https://… (optional)" /></div>
+    <div class="row"><label>Specs</label><div id="specList"></div><button class="btn btn-outline small" onclick="addSpec()">+ Add spec</button></div>
+    <div class="flex" style="margin-top:16px">
+      <button class="btn btn-danger" id="deleteBtn" onclick="doDelete()">Delete</button>
+      <button class="btn btn-outline right" onclick="closeEditor()">Cancel</button>
+      <button class="btn btn-amber" onclick="doSave()">Save</button>
+    </div>
+    <p id="editorErr" class="small" style="color:var(--bad);margin:12px 0 0"></p>
+  </div>
+</div>
+
+<script>
+const CATEGORIES = ['Telehandlers','Boom Lifts','Scissor Lifts','Bulldozers','Excavators','Wheel Loaders','Forklifts','Heavy Forklifts','Graders'];
+let TOKEN = localStorage.getItem('cr_admin_token') || '';
+let STATUS = {};
+
+function authHeaders(){ return TOKEN ? {'Authorization':'Bearer '+TOKEN,'Content-Type':'application/json'} : {'Content-Type':'application/json'}; }
+async function api(path, opts){ const r = await fetch(path, opts); if(r.status===401){ logout(); throw new Error('Session expired'); } return r; }
+
+async function doLogin(){
+  const pw = document.getElementById('pw').value;
+  document.getElementById('loginErr').textContent='';
+  try{
+    const r = await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:pw})});
+    const d = await r.json();
+    if(!r.ok){ document.getElementById('loginErr').textContent = d.error||'Login failed'; return; }
+    TOKEN = d.token; localStorage.setItem('cr_admin_token',TOKEN); showApp();
+  }catch(e){ document.getElementById('loginErr').textContent = String(e); }
+}
+function logout(){ TOKEN=''; localStorage.removeItem('cr_admin_token'); document.getElementById('appView').classList.add('hidden'); document.getElementById('loginView').classList.remove('hidden'); document.getElementById('logoutBtn').classList.add('hidden'); }
+
+async function loadStatus(){
+  try{ STATUS = await (await fetch('/api/status')).json(); }catch{ STATUS={}; }
+  const bar = document.getElementById('statusBar');
+  const p=(ok,l)=>`<span class="pill ${ok?'on':'off'}">${l} ${ok?'✓':'—'}</span>`;
+  bar.innerHTML = p(STATUS.db,'DB')+p(STATUS.email,'Email')+p(STATUS.sms,'SMS');
+  document.getElementById('dbWarn').classList.toggle('hidden', !!STATUS.db);
+  renderSetup();
+}
+
+function showApp(){
+  document.getElementById('loginView').classList.add('hidden');
+  document.getElementById('appView').classList.remove('hidden');
+  document.getElementById('logoutBtn').classList.remove('hidden');
+  const sel=document.getElementById('f_category'); sel.innerHTML=CATEGORIES.map(c=>`<option>${c}</option>`).join('');
+  loadStatus(); loadEquipment(); loadRequests();
+}
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===t));
+  ['equipment','requests','setup'].forEach(x=>document.getElementById('tab-'+x).classList.toggle('hidden',x!==t));
+}
+
+// ---- Equipment ----
+let EQUIP=[];
+async function loadEquipment(){
+  const d = await (await fetch('/api/equipment')).json();
+  EQUIP = d.equipment||[];
+  document.getElementById('eqBody').innerHTML = EQUIP.map(e=>`
+    <tr>
+      <td>${e.image?`<img class="thumb" src="${e.image}" alt="">`:'<div class="thumb"></div>'}</td>
+      <td><b>${esc(e.name)}</b><div class="muted small">${esc(e.brand||'')}</div></td>
+      <td>${esc(e.category||'')}</td>
+      <td>${e.status==='available'?'<span class="tag" style="color:#1c7c4a;border-color:#a7d8bf">Available</span>':e.status==='hidden'?'<span class="tag">Hidden</span>':'<span class="tag" style="color:#b23b3b;border-color:#e2b4b4">Unavailable</span>'}</td>
+      <td>${e.featured?'★':''}</td>
+      <td><button class="btn btn-outline small" onclick='openEditor(${JSON.stringify(e.id)})'>Edit</button></td>
+    </tr>`).join('') || '<tr><td colspan="6" class="muted">No equipment yet. Click “Add Equipment”.</td></tr>';
+}
+
+let specRows=[];
+function renderSpecs(){
+  document.getElementById('specList').innerHTML = specRows.map((s,i)=>`
+    <div class="specrow"><input placeholder="Label (e.g. Capacity)" value="${esc(s.k)}" oninput="specRows[${i}].k=this.value">
+    <input placeholder="Value (e.g. 9,000 lb)" value="${esc(s.v)}" oninput="specRows[${i}].v=this.value">
+    <button class="btn btn-outline small" onclick="specRows.splice(${i},1);renderSpecs()">✕</button></div>`).join('');
+}
+function addSpec(){ specRows.push({k:'',v:''}); renderSpecs(); }
+
+function openEditor(id){
+  const e = id ? EQUIP.find(x=>x.id===id) : null;
+  document.getElementById('editorTitle').textContent = e?'Edit Equipment':'Add Equipment';
+  document.getElementById('editorErr').textContent='';
+  document.getElementById('f_id').value = e?e.id:'';
+  document.getElementById('f_name').value = e?e.name:'';
+  document.getElementById('f_category').value = e?e.category:CATEGORIES[0];
+  document.getElementById('f_brand').value = e?(e.brand||''):'';
+  document.getElementById('f_status').value = e?e.status:'available';
+  document.getElementById('f_featured').value = e&&e.featured?'true':'false';
+  document.getElementById('f_shortDesc').value = e?(e.shortDesc||''):'';
+  document.getElementById('f_description').value = e?(e.description||''):'';
+  document.getElementById('f_image').value = e?(e.image||''):'';
+  document.getElementById('f_day').value = e?(e.rates?.day||''):'';
+  document.getElementById('f_week').value = e?(e.rates?.week||''):'';
+  document.getElementById('f_month').value = e?(e.rates?.month||''):'';
+  document.getElementById('f_bookUrl').value = e?(e.bookUrl||''):'';
+  specRows = e&&Array.isArray(e.specs)?e.specs.map(s=>({k:s.k,v:s.v})):[];
+  renderSpecs();
+  document.getElementById('deleteBtn').style.display = e?'inline-block':'none';
+  document.getElementById('editorBackdrop').classList.add('show');
+}
+function closeEditor(){ document.getElementById('editorBackdrop').classList.remove('show'); }
+
+async function doSave(){
+  const body = {
+    id: document.getElementById('f_id').value||undefined,
+    name: document.getElementById('f_name').value.trim(),
+    category: document.getElementById('f_category').value,
+    brand: document.getElementById('f_brand').value.trim(),
+    status: document.getElementById('f_status').value,
+    featured: document.getElementById('f_featured').value==='true',
+    shortDesc: document.getElementById('f_shortDesc').value.trim(),
+    description: document.getElementById('f_description').value.trim(),
+    image: document.getElementById('f_image').value.trim(),
+    rates: {day:document.getElementById('f_day').value.trim(),week:document.getElementById('f_week').value.trim(),month:document.getElementById('f_month').value.trim()},
+    bookUrl: document.getElementById('f_bookUrl').value.trim(),
+    specs: specRows.filter(s=>s.k||s.v)
+  };
+  if(!body.name||!body.category){ document.getElementById('editorErr').textContent='Name and category are required.'; return; }
+  try{
+    const r = await api('/api/equipment',{method:'POST',headers:authHeaders(),body:JSON.stringify(body)});
+    const d = await r.json();
+    if(!r.ok){ document.getElementById('editorErr').textContent = d.error||'Save failed'; return; }
+    closeEditor(); loadEquipment();
+  }catch(e){ document.getElementById('editorErr').textContent=String(e); }
+}
+async function doDelete(){
+  const id = document.getElementById('f_id').value;
+  if(!id||!confirm('Delete this equipment?'))return;
+  try{
+    const r = await api('/api/equipment?id='+encodeURIComponent(id),{method:'DELETE',headers:authHeaders()});
+    if(r.ok){ closeEditor(); loadEquipment(); }
+  }catch(e){ document.getElementById('editorErr').textContent=String(e); }
+}
+
+// ---- Requests ----
+async function loadRequests(){
+  try{
+    const r = await api('/api/requests',{headers:authHeaders()});
+    const d = await r.json();
+    const list = d.requests||[];
+    document.getElementById('reqBody').innerHTML = list.map(x=>`
+      <tr style="${x.status==='handled'?'opacity:.55':''}">
+        <td class="small muted">${new Date(x.createdAt).toLocaleString()}</td>
+        <td><span class="tag ${x.type}">${x.type}</span></td>
+        <td><b>${esc(x.name||'')}</b><div class="small">${esc(x.phone||'')}${x.phone&&x.email?' · ':''}${esc(x.email||'')}</div></td>
+        <td class="small">${[x.equipment&&('Equip: '+esc(x.equipment)),x.dates&&('Dates: '+esc(x.dates)),x.location&&('To: '+esc(x.location)),x.message&&esc(x.message)].filter(Boolean).join('<br>')}</td>
+        <td><button class="btn btn-outline small" onclick='toggleReq(${JSON.stringify(x.id)},${JSON.stringify(x.status)})'>${x.status==='handled'?'Reopen':'Mark done'}</button></td>
+      </tr>`).join('') || '<tr><td colspan="5" class="muted">No requests yet.</td></tr>';
+  }catch(e){}
+}
+async function toggleReq(id,status){
+  try{ await api('/api/requests',{method:'PATCH',headers:authHeaders(),body:JSON.stringify({id,status:status==='handled'?'new':'handled'})}); loadRequests(); }catch(e){}
+}
+
+function renderSetup(){
+  const item=(ok,name,what)=>`<tr><td>${ok?'<span class="tag" style="color:#1c7c4a;border-color:#a7d8bf">Connected</span>':'<span class="tag" style="color:#b23b3b;border-color:#e2b4b4">Not set</span>'}</td><td><b>${name}</b></td><td class="small muted">${what}</td></tr>`;
+  document.getElementById('setupBody').innerHTML = `
+    <p class="small muted">Set these as Environment Variables in your Vercel project, then redeploy. Alerts route to <b>${esc(STATUS.notifyEmail||'')}</b> and <b>${esc(STATUS.notifySms||'')}</b>.</p>
+    <table><tbody>
+      ${item(STATUS.db,'Database (Upstash / Vercel KV)','KV_REST_API_URL + KV_REST_API_TOKEN (or UPSTASH_… equivalents)')}
+      ${item(STATUS.admin,'Admin password','ADMIN_PASSWORD')}
+      ${item(STATUS.email,'Email alerts (Resend)','RESEND_API_KEY (+ optional RESEND_FROM)')}
+      ${item(STATUS.sms,'SMS alerts (Twilio)','TWILIO_ACCOUNT_SID + TWILIO_AUTH_TOKEN + TWILIO_FROM')}
+    </tbody></table>`;
+}
+
+function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
+
+// boot
+if(TOKEN) showApp(); else loadStatusPublic();
+async function loadStatusPublic(){ try{ STATUS=await (await fetch('/api/status')).json(); }catch{} }

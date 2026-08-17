@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Equipment Fleet | Concord Rents — Michigan Heavy Equipment Rentals</title>
+<meta name="description" content="Browse Concord Rents' heavy equipment fleet — telehandlers, boom lifts, dozers, excavators, forklifts and more. Request a quote, check availability, or ask about delivery across Michigan." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2010%22%3E%3Crect%20width%3D%2210%22%20height%3D%2210%22%20fill%3D%22%23ffb100%22%2F%3E%3C%2Fsvg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--ink:#12243f;--ink-2:#182f4f;--amber:#ffb100;--amber-2:#ff8a00;--amber-ink:#1a1200;--paper:#f5f6f8;--card:#fff;--text:#14243f;--muted:#5b6b82;--line:#e4e7ec;--line-d:rgba(255,255,255,.12);--ring:rgba(255,177,0,.35);--shadow:0 1px 2px rgba(18,36,63,.06),0 8px 24px rgba(18,36,63,.08);--shadow-lg:0 24px 60px rgba(18,36,63,.28)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:'Inter',system-ui,Segoe UI,Arial,sans-serif;font-size:16px;line-height:1.6}
+  h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;margin:0}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-weight:600;font-size:.9rem;padding:.7em 1.15em;border:1px solid transparent;cursor:pointer}
+  .btn-amber{background:linear-gradient(180deg,var(--amber),var(--amber-2));color:var(--amber-ink)}
+  .btn-ghost{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+  .btn-outline{background:#fff;border-color:var(--line);color:var(--text)}
+  header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line-d)}
+  header .wrap{display:flex;align-items:center;gap:16px;min-height:66px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand .b{width:34px;height:34px;background:linear-gradient(180deg,var(--amber),var(--amber-2));display:grid;place-items:center;color:var(--amber-ink);font-family:'Oswald';font-weight:700;font-size:20px}
+  .brand b{font-family:'Oswald';font-size:1.2rem;letter-spacing:.04em}
+  .brand span{display:block;font-size:.58rem;letter-spacing:.22em;color:var(--amber);text-transform:uppercase;font-weight:700}
+  header .sp{margin-left:auto;display:flex;gap:10px;align-items:center}
+  .hero{background:var(--ink);color:#fff;padding:46px 0 40px;border-bottom:1px solid var(--line-d)}
+  .hero .eyebrow{font-family:'Oswald';text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;color:var(--amber-2)}
+  .hero h1{font-size:clamp(2rem,4.5vw,3.2rem);margin:8px 0 10px}
+  .hero p{color:#aab4c0;max-width:60ch;margin:0}
+  main{padding:38px 0 60px}
+  .catsec{margin-bottom:40px}
+  .catsec h2{font-size:1.5rem;margin-bottom:4px}
+  .catsec .cline{height:3px;width:54px;background:var(--amber);margin-bottom:18px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;transition:transform .15s,box-shadow .15s}
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  .card .ph{aspect-ratio:16/10;background:#e9edf1 center/cover no-repeat;position:relative}
+  .card .ph.ph-empty{display:grid;place-items:center;background:radial-gradient(120% 120% at 50% 0%,#2a3f61,#12243f);color:#8ea0b4;font-family:'Oswald';letter-spacing:.14em;font-size:.7rem;text-transform:uppercase}
+  .badge{position:absolute;top:10px;left:10px;font-family:'Oswald';font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;background:rgba(18,36,63,.8);color:#fff}
+  .badge.out{background:#b23b3b}
+  .card .bd{padding:15px 16px 16px;display:flex;flex-direction:column;flex:1}
+  .card .brand-t{font-family:'Oswald';font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-2)}
+  .card h3{font-size:1.12rem;margin:4px 0 6px}
+  .card p{color:var(--muted);font-size:.88rem;margin:0 0 12px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .chips span{font-size:.7rem;font-weight:600;color:var(--muted);background:#f1f4f8;border:1px solid var(--line);padding:3px 8px}
+  .card .acts{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+  .empty{background:#fff;border:1px dashed var(--line);padding:40px;text-align:center;color:var(--muted)}
+  footer{background:#0c1a30;color:#9aa5b2;padding:30px 0;text-align:center;font-size:.85rem}
+  footer a{color:var(--amber)}
+  /* modal */
+  .cr-modal{position:fixed;inset:0;background:rgba(18,36,63,.62);display:none;align-items:flex-start;justify-content:center;z-index:100;overflow:auto;padding:5vh 16px}
+  .cr-modal.show{display:flex}
+  .cr-modal-box{background:linear-gradient(180deg,#1c3355,#10203a);border:1px solid var(--line-d);max-width:560px;width:100%;padding:28px;position:relative;box-shadow:var(--shadow-lg)}
+  .cr-modal-box h3{color:#fff;margin:0 0 4px;font-size:1.3rem}
+  .cr-x{position:absolute;top:12px;right:12px;background:transparent;border:1px solid var(--line-d);color:#fff;width:34px;height:34px;cursor:pointer}
+  .cr-modal-box label{display:block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;color:#9aa5b2;margin:0 0 5px}
+  .cr-modal-box input,.cr-modal-box textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line-d);padding:11px 13px;color:#fff;font-family:inherit;font-size:.95rem}
+  .cr-modal-box input:focus,.cr-modal-box textarea:focus{outline:none;border-color:var(--amber-2);box-shadow:0 0 0 3px var(--ring)}
+  .cr-modal-box .row{margin-bottom:12px}.cr-modal-box .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}.cr-modal-box .two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><span class="b">C</span><span><b>CONCORD RENTS</b><span>Heavy Equipment · Michigan</span></span></a>
+    <div class="sp">
+      <button class="btn btn-amber" onclick="openReq('quote')">Request a Quote</button>
+      <a class="btn btn-ghost" href="tel:12486874515">248-687-4515</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">The Fleet</span>
+    <h1>Equipment Available for Rent</h1>
+    <p>Browse our heavy equipment fleet, delivered across all of Michigan. Found what you need? Request a quote, check availability, or ask about delivery to your job site — Carlton will get right back to you.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap" id="catalog"><p class="muted">Loading fleet…</p></div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Concord Rents · Madison Heights, MI · <a href="tel:12486874515">248-687-4515</a> · <a href="/">Home</a></div>
+</footer>
+
+<!-- REQUEST MODAL -->
+<div class="cr-modal" id="crModal" onclick="if(event.target===this)closeReq()">
+  <div class="cr-modal-box">
+    <button class="cr-x" onclick="closeReq()" aria-label="Close">✕</button>
+    <h3 id="crm_title">Request a Quote</h3>
+    <p id="crm_sub" style="color:#aab4c0;font-size:.9rem;margin:0 0 18px"></p>
+    <form id="crForm" onsubmit="return submitRequest(event)">
+      <input type="hidden" id="crm_type" name="type" value="quote" />
+      <div class="row two"><div><label>Name</label><input name="name" required placeholder="Your name" /></div><div><label>Phone</label><input name="phone" placeholder="Best number" /></div></div>
+      <div class="row"><label>Email</label><input type="email" name="email" placeholder="you@company.com" /></div>
+      <div class="row two"><div><label>Equipment</label><input name="equipment" id="crm_equip" placeholder="Machine" /></div><div><label>Dates</label><input name="dates" placeholder="e.g. Jun 3–10" /></div></div>
+      <div class="row"><label>Delivery location (city or ZIP)</label><input name="location" placeholder="e.g. Traverse City, MI" /></div>
+      <div class="row"><label>Details</label><textarea name="message" rows="2" placeholder="Anything else we should know?"></textarea></div>
+      <input type="text" name="company" style="position:absolute;left:-9999px" tabindex="-1" aria-hidden="true" />
+      <button class="btn btn-amber" type="submit" style="width:100%;justify-content:center">Send Request</button>
+      <p id="crm_status" style="font-size:.8rem;text-align:center;color:#aab4c0;margin:12px 0 0"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+const CATEGORY_ORDER = ['Telehandlers','Boom Lifts','Scissor Lifts','Bulldozers','Excavators','Wheel Loaders','Forklifts','Heavy Forklifts','Graders'];
+document.getElementById('yr').textContent = new Date().getFullYear();
+function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
+
+async function loadCatalog(){
+  var box = document.getElementById('catalog');
+  try{
+    var d = await (await fetch('/api/equipment')).json();
+    var items = (d.equipment||[]).slice().sort((a,b)=>(a.sortOrder||0)-(b.sortOrder||0));
+    if(!items.length){ box.innerHTML='<div class="empty">No equipment listed yet. Please call <a href="tel:12486874515">248-687-4515</a> for availability.</div>'; return; }
+    var byCat = {};
+    items.forEach(function(e){ (byCat[e.category]=byCat[e.category]||[]).push(e); });
+    var cats = Object.keys(byCat).sort((a,b)=>{ var i=CATEGORY_ORDER.indexOf(a),j=CATEGORY_ORDER.indexOf(b); return (i<0?99:i)-(j<0?99:j); });
+    box.innerHTML = cats.map(function(cat){
+      return '<div class="catsec"><h2>'+esc(cat)+'</h2><div class="cline"></div><div class="grid">'+
+        byCat[cat].map(cardHTML).join('')+'</div></div>';
+    }).join('');
+  }catch(e){ box.innerHTML='<div class="empty">Couldn\'t load the fleet. Call <a href="tel:12486874515">248-687-4515</a>.</div>'; }
+}
+function cardHTML(e){
+  var out = e.status==='unavailable';
+  var ph = e.image ? '<div class="ph" style="background-image:url(\''+esc(e.image)+'\')">' : '<div class="ph ph-empty">'+esc(e.category||'Equipment');
+  var badge = out ? '<span class="badge out">Currently Out</span>' : (e.featured?'<span class="badge">Featured</span>':'');
+  var chips = (e.specs||[]).slice(0,3).map(function(s){ return '<span>'+esc((s.k?s.k+': ':'')+s.v)+'</span>'; }).join('');
+  var acts = '<button class="btn btn-amber" onclick="openReq(\'availability\','+JSON.stringify(esc(e.name))+')">Check Availability</button>'+
+    (e.bookUrl?'<a class="btn btn-outline" href="'+esc(e.bookUrl)+'" target="_blank" rel="noopener">Reserve ›</a>':'');
+  return '<div class="card">'+ph+badge+'</div><div class="bd">'+
+    (e.brand?'<span class="brand-t">'+esc(e.brand)+'</span>':'')+
+    '<h3>'+esc(e.name)+'</h3>'+
+    (e.shortDesc?'<p>'+esc(e.shortDesc)+'</p>':'')+
+    (chips?'<div class="chips">'+chips+'</div>':'')+
+    '<div class="acts">'+acts+'</div></div></div>';
+}
+
+function openReq(type, equipment){
+  type = type || 'quote';
+  document.getElementById('crm_type').value = type;
+  var titles={quote:'Request a Quote',availability:'Check Availability',delivery:'Delivery to Your Location'};
+  var subs={quote:"Carlton will send pricing and availability.",availability:"We'll confirm availability for your dates.",delivery:"We'll confirm delivery to your location and cost."};
+  document.getElementById('crm_title').textContent=titles[type]||'Request';
+  document.getElementById('crm_sub').textContent=subs[type]||'';
+  document.getElementById('crm_equip').value=equipment||'';
+  document.getElementById('crm_status').textContent='';
+  document.getElementById('crModal').classList.add('show');
+  setTimeout(function(){var n=document.querySelector('#crForm [name=name]');if(n)n.focus();},60);
+}
+function closeReq(){ document.getElementById('crModal').classList.remove('show'); }
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeReq(); });
+
+async function submitRequest(ev){
+  ev.preventDefault();
+  var form=document.getElementById('crForm');
+  var data=Object.fromEntries(new FormData(form).entries());
+  var statusEl=document.getElementById('crm_status');
+  var btn=form.querySelector('button[type=submit]');
+  if(!data.name||(!data.phone&&!data.email)){ statusEl.style.color='#ffcaca'; statusEl.textContent='Please add your name and a phone or email.'; return false; }
+  btn.disabled=true; var t=btn.textContent; btn.textContent='Sending…';
+  try{
+    var r=await fetch('/api/requests',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    var d=await r.json();
+    if(r.ok){ form.reset(); statusEl.style.color='#8fe3a6'; statusEl.textContent='✓ Thanks! Carlton will get right back to you.'; }
+    else { statusEl.style.color='#ffcaca'; statusEl.textContent=(d&&d.error)||'Something went wrong — call 248-687-4515.'; }
+  }catch(e){ statusEl.style.color='#ffcaca'; statusEl.textContent='Network error — please call 248-687-4515.'; }
+  finally{ btn.disabled=false; btn.textContent=t; }
+  return false;
+}
+loadCatalog();
+</script>
+</body>
+</html>
