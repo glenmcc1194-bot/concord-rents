@@ -107,7 +107,13 @@
 
   <!-- SETUP -->
   <div id="tab-setup" class="hidden">
-    <h2 style="margin-bottom:12px">Setup Status</h2>
+    <h2 style="margin-bottom:12px">Settings</h2>
+    <div class="card">
+      <div class="row" style="max-width:360px"><label>Customer "Text About This" number</label><input id="set_sms" placeholder="248-794-3519" /></div>
+      <div class="flex"><button class="btn btn-amber" onclick="saveTextNumber()">Save number</button><span id="setMsg" class="small"></span></div>
+      <p class="small muted" style="margin:12px 0 0">This is the phone number that receives the one-tap texts from the equipment pages. Changing it takes effect immediately — no redeploy needed. (Requires the database to be connected.)</p>
+    </div>
+    <h2 style="margin:20px 0 12px">Configuration Status</h2>
     <div class="card" id="setupBody"></div>
   </div>
 </div>
@@ -179,7 +185,22 @@ function showApp(){
   document.getElementById('appView').classList.remove('hidden');
   document.getElementById('logoutBtn').classList.remove('hidden');
   const sel=document.getElementById('f_category'); sel.innerHTML=CATEGORIES.map(c=>`<option>${c}</option>`).join('');
-  loadStatus(); loadEquipment(); loadRequests();
+  loadStatus(); loadEquipment(); loadRequests(); loadTextNumber();
+}
+
+async function loadTextNumber(){
+  try{ const s = await (await fetch('/api/settings')).json(); document.getElementById('set_sms').value = s.smsNumber || ''; }catch(e){}
+}
+async function saveTextNumber(){
+  const v = document.getElementById('set_sms').value.trim();
+  const msg = document.getElementById('setMsg');
+  msg.style.color='var(--muted)'; msg.textContent='Saving…';
+  try{
+    const r = await api('/api/settings',{method:'POST',headers:authHeaders(),body:JSON.stringify({smsNumber:v})});
+    const d = await r.json();
+    if(r.ok){ msg.style.color='var(--ok)'; msg.textContent='✓ Saved: '+d.smsNumber; document.getElementById('set_sms').value=d.smsNumber; }
+    else { msg.style.color='var(--bad)'; msg.textContent=d.error||'Save failed'; }
+  }catch(e){ msg.style.color='var(--bad)'; msg.textContent=String(e); }
 }
 function switchTab(t){
   document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===t));

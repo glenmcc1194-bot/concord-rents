@@ -120,14 +120,16 @@
 
 <script>
 const CATEGORY_ORDER = ['Telehandlers','Boom Lifts','Scissor Lifts','Bulldozers','Excavators','Wheel Loaders','Forklifts','Heavy Forklifts','Graders'];
-const SMS_NUMBER = '+12487943519';
+var SMS_NUMBER = '+12487943519'; // default; overridden by the admin-set number from /api/settings
 document.getElementById('yr').textContent = new Date().getFullYear();
 function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
 
 async function loadCatalog(){
   var box = document.getElementById('catalog');
   try{
-    var d = await (await fetch('/api/equipment')).json();
+    var results = await Promise.all([fetch('/api/settings'), fetch('/api/equipment')]);
+    try{ var s = await results[0].json(); if(s && s.smsNumber) SMS_NUMBER = s.smsNumber; }catch(e){}
+    var d = await results[1].json();
     var items = (d.equipment||[]).slice().sort((a,b)=>(a.sortOrder||0)-(b.sortOrder||0));
     if(!items.length){ box.innerHTML='<div class="empty">No equipment listed yet. Please call <a href="tel:12486874515">248-687-4515</a> for availability.</div>'; return; }
     var byCat = {};
