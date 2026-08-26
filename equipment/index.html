@@ -149,7 +149,8 @@ function cardHTML(e){
   if(r.week) bits.push('<span><span class="amt">'+esc(r.week)+'</span> <span class="per">/week</span></span>');
   if(r.month) bits.push('<span><span class="amt">'+esc(r.month)+'</span> <span class="per">/month</span></span>');
   var price = bits.length ? '<div class="price">'+bits.join('<span class="sep">·</span>')+'</div>' : '<div class="price call">Call for pricing</div>';
-  var acts = '<button class="btn btn-amber" onclick="openReq(\'availability\','+JSON.stringify(esc(e.name))+')">Check Availability</button>'+
+  var nm = esc(e.name).replace(/'/g, "\\'");
+  var acts = '<button class="btn btn-amber" onclick="openReq(\'availability\',\''+nm+'\')">Check Availability</button>'+
     (e.bookUrl?'<a class="btn btn-outline" href="'+esc(e.bookUrl)+'" target="_blank" rel="noopener">Reserve ›</a>':'');
   return '<div class="card">'+ph+badge+'</div><div class="bd">'+
     (e.brand?'<span class="brand-t">'+esc(e.brand)+'</span>':'')+
