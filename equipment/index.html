@@ -149,8 +149,7 @@ function cardHTML(e){
   if(r.week) bits.push('<span><span class="amt">'+esc(r.week)+'</span> <span class="per">/week</span></span>');
   if(r.month) bits.push('<span><span class="amt">'+esc(r.month)+'</span> <span class="per">/month</span></span>');
   var price = bits.length ? '<div class="price">'+bits.join('<span class="sep">·</span>')+'</div>' : '<div class="price call">Call for pricing</div>';
-  var nm = esc(e.name).replace(/'/g, "\\'");
-  var acts = '<button class="btn btn-amber" onclick="openReq(\'availability\',\''+nm+'\')">Check Availability</button>'+
+  var acts = '<button class="btn btn-amber" data-avail="'+esc(e.name)+'">Check Availability</button>'+
     (e.bookUrl?'<a class="btn btn-outline" href="'+esc(e.bookUrl)+'" target="_blank" rel="noopener">Reserve ›</a>':'');
   return '<div class="card">'+ph+badge+'</div><div class="bd">'+
     (e.brand?'<span class="brand-t">'+esc(e.brand)+'</span>':'')+
@@ -175,6 +174,7 @@ function openReq(type, equipment){
 }
 function closeReq(){ document.getElementById('crModal').classList.remove('show'); }
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeReq(); });
+document.getElementById('catalog').addEventListener('click',function(ev){ var b=ev.target.closest('[data-avail]'); if(b){ openReq('availability', b.getAttribute('data-avail')); } });
 
 async function submitRequest(ev){
   ev.preventDefault();
