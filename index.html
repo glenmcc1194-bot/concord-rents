@@ -73,13 +73,13 @@
   .hero::after{content:"";position:absolute;inset:0;background:
      radial-gradient(1200px 600px at 78% -10%,rgba(255,177,0,.16),transparent 60%),
      linear-gradient(90deg,rgba(18,36,63,.96) 0%,rgba(18,36,63,.82) 42%,rgba(18,36,63,.42) 100%)}
-  .hero .wrap{position:relative;z-index:2;padding:clamp(56px,9vw,116px) 22px clamp(50px,7vw,92px)}
+  .hero .wrap{position:relative;z-index:2;padding:clamp(32px,5vw,60px) 22px clamp(22px,3vw,36px)}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
   .hero h1{font-size:clamp(2.5rem,6vw,4.6rem);letter-spacing:.005em}
   .hero h1 .hl{color:var(--amber)}
   .hero p.lead{font-size:clamp(1.05rem,1.6vw,1.28rem);color:#c9d2dd;max-width:44ch;margin:22px 0 30px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-  .hero-badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--line-d)}
+  .hero-badges{display:flex;gap:22px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--line-d)}
   .hero-badges .b{display:flex;align-items:center;gap:10px;color:#dbe2ea;font-size:.9rem;font-weight:600}
   .hero-badges .b svg{width:22px;height:22px;fill:var(--amber);flex:none}
   .hero-card{background:linear-gradient(180deg,rgba(38,58,90,.92),rgba(20,38,64,.92));border:1px solid var(--line-d);border-radius:0;padding:22px;box-shadow:var(--shadow-lg)}
@@ -98,7 +98,7 @@
   .strip .brands{display:flex;gap:26px;flex-wrap:wrap;align-items:center;justify-content:center}
   .strip .brands b{font-family:'Oswald';font-weight:600;letter-spacing:.05em;color:#e6ebf1;opacity:.9;font-size:1.02rem}
 
-  .rent-now{background:var(--ink);color:#fff;padding:clamp(48px,6vw,72px) 0 clamp(40px,5vw,60px)}
+  .rent-now{background:var(--ink);color:#fff;padding:clamp(10px,2vw,22px) 0 clamp(40px,5vw,60px);border-top:1px solid var(--line-d)}
   .rent-now .sec-head p{color:#aab4c0}
   .carousel-wrap{overflow:hidden}
   .carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 22px 16px;max-width:calc(var(--maxw) + 44px);margin:0 auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.25) transparent}
@@ -346,10 +346,10 @@
 
 <section class="rent-now">
   <div class="wrap">
-    <div class="sec-head" style="margin-bottom:24px">
+    <div class="sec-head" style="margin-bottom:16px">
       <span class="eyebrow" style="color:var(--amber)">In the Yard</span>
-      <h2>Available to Rent Right Now</h2>
-      <p>A rolling look at machines ready for your next job — swipe through and text us about any one.</p>
+      <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);margin:6px 0 6px">Available to Rent Right Now</h2>
+      <p style="font-size:.98rem">A rolling look at machines ready for your next job — swipe through and text us about any one.</p>
     </div>
   </div>
   <div class="carousel-wrap"><div class="carousel" id="rentCarousel"><p style="padding:0 22px;color:#8ea0b4">Loading fleet…</p></div></div>
