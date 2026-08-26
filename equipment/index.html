@@ -153,7 +153,7 @@ function cardHTML(e){
   if(r.month) bits.push('<span><span class="amt">'+esc(r.month)+'</span> <span class="per">/month</span></span>');
   var price = bits.length ? '<div class="price">'+bits.join('<span class="sep">·</span>')+'</div>' : '<div class="price call">Call for pricing</div>';
   var smsBody = encodeURIComponent("Hi Concord Rents, I'd like to check availability on the "+e.name+".");
-  var acts = '<a class="btn btn-amber" href="sms:'+SMS_NUMBER+'?body='+smsBody+'">Text About This</a>'+
+  var acts = '<a class="btn btn-amber" href="sms:'+SMS_NUMBER+'?body='+smsBody+'"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="flex:none"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 6v2h10V9zm0 4v2h7v-2z"/></svg> Text About This</a>'+
     '<button class="btn btn-outline" data-avail="'+esc(e.name)+'">Check Availability</button>'+
     (e.bookUrl?'<a class="btn btn-outline" href="'+esc(e.bookUrl)+'" target="_blank" rel="noopener">Reserve ›</a>':'');
   return '<div class="card">'+ph+badge+'</div><div class="bd">'+

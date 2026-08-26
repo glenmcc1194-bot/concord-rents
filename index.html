@@ -98,6 +98,20 @@
   .strip .brands{display:flex;gap:26px;flex-wrap:wrap;align-items:center;justify-content:center}
   .strip .brands b{font-family:'Oswald';font-weight:600;letter-spacing:.05em;color:#e6ebf1;opacity:.9;font-size:1.02rem}
 
+  .rent-now{background:var(--ink);color:#fff;padding:clamp(48px,6vw,72px) 0 clamp(40px,5vw,60px)}
+  .rent-now .sec-head p{color:#aab4c0}
+  .carousel-wrap{overflow:hidden}
+  .carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 22px 16px;max-width:calc(var(--maxw) + 44px);margin:0 auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.25) transparent}
+  .carousel::-webkit-scrollbar{height:8px}
+  .carousel::-webkit-scrollbar-thumb{background:rgba(255,255,255,.22);border-radius:0}
+  .c-card{flex:0 0 250px;scroll-snap-align:start;background:linear-gradient(180deg,#1c3355,#10203a);border:1px solid var(--line-d);display:flex;flex-direction:column;overflow:hidden}
+  .c-card .cph{aspect-ratio:16/11;background:#12243f center/cover no-repeat}
+  .c-card .cbd{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+  .c-card .cbrand{font-family:'Oswald';font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+  .c-card h4{font-family:'Oswald';text-transform:uppercase;font-size:.95rem;color:#fff;margin:3px 0 8px;line-height:1.15}
+  .c-card .cprice{font-family:'Oswald';font-size:.8rem;color:#c9d2dd;margin-bottom:10px}
+  .c-card .btn{margin-top:auto;justify-content:center;font-size:.82rem;padding:.6em 1em}
+
   section{padding:clamp(52px,7vw,88px) 0}
   .sec-head{max-width:70ch;margin-bottom:38px}
   .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
@@ -293,10 +307,11 @@
     <div class="hero-grid">
       <div>
         <span class="eyebrow">Madison Heights · Metro Detroit · Statewide</span>
-        <h1>Heavy Equipment,<br><span class="hl">Ready to Work</span><br>Across Michigan.</h1>
+        <h1>Heavy Equipment,<br><span class="hl">Rent It Today</span><br>Across Michigan.</h1>
         <p class="lead">Telehandlers, boom lifts, dozers, excavators and forklifts — well-maintained machines from brands you trust, delivered on time and priced to win your project.</p>
         <div class="hero-cta">
-          <button type="button" class="btn btn-amber btn-lg" onclick="openReq('quote')"><svg class="icon"><use href="#i-arrow"/></svg> Request a Quote</button>
+          <a class="btn btn-amber btn-lg" id="heroTextBtn" href="sms:+12487943519?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20equipment."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
+          <button type="button" class="btn btn-ghost btn-lg" onclick="openReq('quote')"><svg class="icon"><use href="#i-arrow"/></svg> Request a Quote</button>
           <a class="btn btn-ghost btn-lg" href="/equipment/"><svg class="icon"><use href="#i-truck"/></svg> Browse Equipment</a>
         </div>
         <div class="hero-badges">
@@ -328,6 +343,17 @@
     </div>
   </div>
 </div>
+
+<section class="rent-now">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:24px">
+      <span class="eyebrow" style="color:var(--amber)">In the Yard</span>
+      <h2>Available to Rent Right Now</h2>
+      <p>A rolling look at machines ready for your next job — swipe through and text us about any one.</p>
+    </div>
+  </div>
+  <div class="carousel-wrap"><div class="carousel" id="rentCarousel"><p style="padding:0 22px;color:#8ea0b4">Loading fleet…</p></div></div>
+</section>
 
 <section id="equipment">
   <div class="wrap">
@@ -652,6 +678,37 @@
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
   document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+
+  var SMS_NUMBER = '+12487943519';
+  function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
+
+  async function initTextAndFleet(){
+    try{ var s = await (await fetch('/api/settings')).json(); if(s && s.smsNumber) SMS_NUMBER = s.smsNumber; }catch(e){}
+    var hb = document.getElementById('heroTextBtn');
+    if(hb) hb.href = 'sms:'+SMS_NUMBER+'?body='+encodeURIComponent("Hi Concord Rents, I'd like to rent equipment.");
+    loadRentCarousel();
+  }
+  async function loadRentCarousel(){
+    var el = document.getElementById('rentCarousel');
+    if(!el) return;
+    try{
+      var d = await (await fetch('/api/equipment')).json();
+      var items = (d.equipment||[]).filter(function(e){ return e.status!=='unavailable' && e.image; }).slice(0,14);
+      if(!items.length){ el.innerHTML=''; return; }
+      el.innerHTML = items.map(function(e){
+        var r = e.rates||{};
+        var rate = r.day?(r.day+' /day'):(r.week?(r.week+' /week'):(r.month?(r.month+' /month'):'Call for pricing'));
+        var body = encodeURIComponent("Hi Concord Rents, I'd like to check availability on the "+e.name+".");
+        return '<div class="c-card"><div class="cph" style="background-image:url(\''+e.image.replace(/'/g,'%27')+'\')"></div><div class="cbd">'+
+          (e.brand?'<span class="cbrand">'+esc(e.brand)+'</span>':'')+
+          '<h4>'+esc(e.name)+'</h4>'+
+          '<div class="cprice">'+esc(rate)+'</div>'+
+          '<a class="btn btn-amber" href="sms:'+SMS_NUMBER+'?body='+body+'"><svg class="icon"><use href="#i-chat"/></svg> Text About This</a>'+
+          '</div></div>';
+      }).join('');
+    }catch(e){ el.innerHTML=''; }
+  }
+  initTextAndFleet();
 
   function openReq(type, equipment){
     type = type || 'quote';
