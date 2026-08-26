@@ -49,6 +49,10 @@
   .card p{color:var(--muted);font-size:.88rem;margin:0 0 12px}
   .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
   .chips span{font-size:.7rem;font-weight:600;color:var(--muted);background:#f1f4f8;border:1px solid var(--line);padding:3px 8px}
+  .price{font-family:'Oswald';font-weight:600;color:var(--ink);font-size:.92rem;letter-spacing:.01em;margin:0 0 14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+  .price .amt{color:var(--ink)}.price .per{color:var(--muted);font-family:'Inter';font-weight:500;font-size:.72rem}
+  .price .sep{color:var(--line)}
+  .price.call{color:var(--amber-2);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
   .card .acts{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
   .empty{background:#fff;border:1px dashed var(--line);padding:40px;text-align:center;color:var(--muted)}
   footer{background:#0c1a30;color:#9aa5b2;padding:30px 0;text-align:center;font-size:.85rem}
@@ -139,6 +143,12 @@ function cardHTML(e){
   var ph = e.image ? '<div class="ph" style="background-image:url(\''+esc(e.image)+'\')">' : '<div class="ph ph-empty">'+esc(e.category||'Equipment');
   var badge = out ? '<span class="badge out">Currently Out</span>' : (e.featured?'<span class="badge">Featured</span>':'');
   var chips = (e.specs||[]).slice(0,3).map(function(s){ return '<span>'+esc((s.k?s.k+': ':'')+s.v)+'</span>'; }).join('');
+  var r = e.rates||{};
+  var bits = [];
+  if(r.day) bits.push('<span><span class="amt">'+esc(r.day)+'</span> <span class="per">/day</span></span>');
+  if(r.week) bits.push('<span><span class="amt">'+esc(r.week)+'</span> <span class="per">/week</span></span>');
+  if(r.month) bits.push('<span><span class="amt">'+esc(r.month)+'</span> <span class="per">/month</span></span>');
+  var price = bits.length ? '<div class="price">'+bits.join('<span class="sep">·</span>')+'</div>' : '<div class="price call">Call for pricing</div>';
   var acts = '<button class="btn btn-amber" onclick="openReq(\'availability\','+JSON.stringify(esc(e.name))+')">Check Availability</button>'+
     (e.bookUrl?'<a class="btn btn-outline" href="'+esc(e.bookUrl)+'" target="_blank" rel="noopener">Reserve ›</a>':'');
   return '<div class="card">'+ph+badge+'</div><div class="bd">'+
@@ -146,6 +156,7 @@ function cardHTML(e){
     '<h3>'+esc(e.name)+'</h3>'+
     (e.shortDesc?'<p>'+esc(e.shortDesc)+'</p>':'')+
     (chips?'<div class="chips">'+chips+'</div>':'')+
+    price+
     '<div class="acts">'+acts+'</div></div></div>';
 }
 
