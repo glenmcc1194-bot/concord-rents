@@ -86,7 +86,7 @@
   <div class="wrap">
     <span class="eyebrow">The Fleet</span>
     <h1>Equipment Available for Rent</h1>
-    <p>Browse our heavy equipment fleet, delivered across all of Michigan. Found what you need? Request a quote, check availability, or ask about delivery to your job site — Carlton will get right back to you.</p>
+    <p>Browse our heavy equipment fleet, delivered across all of Michigan. Found what you need? Text about a specific machine, request a quote, or ask about delivery to your job site — Carlton will get right back to you.</p>
   </div>
 </section>
 
@@ -120,6 +120,7 @@
 
 <script>
 const CATEGORY_ORDER = ['Telehandlers','Boom Lifts','Scissor Lifts','Bulldozers','Excavators','Wheel Loaders','Forklifts','Heavy Forklifts','Graders'];
+const SMS_NUMBER = '+12487943519';
 document.getElementById('yr').textContent = new Date().getFullYear();
 function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
 
@@ -150,7 +151,7 @@ function cardHTML(e){
   if(r.month) bits.push('<span><span class="amt">'+esc(r.month)+'</span> <span class="per">/month</span></span>');
   var price = bits.length ? '<div class="price">'+bits.join('<span class="sep">·</span>')+'</div>' : '<div class="price call">Call for pricing</div>';
   var smsBody = encodeURIComponent("Hi Concord Rents, I'd like to check availability on the "+e.name+".");
-  var acts = '<a class="btn btn-amber" href="sms:+12487943519?body='+smsBody+'">Text About This</a>'+
+  var acts = '<a class="btn btn-amber" href="sms:'+SMS_NUMBER+'?body='+smsBody+'">Text About This</a>'+
     '<button class="btn btn-outline" data-avail="'+esc(e.name)+'">Check Availability</button>'+
     (e.bookUrl?'<a class="btn btn-outline" href="'+esc(e.bookUrl)+'" target="_blank" rel="noopener">Reserve ›</a>':'');
   return '<div class="card">'+ph+badge+'</div><div class="bd">'+
