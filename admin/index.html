@@ -134,7 +134,17 @@
     </div>
     <div class="row"><label>Short description</label><input id="f_shortDesc" placeholder="One-line summary shown on cards" /></div>
     <div class="row"><label>Full description</label><textarea id="f_description" rows="3"></textarea></div>
-    <div class="row"><label>Main image URL</label><input id="f_image" placeholder="https://…" /></div>
+    <div class="row"><label>Photo</label>
+      <div class="flex" style="align-items:flex-start;gap:12px">
+        <img id="imgPreview" alt="" style="width:120px;height:90px;object-fit:cover;border:1px solid var(--line);background:#eef1f5;display:none" />
+        <div style="flex:1;min-width:200px">
+          <input type="file" id="f_photo" accept="image/*" />
+          <div class="small muted" style="margin:6px 0">Upload from your phone or computer (auto-resized), or paste an image URL below.</div>
+          <input id="f_image" placeholder="https://… image URL" />
+          <span id="uploadMsg" class="small"></span>
+        </div>
+      </div>
+    </div>
     <div class="grid3">
       <div class="row"><label>Day rate</label><input id="f_day" placeholder="$" /></div>
       <div class="row"><label>Week rate</label><input id="f_week" placeholder="$" /></div>
@@ -245,6 +255,7 @@ function openEditor(id){
   document.getElementById('f_shortDesc').value = e?(e.shortDesc||''):'';
   document.getElementById('f_description').value = e?(e.description||''):'';
   document.getElementById('f_image').value = e?(e.image||''):'';
+  setImgPreview(e?(e.image||''):''); document.getElementById('uploadMsg').textContent='';
   document.getElementById('f_day').value = e?(e.rates?.day||''):'';
   document.getElementById('f_week').value = e?(e.rates?.week||''):'';
   document.getElementById('f_month').value = e?(e.rates?.month||''):'';
@@ -321,6 +332,36 @@ function renderSetup(){
 }
 
 function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
+
+// ---- Photo upload ----
+function setImgPreview(url){ var im=document.getElementById('imgPreview'); if(!im) return; if(url){ im.src=url; im.style.display='block'; } else { im.removeAttribute('src'); im.style.display='none'; } }
+function resizeToDataUrl(file, maxW, quality){
+  return new Promise(function(resolve,reject){
+    var img=new Image();
+    img.onload=function(){ var scale=Math.min(1, maxW/img.width); var w=Math.max(1,Math.round(img.width*scale)), h=Math.max(1,Math.round(img.height*scale)); var c=document.createElement('canvas'); c.width=w; c.height=h; c.getContext('2d').drawImage(img,0,0,w,h); resolve(c.toDataURL('image/jpeg',quality)); };
+    img.onerror=function(){ reject(new Error('Could not read that image file.')); };
+    img.src=URL.createObjectURL(file);
+  });
+}
+(function(){
+  var fp=document.getElementById('f_photo');
+  if(fp) fp.addEventListener('change', async function(){
+    var file=this.files&&this.files[0]; if(!file) return;
+    var msg=document.getElementById('uploadMsg'); msg.style.color='var(--muted)'; msg.textContent='Resizing…';
+    try{
+      var dataUrl=await resizeToDataUrl(file, 1400, 0.82);
+      setImgPreview(dataUrl); msg.textContent='Uploading…';
+      var slug=document.getElementById('f_name').value||'photo';
+      var r=await api('/api/upload',{method:'POST',headers:authHeaders(),body:JSON.stringify({dataUrl:dataUrl,slug:slug})});
+      var d=await r.json();
+      if(r.ok){ document.getElementById('f_image').value=d.url; setImgPreview(d.url); msg.style.color='var(--ok)'; msg.textContent='✓ Photo uploaded'; }
+      else { msg.style.color='var(--bad)'; msg.textContent=(d&&d.error)||'Upload failed'; }
+    }catch(e){ msg.style.color='var(--bad)'; msg.textContent=String(e.message||e); }
+    finally{ this.value=''; }
+  });
+  var fi=document.getElementById('f_image');
+  if(fi) fi.addEventListener('input', function(){ setImgPreview(this.value.trim()); });
+})();
 
 // boot
 if(TOKEN) showApp(); else loadStatusPublic();
