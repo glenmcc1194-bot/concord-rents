@@ -24,7 +24,8 @@
   header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line-d)}
   header .wrap{display:flex;align-items:center;gap:16px;min-height:66px}
   .brand{display:flex;align-items:center;gap:10px}
-  .brand .b{width:34px;height:34px;background:linear-gradient(180deg,var(--amber),var(--amber-2));display:grid;place-items:center;color:var(--amber-ink);font-family:'Oswald';font-weight:700;font-size:20px}
+  .brand .b{width:34px;height:34px;background:linear-gradient(180deg,var(--amber),var(--amber-2));display:grid;place-items:center;flex:none}
+  .brand .b svg{width:23px;height:23px;display:block;fill:var(--amber-ink)}
   .brand b{font-family:'Oswald';font-size:1.2rem;letter-spacing:.04em}
   .brand span{display:block;font-size:.58rem;letter-spacing:.22em;color:var(--amber);text-transform:uppercase;font-weight:700}
   header .sp{margin-left:auto;display:flex;gap:10px;align-items:center}
@@ -74,7 +75,7 @@
 <body>
 <header>
   <div class="wrap">
-    <a class="brand" href="/"><span class="b">C</span><span><b>CONCORD RENTS</b><span>Heavy Equipment · Michigan</span></span></a>
+    <a class="brand" href="/"><span class="b"><svg viewBox="37 113 316 285" aria-hidden="true"><path d="M116 116 37 250 38 255 41 258 53 280 64 297 85 335 99 357 99 359 108 372 116 387 276 387 339 278 249 278 245 285 233 298 220 306 207 310 182 309 173 306 162 300 151 290 146 283 140 271 137 256 138 239 140 235 140 231 146 219 160 204 173 196 188 192 207 192 215 194 228 200 242 212 249 223 339 223 338 220 316 185 310 173 276 116Z"/></svg></span><span><b>CONCORD RENTS</b><span>Heavy Equipment Rental</span></span></a>
     <div class="sp">
       <button class="btn btn-amber" onclick="openReq('quote')">Request a Quote</button>
       <a class="btn btn-ghost" href="tel:12486874515">248-687-4515</a>
