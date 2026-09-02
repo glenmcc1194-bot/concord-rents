@@ -54,6 +54,14 @@
   .modal{background:#fff;border:1px solid var(--line);max-width:720px;width:100%;padding:22px}
   .modal h2{margin-bottom:14px}
   .specrow{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-bottom:8px}
+  .photo-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+  .photo-grid:empty{display:none}
+  .pthumb{position:relative;width:104px;height:78px;border:1px solid var(--line);background:#eef1f5 center/cover no-repeat;border-radius:4px;overflow:hidden}
+  .pthumb.cover{border-color:var(--amber-2);box-shadow:0 0 0 2px var(--amber)}
+  .pthumb .pcov{position:absolute;top:0;left:0;font-family:'Oswald';font-size:.58rem;letter-spacing:.05em;text-transform:uppercase;background:var(--amber);color:var(--amber-ink);padding:2px 6px;border-radius:0 0 4px 0}
+  .pthumb .pset{position:absolute;bottom:0;left:0;right:0;font-size:.66rem;text-align:center;background:rgba(18,36,63,.72);color:#fff;padding:2px 0;cursor:pointer;border:0}
+  .pthumb .pset:hover{background:var(--amber-2);color:var(--amber-ink)}
+  .pthumb .prm{position:absolute;top:2px;right:2px;width:20px;height:20px;border:0;border-radius:3px;background:rgba(178,59,59,.9);color:#fff;cursor:pointer;font-size:12px;line-height:1;display:grid;place-items:center}
   .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
   .right{margin-left:auto}
   .note{background:#fff7e6;border:1px solid #f0d59a;padding:10px 12px;font-size:.85rem;margin-bottom:14px}
@@ -134,16 +142,15 @@
     </div>
     <div class="row"><label>Short description</label><input id="f_shortDesc" placeholder="One-line summary shown on cards" /></div>
     <div class="row"><label>Full description</label><textarea id="f_description" rows="3"></textarea></div>
-    <div class="row"><label>Photo</label>
-      <div class="flex" style="align-items:flex-start;gap:12px">
-        <img id="imgPreview" alt="" style="width:120px;height:90px;object-fit:cover;border:1px solid var(--line);background:#eef1f5;display:none" />
-        <div style="flex:1;min-width:200px">
-          <input type="file" id="f_photo" accept="image/*" />
-          <div class="small muted" style="margin:6px 0">Upload from your phone or computer (auto-resized), or paste an image URL below.</div>
-          <input id="f_image" placeholder="https://… image URL" />
-          <span id="uploadMsg" class="small"></span>
-        </div>
+    <div class="row"><label>Photos</label>
+      <div id="photoGrid" class="photo-grid"></div>
+      <input type="file" id="f_photo" accept="image/*" multiple />
+      <div class="small muted" style="margin:6px 0">Upload one or more photos (auto-resized). Click <b>Set cover</b> to choose the main image shown on the site. Or paste a URL to add one.</div>
+      <div class="flex" style="gap:6px">
+        <input id="f_addurl" placeholder="https://… image URL" style="flex:1" />
+        <button class="btn btn-outline small" type="button" onclick="addUrlPhoto()">Add URL</button>
       </div>
+      <span id="uploadMsg" class="small"></span>
     </div>
     <div class="grid3">
       <div class="row"><label>Day rate</label><input id="f_day" placeholder="$" /></div>
@@ -254,8 +261,9 @@ function openEditor(id){
   document.getElementById('f_featured').value = e&&e.featured?'true':'false';
   document.getElementById('f_shortDesc').value = e?(e.shortDesc||''):'';
   document.getElementById('f_description').value = e?(e.description||''):'';
-  document.getElementById('f_image').value = e?(e.image||''):'';
-  setImgPreview(e?(e.image||''):''); document.getElementById('uploadMsg').textContent='';
+  galleryUrls = e && Array.isArray(e.gallery) && e.gallery.length ? e.gallery.slice() : (e && e.image ? [e.image] : []);
+  coverUrl = e ? (e.image || galleryUrls[0] || '') : '';
+  renderPhotoGrid(); document.getElementById('uploadMsg').textContent=''; document.getElementById('f_addurl').value='';
   document.getElementById('f_day').value = e?(e.rates?.day||''):'';
   document.getElementById('f_week').value = e?(e.rates?.week||''):'';
   document.getElementById('f_month').value = e?(e.rates?.month||''):'';
@@ -277,7 +285,8 @@ async function doSave(){
     featured: document.getElementById('f_featured').value==='true',
     shortDesc: document.getElementById('f_shortDesc').value.trim(),
     description: document.getElementById('f_description').value.trim(),
-    image: document.getElementById('f_image').value.trim(),
+    image: coverUrl,
+    gallery: galleryUrls,
     rates: {day:document.getElementById('f_day').value.trim(),week:document.getElementById('f_week').value.trim(),month:document.getElementById('f_month').value.trim()},
     bookUrl: document.getElementById('f_bookUrl').value.trim(),
     specs: specRows.filter(s=>s.k||s.v)
@@ -333,8 +342,23 @@ function renderSetup(){
 
 function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
 
-// ---- Photo upload ----
-function setImgPreview(url){ var im=document.getElementById('imgPreview'); if(!im) return; if(url){ im.src=url; im.style.display='block'; } else { im.removeAttribute('src'); im.style.display='none'; } }
+// ---- Photos (multiple + cover) ----
+let galleryUrls=[]; let coverUrl='';
+function renderPhotoGrid(){
+  var g=document.getElementById('photoGrid'); if(!g) return;
+  g.innerHTML = galleryUrls.map(function(u){
+    var isCover=(u===coverUrl);
+    return '<div class="pthumb'+(isCover?' cover':'')+'" style="background-image:url(\''+esc(u)+'\')">'+
+      (isCover?'<span class="pcov">★ Cover</span>':'')+
+      '<button type="button" class="prm" title="Remove" onclick='+"'"+'removePhoto('+JSON.stringify(u)+')'+"'"+'>✕</button>'+
+      (isCover?'':'<button type="button" class="pset" onclick='+"'"+'setCover('+JSON.stringify(u)+')'+"'"+'>Set cover</button>')+
+      '</div>';
+  }).join('');
+}
+function addPhoto(url){ url=String(url||'').trim(); if(!url) return; if(galleryUrls.indexOf(url)<0) galleryUrls.push(url); if(!coverUrl) coverUrl=galleryUrls[0]; renderPhotoGrid(); }
+function removePhoto(url){ galleryUrls=galleryUrls.filter(function(u){return u!==url;}); if(coverUrl===url) coverUrl=galleryUrls[0]||''; renderPhotoGrid(); }
+function setCover(url){ coverUrl=url; renderPhotoGrid(); }
+function addUrlPhoto(){ var el=document.getElementById('f_addurl'); var v=el.value.trim(); if(v){ addPhoto(v); el.value=''; } }
 function resizeToDataUrl(file, maxW, quality){
   return new Promise(function(resolve,reject){
     var img=new Image();
@@ -346,21 +370,21 @@ function resizeToDataUrl(file, maxW, quality){
 (function(){
   var fp=document.getElementById('f_photo');
   if(fp) fp.addEventListener('change', async function(){
-    var file=this.files&&this.files[0]; if(!file) return;
-    var msg=document.getElementById('uploadMsg'); msg.style.color='var(--muted)'; msg.textContent='Resizing…';
-    try{
-      var dataUrl=await resizeToDataUrl(file, 1400, 0.82);
-      setImgPreview(dataUrl); msg.textContent='Uploading…';
-      var slug=document.getElementById('f_name').value||'photo';
-      var r=await api('/api/upload',{method:'POST',headers:authHeaders(),body:JSON.stringify({dataUrl:dataUrl,slug:slug})});
-      var d=await r.json();
-      if(r.ok){ document.getElementById('f_image').value=d.url; setImgPreview(d.url); msg.style.color='var(--ok)'; msg.textContent='✓ Photo uploaded'; }
-      else { msg.style.color='var(--bad)'; msg.textContent=(d&&d.error)||'Upload failed'; }
-    }catch(e){ msg.style.color='var(--bad)'; msg.textContent=String(e.message||e); }
-    finally{ this.value=''; }
+    var files=this.files?Array.prototype.slice.call(this.files):[]; if(!files.length) return;
+    var msg=document.getElementById('uploadMsg'); var slug=document.getElementById('f_name').value||'photo'; var done=0, fail=0;
+    for(var i=0;i<files.length;i++){
+      msg.style.color='var(--muted)'; msg.textContent='Uploading '+(i+1)+' of '+files.length+'…';
+      try{
+        var dataUrl=await resizeToDataUrl(files[i], 1400, 0.82);
+        var r=await api('/api/upload',{method:'POST',headers:authHeaders(),body:JSON.stringify({dataUrl:dataUrl,slug:slug})});
+        var d=await r.json();
+        if(r.ok){ addPhoto(d.url); done++; } else { fail++; }
+      }catch(e){ fail++; }
+    }
+    msg.style.color=fail?'var(--bad)':'var(--ok)';
+    msg.textContent='✓ '+done+' photo'+(done===1?'':'s')+' added'+(fail?(' · '+fail+' failed'):'');
+    this.value='';
   });
-  var fi=document.getElementById('f_image');
-  if(fi) fi.addEventListener('input', function(){ setImgPreview(this.value.trim()); });
 })();
 
 // boot
