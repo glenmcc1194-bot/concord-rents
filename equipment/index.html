@@ -33,7 +33,7 @@
   .hero h1{font-size:clamp(2rem,4.5vw,3.2rem);margin:8px 0 10px}
   .hero p{color:#aab4c0;max-width:60ch;margin:0}
   main{padding:38px 0 60px}
-  .catsec{margin-bottom:40px}
+  .catsec{margin-bottom:40px;scroll-margin-top:84px}
   .catsec h2{font-size:1.5rem;margin-bottom:4px}
   .catsec .cline{height:3px;width:54px;background:var(--amber);margin-bottom:18px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -123,6 +123,7 @@ const CATEGORY_ORDER = ['Telehandlers','Boom Lifts','Scissor Lifts','Bulldozers'
 var SMS_NUMBER = '+12487943519'; // default; overridden by the admin-set number from /api/settings
 document.getElementById('yr').textContent = new Date().getFullYear();
 function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
+function catSlug(c){ return String(c).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
 
 async function loadCatalog(){
   var box = document.getElementById('catalog');
@@ -136,9 +137,10 @@ async function loadCatalog(){
     items.forEach(function(e){ (byCat[e.category]=byCat[e.category]||[]).push(e); });
     var cats = Object.keys(byCat).sort((a,b)=>{ var i=CATEGORY_ORDER.indexOf(a),j=CATEGORY_ORDER.indexOf(b); return (i<0?99:i)-(j<0?99:j); });
     box.innerHTML = cats.map(function(cat){
-      return '<div class="catsec"><h2>'+esc(cat)+'</h2><div class="cline"></div><div class="grid">'+
+      return '<div class="catsec" id="'+catSlug(cat)+'"><h2>'+esc(cat)+'</h2><div class="cline"></div><div class="grid">'+
         byCat[cat].map(cardHTML).join('')+'</div></div>';
     }).join('');
+    if(location.hash){ var tgt=document.getElementById(decodeURIComponent(location.hash.slice(1))); if(tgt) setTimeout(function(){ tgt.scrollIntoView({block:'start'}); },50); }
   }catch(e){ box.innerHTML='<div class="empty">Couldn\'t load the fleet. Call <a href="tel:12486874515">248-687-4515</a>.</div>'; }
 }
 function cardHTML(e){

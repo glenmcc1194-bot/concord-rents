@@ -47,13 +47,14 @@
   .btn-lg{padding:1.05em 1.7em;font-size:1.02rem}
   .icon{width:1.1em;height:1.1em;fill:currentColor;flex:none}
 
-  .util{background:var(--ink);color:#cfd6df;font-size:.82rem;border-bottom:1px solid var(--line-d)}
-  .util .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px;flex-wrap:wrap}
-  .util a{color:#e7ecf2;font-weight:600}
-  .util .u-left{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
-  .util .dot{display:inline-flex;align-items:center;gap:.4em}
-  .util .dot svg{width:15px;height:15px;fill:var(--amber)}
-  .util .u-flag{color:var(--amber);font-weight:700;letter-spacing:.04em;font-family:'Oswald',sans-serif;text-transform:uppercase}
+  .util{background:var(--ink);color:#cfd6df;font-size:.85rem;border-bottom:1px solid var(--line-d)}
+  .util .wrap{display:flex;align-items:center;justify-content:center;gap:22px;min-height:42px}
+  .util a{display:inline-flex;align-items:center;gap:.45em;color:#e7ecf2;font-weight:600;white-space:nowrap}
+  .util .u-cta{color:var(--amber);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em}
+  .util .u-cta svg{width:16px;height:16px;fill:var(--amber)}
+  .util .u-call svg{width:14px;height:14px;fill:var(--amber)}
+  .util .u-call:hover,.util .u-cta:hover{color:#fff}
+  .util .u-cta:hover svg,.util .u-call:hover svg{fill:#fff}
 
   header.site{position:sticky;top:0;z-index:50;background:rgba(18,36,63,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
   header.site .wrap{display:flex;align-items:center;gap:20px;min-height:70px}
@@ -237,7 +238,6 @@
     .vp-grid{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr}
     form.qf .two{grid-template-columns:1fr}
-    .util .u-left{gap:14px}
   }
 </style>
 </head>
@@ -271,14 +271,8 @@
 
 <div class="util">
   <div class="wrap">
-    <div class="u-left">
-      <span class="u-flag">★ Serving All of Michigan</span>
-      <a class="dot" href="tel:12486874515"><svg><use href="#i-phone"/></svg> 248-687-4515</a>
-      <span class="dot"><svg><use href="#i-clock"/></svg> Mon–Fri, 9AM–5PM</span>
-    </div>
-    <div class="u-right">
-      <a class="dot" href="mailto:ch@concord-equipment.com"><svg><use href="#i-mail"/></svg> Email us</a>
-    </div>
+    <a class="u-cta" id="utilTextBtn" href="sms:+12487943519?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20equipment."><svg><use href="#i-chat"/></svg> Text Us Now</a>
+    <a class="u-call" href="tel:12486874515"><svg><use href="#i-phone"/></svg> 248-687-4515</a>
   </div>
 </div>
 
@@ -324,10 +318,10 @@
         <h3>Rent by Category</h3>
         <div class="sub">Jump straight to the machine you need.</div>
         <div class="quick-list">
-          <a href="/equipment/"><span class="ic"><svg><use href="#e-telehandler"/></svg></span> Telehandlers <span class="go">›</span></a>
-          <a href="/equipment/"><span class="ic"><svg><use href="#e-boom"/></svg></span> Boom Lifts <span class="go">›</span></a>
-          <a href="/equipment/"><span class="ic"><svg><use href="#e-dozer"/></svg></span> Bulldozers <span class="go">›</span></a>
-          <a href="/equipment/"><span class="ic"><svg><use href="#e-heavyfork"/></svg></span> Heavy Forklifts <span class="go">›</span></a>
+          <a href="/equipment/#telehandlers"><span class="ic"><svg><use href="#e-telehandler"/></svg></span> Telehandlers <span class="go">›</span></a>
+          <a href="/equipment/#boom-lifts"><span class="ic"><svg><use href="#e-boom"/></svg></span> Boom Lifts <span class="go">›</span></a>
+          <a href="/equipment/#bulldozers"><span class="ic"><svg><use href="#e-dozer"/></svg></span> Bulldozers <span class="go">›</span></a>
+          <a href="/equipment/#heavy-forklifts"><span class="ic"><svg><use href="#e-heavyfork"/></svg></span> Heavy Forklifts <span class="go">›</span></a>
           <a href="/equipment/"><span class="ic"><svg><use href="#i-arrow"/></svg></span> View Full Fleet <span class="go">›</span></a>
         </div>
       </aside>
@@ -363,55 +357,55 @@
       <p>Nine equipment categories, real photos of our fleet, and a clean path to reserve. Browse the full catalog and request a quote or availability in seconds.</p>
     </div>
     <div class="cat-grid">
-      <a class="cat" href="/equipment/">
+      <a class="cat" href="/equipment/#telehandlers">
         <div class="ph" style="background-image:url('/img/cat-telehandlers.jpg')">
           <span class="badge"><svg><use href="#e-telehandler"/></svg></span><span class="cap">6K – 10K lb · up to 56 ft</span>
         </div>
         <div class="body"><h3>Telehandlers</h3><p>Reach forklifts for lifting and placing loads at height on site.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
-      <a class="cat" href="/equipment/">
+      <a class="cat" href="/equipment/#boom-lifts">
         <div class="ph" style="background-image:url('/img/cat-boom.jpg')">
           <span class="badge"><svg><use href="#e-boom"/></svg></span><span class="cap">Articulating & straight</span>
         </div>
         <div class="body"><h3>Boom Lifts</h3><p>Elevated access for maintenance, install and hard-to-reach work.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
-      <a class="cat" href="/equipment/">
+      <a class="cat" href="/equipment/#bulldozers">
         <div class="ph" style="background-image:url('/img/cat-bulldozers.jpg')">
           <span class="badge"><svg><use href="#e-dozer"/></svg></span><span class="cap">Grading & pushing</span>
         </div>
         <div class="body"><h3>Bulldozers</h3><p>Move earth, clear sites and grade with dependable dozer power.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
-      <a class="cat" href="/equipment/">
+      <a class="cat" href="/equipment/#excavators">
         <div class="ph" style="background-image:url('/img/cat-excavators.jpg')">
           <span class="badge"><svg><use href="#e-excavator"/></svg></span><span class="cap">Digging & trenching</span>
         </div>
         <div class="body"><h3>Excavators</h3><p>Dig footings, trenches and utilities with precision and reach.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
-      <a class="cat" href="/equipment/">
+      <a class="cat" href="/equipment/#heavy-forklifts">
         <div class="ph" style="background-image:url('/img/cat-heavyfork.jpg')">
           <span class="badge"><svg><use href="#e-heavyfork"/></svg></span><span class="cap">Up to 120,000 lb</span>
         </div>
         <div class="body"><h3>Heavy Forklifts</h3><p>High-capacity forklifts for industrial loads and steel handling.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
-      <a class="cat" href="/equipment/">
+      <a class="cat" href="/equipment/#forklifts">
         <div class="ph" style="background-image:url('/img/cat-forklifts.jpg')">
           <span class="badge"><svg><use href="#e-forklift"/></svg></span><span class="cap">Warehouse & yard</span>
         </div>
         <div class="body"><h3>Forklifts</h3><p>Standard-capacity forklifts for material handling and logistics.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
-      <a class="cat" href="/equipment/">
+      <a class="cat" href="/equipment/#scissor-lifts">
         <div class="ph" style="background-image:url('/img/cat-scissor.jpg')">
           <span class="badge"><svg><use href="#e-scissor"/></svg></span><span class="cap">Vertical platform</span>
         </div>
         <div class="body"><h3>Scissor Lifts</h3><p>Stable elevated platforms for indoor and outdoor access work.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
-      <a class="cat" href="/equipment/">
+      <a class="cat" href="/equipment/#graders">
         <div class="ph" style="background-image:url('/img/cat-graders.jpg')">
           <span class="badge"><svg><use href="#e-grader"/></svg></span><span class="cap">Precision grading</span>
         </div>
         <div class="body"><h3>Graders</h3><p>Fine-grade roads, pads and lots to spec with motor graders.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
-      <a class="cat model" href="/equipment/">
+      <a class="cat model" href="/equipment/#wheel-loaders">
         <div class="ph">
           <svg class="big" viewBox="0 0 64 64"><use href="#e-loader"/></svg>
           <span class="badge"><svg><use href="#e-loader"/></svg></span><span class="cap">Loading & hauling</span>
@@ -684,8 +678,11 @@
 
   async function initTextAndFleet(){
     try{ var s = await (await fetch('/api/settings')).json(); if(s && s.smsNumber) SMS_NUMBER = s.smsNumber; }catch(e){}
+    var body = encodeURIComponent("Hi Concord Rents, I'd like to rent equipment.");
     var hb = document.getElementById('heroTextBtn');
-    if(hb) hb.href = 'sms:'+SMS_NUMBER+'?body='+encodeURIComponent("Hi Concord Rents, I'd like to rent equipment.");
+    if(hb) hb.href = 'sms:'+SMS_NUMBER+'?body='+body;
+    var ub = document.getElementById('utilTextBtn');
+    if(ub) ub.href = 'sms:'+SMS_NUMBER+'?body='+body;
     loadRentCarousel();
   }
   async function loadRentCarousel(){
