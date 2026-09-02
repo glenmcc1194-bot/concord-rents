@@ -325,3 +325,6 @@ function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','
 // boot
 if(TOKEN) showApp(); else loadStatusPublic();
 async function loadStatusPublic(){ try{ STATUS=await (await fetch('/api/status')).json(); }catch{} }
+</script>
+</body>
+</html>
