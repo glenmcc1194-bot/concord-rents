@@ -153,7 +153,7 @@
 
 <script>
 const CATEGORY_ORDER = ['Telehandlers','Boom Lifts','Scissor Lifts','Bulldozers','Excavators','Wheel Loaders','Forklifts','Heavy Forklifts','Graders'];
-var SMS_NUMBER = '+12487943519'; // default; overridden by the admin-set number from /api/settings
+var SMS_NUMBER = '+12486874515'; // default; overridden by the admin-set number from /api/settings
 document.getElementById('yr').textContent = new Date().getFullYear();
 function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
 function catSlug(c){ return String(c).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }

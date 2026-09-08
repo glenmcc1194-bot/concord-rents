@@ -1,7 +1,7 @@
 import { getSettings, saveSettings } from '../lib/store.js';
 import { isAuthed } from '../lib/auth.js';
 
-const DEFAULT_SMS = '+12487943519';
+const DEFAULT_SMS = '+12486874515';
 
 // Normalize a user-typed phone number to an sms:-friendly form (E.164-ish, US-aware).
 function normalizePhone(input) {
