@@ -6,6 +6,17 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242638402"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18242638402');</script>
+<!-- Concord Ads conversion tracking -->
+<script>
+  window.crTrack=function(id){try{if(typeof gtag==='function')gtag('event','conversion',{send_to:id});}catch(e){}};
+  window.CR_CONV={form:'AW-18242638402/2DlKCMikvu4cEMKk4vpD',text:'AW-18242638402/RMi7CMukvu4cEMKk4vpD',call:'AW-18242638402/4mQbCM6kvu4cEMKk4vpD'};
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest?ev.target.closest('a[href^="sms:"],a[href^="tel:"]'):null; if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(h.slice(0,4)==='sms:') crTrack(CR_CONV.text);
+    else if(h.slice(0,4)==='tel:') crTrack(CR_CONV.call);
+  },true);
+</script>
 <title>Concord Rents | Heavy Equipment Rentals Across Michigan | Madison Heights, MI</title>
 <meta name="description" content="Concord Rents delivers telehandlers, boom lifts, bulldozers, excavators, forklifts and more across all of Michigan. Well-maintained fleet, flexible daily/weekly/monthly terms, on-time delivery. Call or text 248-687-4515." />
 <meta name="theme-color" content="#12243f" />
@@ -745,6 +756,7 @@
       var d = await r.json();
       if(r.ok){
         form.reset();
+        if(window.crTrack) crTrack(CR_CONV.form);
         if(statusEl){ statusEl.style.color='#8fe3a6'; statusEl.textContent='✓ Thanks! Carlton will get right back to you.'; }
       } else {
         if(statusEl){ statusEl.style.color='#ffcaca'; statusEl.textContent=(d && d.error) || 'Something went wrong — please call 248-687-4515.'; }

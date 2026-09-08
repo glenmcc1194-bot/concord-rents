@@ -6,6 +6,17 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242638402"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18242638402');</script>
+<!-- Concord Ads conversion tracking -->
+<script>
+  window.crTrack=function(id){try{if(typeof gtag==='function')gtag('event','conversion',{send_to:id});}catch(e){}};
+  window.CR_CONV={form:'AW-18242638402/2DlKCMikvu4cEMKk4vpD',text:'AW-18242638402/RMi7CMukvu4cEMKk4vpD',call:'AW-18242638402/4mQbCM6kvu4cEMKk4vpD'};
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest?ev.target.closest('a[href^="sms:"],a[href^="tel:"]'):null; if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(h.slice(0,4)==='sms:') crTrack(CR_CONV.text);
+    else if(h.slice(0,4)==='tel:') crTrack(CR_CONV.call);
+  },true);
+</script>
 <title>Equipment Fleet | Concord Rents — Michigan Heavy Equipment Rentals</title>
 <meta name="description" content="Browse Concord Rents' heavy equipment fleet — telehandlers, boom lifts, dozers, excavators, forklifts and more. Request a quote, check availability, or ask about delivery across Michigan." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2010%22%3E%3Crect%20width%3D%2210%22%20height%3D%2210%22%20fill%3D%22%23ffb100%22%2F%3E%3C%2Fsvg%3E" />
@@ -232,7 +243,7 @@ async function submitRequest(ev){
   try{
     var r=await fetch('/api/requests',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
     var d=await r.json();
-    if(r.ok){ form.reset(); statusEl.style.color='#8fe3a6'; statusEl.textContent='✓ Thanks! Carlton will get right back to you.'; }
+    if(r.ok){ form.reset(); if(window.crTrack) crTrack(CR_CONV.form); statusEl.style.color='#8fe3a6'; statusEl.textContent='✓ Thanks! Carlton will get right back to you.'; }
     else { statusEl.style.color='#ffcaca'; statusEl.textContent=(d&&d.error)||'Something went wrong — call 248-687-4515.'; }
   }catch(e){ statusEl.style.color='#ffcaca'; statusEl.textContent='Network error — please call 248-687-4515.'; }
   finally{ btn.disabled=false; btn.textContent=t; }
