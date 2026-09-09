@@ -23,17 +23,17 @@
 <meta property="og:title" content="Concord Rents | Heavy Equipment Rentals Across Michigan" />
 <meta property="og:description" content="Telehandlers, boom lifts, dozers, excavators, forklifts & more — delivered across Michigan. Call or text 248-687-4515." />
 <meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2237%20113%20316%20285%22%3E%3Cpath%20fill%3D%22%23ffb100%22%20d%3D%22M116%20116%2037%20250%2038%20255%2041%20258%2053%20280%2064%20297%2085%20335%2099%20357%2099%20359%20108%20372%20116%20387%20276%20387%20339%20278%20249%20278%20245%20285%20233%20298%20220%20306%20207%20310%20182%20309%20173%20306%20162%20300%20151%20290%20146%20283%20140%20271%20137%20256%20138%20239%20140%20235%20140%20231%20146%20219%20160%20204%20173%20196%20188%20192%20207%20192%20215%20194%20228%20200%20242%20212%20249%20223%20339%20223%20338%20220%20316%20185%20310%20173%20276%20116Z%22%2F%3E%3C%2Fsvg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2237%20113%20316%20285%22%3E%3Cpath%20fill%3D%22%2312243f%22%20d%3D%22M116%20116%2037%20250%2038%20255%2041%20258%2053%20280%2064%20297%2085%20335%2099%20357%2099%20359%20108%20372%20116%20387%20276%20387%20339%20278%20249%20278%20245%20285%20233%20298%20220%20306%20207%20310%20182%20309%20173%20306%20162%20300%20151%20290%20146%20283%20140%20271%20137%20256%20138%20239%20140%20235%20140%20231%20146%20219%20160%20204%20173%20196%20188%20192%20207%20192%20215%20194%20228%20200%20242%20212%20249%20223%20339%20223%20338%20220%20316%20185%20310%20173%20276%20116Z%22%2F%3E%3C%2Fsvg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root{
     --ink:#12243f; --ink-2:#182f4f; --steel:#1d3454; --steel-2:#274268;
-    --amber:#2f80d8; --amber-2:#1c60ad; --amber-ink:#ffffff;
+    --amber:#274268; --amber-2:#1d3454; --amber-ink:#ffffff;
     --paper:#f5f6f8; --card:#ffffff; --text:#14243f; --muted:#5b6b82;
     --line:#e4e7ec; --line-d:rgba(255,255,255,.12);
-    --ring:rgba(47,128,216,.35);
+    --ring:rgba(39,66,104,.35);
     --maxw:1200px;
     --shadow:0 1px 2px rgba(18,36,63,.06),0 8px 24px rgba(18,36,63,.08);
     --shadow-lg:0 24px 60px rgba(18,36,63,.28);
@@ -51,9 +51,10 @@
   img{max-width:100%;display:block}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
   .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-weight:600;font-size:.78rem;color:var(--amber-2)}
+  .hero .eyebrow{color:#dbe4f0}
   .btn{display:inline-flex;align-items:center;gap:.55em;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:.95rem;padding:.85em 1.4em;border-radius:0;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease;white-space:nowrap}
   .btn:hover{transform:translateY(-2px)}
-  .btn-amber{background:linear-gradient(180deg,var(--amber),var(--amber-2));color:var(--amber-ink);box-shadow:0 8px 22px rgba(47,128,216,.32)}
+  .btn-amber{background:linear-gradient(180deg,var(--amber),var(--amber-2));color:var(--amber-ink);border-color:rgba(255,255,255,.16);box-shadow:0 8px 22px rgba(12,26,48,.45)}
   .btn-ghost{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
   .btn-ghost:hover{background:rgba(255,255,255,.08)}
   .btn-dark{background:var(--ink);color:#fff}
@@ -64,9 +65,9 @@
   .util{background:var(--ink);color:#cfd6df;font-size:.85rem;border-bottom:1px solid var(--line-d)}
   .util .wrap{display:flex;align-items:center;justify-content:center;gap:22px;min-height:42px}
   .util a{display:inline-flex;align-items:center;gap:.45em;color:#e7ecf2;font-weight:600;white-space:nowrap}
-  .util .u-cta{color:var(--amber);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em}
-  .util .u-cta svg{width:16px;height:16px;fill:var(--amber)}
-  .util .u-call svg{width:14px;height:14px;fill:var(--amber)}
+  .util .u-cta{color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em}
+  .util .u-cta svg{width:16px;height:16px;fill:#fff}
+  .util .u-call svg{width:14px;height:14px;fill:#fff}
   .util .u-call:hover,.util .u-cta:hover{color:#fff}
   .util .u-cta:hover svg,.util .u-call:hover svg{fill:#fff}
 
@@ -77,7 +78,7 @@
   nav.main{margin-left:auto;display:flex;align-items:center;gap:26px}
   nav.main a{color:#d5dce4;font-weight:600;font-size:.94rem;position:relative;padding:4px 0}
   nav.main a:hover{color:#fff}
-  nav.main a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:var(--amber);transition:right .25s ease}
+  nav.main a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:#fff;transition:right .25s ease}
   nav.main a:hover::after{right:0}
   .header-cta{display:flex;align-items:center;gap:10px}
   .menu-btn{display:none;margin-left:auto;background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:0;padding:8px;cursor:pointer}
@@ -86,26 +87,26 @@
   .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
   .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.34;filter:grayscale(.15) contrast(1.05)}
   .hero::after{content:"";position:absolute;inset:0;background:
-     radial-gradient(1200px 600px at 78% -10%,rgba(47,128,216,.16),transparent 60%),
+     radial-gradient(1200px 600px at 78% -10%,rgba(60,90,130,.22),transparent 60%),
      linear-gradient(90deg,rgba(18,36,63,.96) 0%,rgba(18,36,63,.82) 42%,rgba(18,36,63,.42) 100%)}
   .hero .wrap{position:relative;z-index:2;padding:clamp(24px,4vw,48px) 22px clamp(20px,2.5vw,32px)}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
   .hero h1{font-size:clamp(2rem,4.3vw,3.2rem);letter-spacing:.005em}
-  .hero h1 .hl{color:var(--amber)}
+  .hero h1 .hl{color:#fff;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:8px;text-decoration-color:rgba(255,255,255,.55)}
   .hero p.lead{font-size:clamp(1rem,1.5vw,1.18rem);color:#c9d2dd;max-width:44ch;margin:16px 0 22px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .hero-badges{display:flex;gap:20px;flex-wrap:wrap;margin-top:14px;padding-top:13px;border-top:1px solid var(--line-d)}
   .hero-badges .b{display:flex;align-items:center;gap:10px;color:#dbe2ea;font-size:.9rem;font-weight:600}
-  .hero-badges .b svg{width:22px;height:22px;fill:var(--amber);flex:none}
+  .hero-badges .b svg{width:22px;height:22px;fill:#fff;flex:none}
   .hero-card{background:linear-gradient(180deg,rgba(38,58,90,.92),rgba(20,38,64,.92));border:1px solid var(--line-d);border-radius:0;padding:18px;box-shadow:var(--shadow-lg)}
   .hero-card h3{font-size:1.05rem;color:#fff;margin-bottom:4px;letter-spacing:.04em}
   .hero-card .sub{color:#a9b3bf;font-size:.85rem;text-transform:none;font-family:'Inter';font-weight:500;margin-bottom:16px}
   .quick-list{display:grid;gap:8px}
   .quick-list a{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.04);border:1px solid var(--line-d);border-radius:0;padding:9px 12px;color:#eef2f6;font-weight:600;font-size:.9rem;transition:background .15s,border-color .15s,transform .15s}
-  .quick-list a:hover{background:rgba(47,128,216,.12);border-color:var(--ring);transform:translateX(3px)}
-  .quick-list a .ic{width:34px;height:34px;border-radius:0;background:rgba(47,128,216,.14);display:grid;place-items:center;flex:none}
-  .quick-list a .ic svg{width:22px;height:22px;fill:var(--amber)}
-  .quick-list a .go{margin-left:auto;color:var(--amber);font-family:'Oswald';font-size:.8rem}
+  .quick-list a:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.28);transform:translateX(3px)}
+  .quick-list a .ic{width:34px;height:34px;border-radius:0;background:rgba(255,255,255,.10);display:grid;place-items:center;flex:none}
+  .quick-list a .ic svg{width:22px;height:22px;fill:#fff}
+  .quick-list a .go{margin-left:auto;color:#fff;font-family:'Oswald';font-size:.8rem}
 
   .strip{background:var(--steel);color:#fff;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
   .strip .wrap{display:flex;align-items:center;gap:12px 40px;flex-wrap:wrap;justify-content:center;padding:16px 22px}
@@ -140,10 +141,10 @@
   .cat .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,36,63,0) 40%,rgba(18,36,63,.62))}
   .cat.model .ph{display:grid;place-items:center;background:
      radial-gradient(120% 120% at 50% 0%,#2a3f61,#10203a)}
-  .cat.model .ph svg.big{width:54%;height:54%;fill:var(--amber);opacity:.92;position:relative;z-index:1}
+  .cat.model .ph svg.big{width:54%;height:54%;fill:#fff;opacity:.92;position:relative;z-index:1}
   .cat.model .ph::before{content:"MODEL VIEW";position:absolute;bottom:12px;left:14px;z-index:2;font-family:'Oswald';font-size:.66rem;letter-spacing:.2em;color:#8ea0b4}
   .cat .badge{position:absolute;top:12px;left:12px;z-index:3;width:46px;height:46px;border-radius:0;background:rgba(18,36,63,.72);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.18);display:grid;place-items:center}
-  .cat .badge svg{width:30px;height:30px;fill:var(--amber)}
+  .cat .badge svg{width:30px;height:30px;fill:#fff}
   .cat .body{padding:16px 18px 18px}
   .cat h3{font-size:1.22rem;letter-spacing:.03em}
   .cat p{color:var(--muted);font-size:.9rem;margin:6px 0 14px;min-height:2.4em}
@@ -159,7 +160,7 @@
   .feat:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
   .feat .ph{aspect-ratio:4/3;background:#12243f center/cover no-repeat;border-bottom:1px solid var(--line-d)}
   .feat .body{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
-  .feat .tag{font-family:'Oswald';font-size:.68rem;letter-spacing:.18em;color:var(--amber);text-transform:uppercase}
+  .feat .tag{font-family:'Oswald';font-size:.68rem;letter-spacing:.18em;color:#fff;text-transform:uppercase}
   .feat h3{font-size:1.24rem;margin:8px 0 12px;color:#fff}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
   .chips span{font-size:.76rem;font-weight:600;color:#d7dee6;background:rgba(255,255,255,.06);border:1px solid var(--line-d);border-radius:0;padding:5px 11px}
@@ -170,11 +171,11 @@
   .map-card{position:relative;background:var(--ink);border-radius:0;box-shadow:var(--shadow-lg);overflow:hidden;border:1px solid var(--line-d)}
   .map-card .mi-map{width:100%;height:440px;border:0;display:block}
   .map-card .map-cap{display:flex;align-items:center;gap:9px;background:var(--ink);color:#fff;font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:.8rem;padding:13px 16px;border-top:1px solid var(--line-d)}
-  .map-card .map-cap svg{width:16px;height:16px;fill:var(--amber);flex:none}
+  .map-card .map-cap svg{width:16px;height:16px;fill:#fff;flex:none}
   .cov-list{display:grid;gap:16px;margin:26px 0 30px}
   .cov-list li{list-style:none;display:flex;gap:14px;align-items:flex-start}
   .cov-list .ic{width:42px;height:42px;border-radius:0;background:var(--ink);display:grid;place-items:center;flex:none}
-  .cov-list .ic svg{width:24px;height:24px;fill:var(--amber)}
+  .cov-list .ic svg{width:24px;height:24px;fill:#fff}
   .cov-list h4{font-family:'Oswald';text-transform:uppercase;letter-spacing:.03em;font-size:1.02rem;margin:2px 0 3px}
   .cov-list p{margin:0;color:var(--muted);font-size:.95rem}
   .ship-note{background:#fff;border:1px dashed var(--amber-2);border-left:5px solid var(--amber-2);border-radius:0;padding:16px 18px;color:var(--text);font-size:.96rem}
@@ -183,7 +184,7 @@
   .vp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
   .vp{background:var(--card);border:1px solid var(--line);border-radius:0;padding:24px 22px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
   .vp:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-  .vp .ic{width:52px;height:52px;border-radius:0;background:linear-gradient(180deg,var(--amber),var(--amber-2));display:grid;place-items:center;margin-bottom:16px;box-shadow:0 8px 18px rgba(47,128,216,.28)}
+  .vp .ic{width:52px;height:52px;border-radius:0;background:linear-gradient(180deg,var(--amber),var(--amber-2));display:grid;place-items:center;margin-bottom:16px;box-shadow:0 8px 18px rgba(12,26,48,.35)}
   .vp .ic svg{width:30px;height:30px;fill:var(--amber-ink)}
   .vp h3{font-size:1.12rem;margin-bottom:8px;letter-spacing:.03em}
   .vp p{color:var(--muted);font-size:.94rem;margin:0}
@@ -191,7 +192,7 @@
   .steps{background:var(--steel);color:#fff}
   .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
   .step{position:relative;background:rgba(255,255,255,.03);border:1px solid var(--line-d);border-radius:0;padding:28px 24px}
-  .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:'Oswald';font-size:2.6rem;color:var(--amber);opacity:.9;line-height:1;display:block;margin-bottom:12px}
+  .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:'Oswald';font-size:2.6rem;color:#fff;opacity:.9;line-height:1;display:block;margin-bottom:12px}
   .step h3{color:#fff;font-size:1.16rem;margin-bottom:8px}
   .step p{color:#aab4c0;font-size:.95rem;margin:0}
 
@@ -209,16 +210,16 @@
   .contact .sec-head p{color:#aab4c0}
   .info-list{display:grid;gap:14px;margin:8px 0 26px}
   .info{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.03);border:1px solid var(--line-d);border-radius:0;padding:16px 18px}
-  .info .ic{width:44px;height:44px;border-radius:0;background:rgba(47,128,216,.14);display:grid;place-items:center;flex:none}
-  .info .ic svg{width:24px;height:24px;fill:var(--amber)}
+  .info .ic{width:44px;height:44px;border-radius:0;background:rgba(255,255,255,.08);display:grid;place-items:center;flex:none}
+  .info .ic svg{width:24px;height:24px;fill:#fff}
   .info h4{font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:.82rem;color:#9aa5b2;margin:0 0 3px}
   .info a,.info p{margin:0;color:#fff;font-weight:600;font-size:1.02rem}
-  .info a:hover{color:var(--amber)}
+  .info a:hover{color:#fff}
   form.qf{background:linear-gradient(180deg,#1c3355,#10203a);border:1px solid var(--line-d);border-radius:0;padding:26px;box-shadow:var(--shadow-lg)}
   form.qf label{display:block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:#9aa5b2;margin:0 0 6px}
   form.qf .row{margin-bottom:16px}
   form.qf input,form.qf textarea,form.qf select{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:0;padding:12px 14px;color:#fff;font-family:inherit;font-size:.96rem;transition:border-color .15s,box-shadow .15s}
-  form.qf input:focus,form.qf textarea:focus,form.qf select:focus{outline:none;border-color:var(--amber-2);box-shadow:0 0 0 3px var(--ring)}
+  form.qf input:focus,form.qf textarea:focus,form.qf select:focus{outline:none;border-color:rgba(255,255,255,.6);box-shadow:0 0 0 3px rgba(255,255,255,.14)}
   form.qf textarea{resize:vertical;min-height:120px}
   form.qf .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   form.qf .btn{width:100%;justify-content:center;margin-top:4px}
@@ -228,10 +229,10 @@
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px}
   footer h5{font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:#fff;margin:0 0 14px}
   footer ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
-  footer a:hover{color:var(--amber)}
+  footer a:hover{color:#fff}
   footer .about-blurb{font-size:.9rem;margin:16px 0 0;max-width:34ch}
   .foot-bottom{border-top:1px solid var(--line-d);margin-top:38px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem}
-  .foot-bottom .flag{color:var(--amber);font-family:'Oswald';letter-spacing:.06em;text-transform:uppercase}
+  .foot-bottom .flag{color:#fff;font-family:'Oswald';letter-spacing:.06em;text-transform:uppercase}
 
   @media (max-width:960px){
     .hero-grid{grid-template-columns:1fr}
@@ -279,7 +280,7 @@
     <symbol id="e-forklift" viewBox="0 0 64 64"><circle cx="17" cy="50" r="6"/><circle cx="33" cy="50" r="6"/><rect x="10" y="30" width="21" height="16" rx="2"/><rect x="12" y="19" width="17" height="12" rx="2"/><rect x="34" y="15" width="3.4" height="33"/><rect x="37" y="45" width="13" height="2.6"/><rect x="37" y="30" width="2.4" height="16"/></symbol>
     <symbol id="e-heavyfork" viewBox="0 0 64 64"><circle cx="15" cy="52" r="6"/><circle cx="26" cy="52" r="6"/><circle cx="40" cy="52" r="6"/><rect x="8" y="30" width="27" height="20" rx="2"/><rect x="10" y="18" width="21" height="13" rx="2"/><rect x="38" y="13" width="4" height="39"/><rect x="42" y="49" width="15" height="2.8"/><rect x="42" y="30" width="2.6" height="21"/></symbol>
     <symbol id="e-grader" viewBox="0 0 64 64"><circle cx="12" cy="50" r="5"/><circle cx="45" cy="50" r="5"/><circle cx="53" cy="50" r="5"/><rect x="10" y="37" width="45" height="5" rx="2"/><rect x="42" y="25" width="13" height="13" rx="2"/><polygon points="22,50 35,43 37,46 24,53"/><rect x="27" y="41" width="2.6" height="8"/></symbol>
-    <g id="logo"><path fill="#2f80d8" d="M116 116 37 250 38 255 41 258 53 280 64 297 85 335 99 357 99 359 108 372 116 387 276 387 339 278 249 278 245 285 233 298 220 306 207 310 182 309 173 306 162 300 151 290 146 283 140 271 137 256 138 239 140 235 140 231 146 219 160 204 173 196 188 192 207 192 215 194 228 200 242 212 249 223 339 223 338 220 316 185 310 173 276 116Z"/><path fill="#f5f7fa" d="M1044 315 1043 316 1043 337 1066 337 1068 339 1067 340 1067 394 1094 394 1094 338 1095 337 1119 337 1119 315ZM876 316 876 394 878 395 879 394 902 394 902 356 903 355 932 395 933 394 939 394 940 395 941 394 957 394 957 316 956 315 932 315 931 316 931 351 930 352 906 320 904 319 903 316 900 315 880 315 879 316 878 315ZM720 316 721 317 721 391 720 394 721 395 722 394 768 394 769 395 785 394 786 395 787 394 787 375 747 375 746 374 746 365 748 363 782 363 782 347 781 346 749 347 746 345 746 336 749 334 751 335 752 334 785 334 786 335 787 334 787 316 786 315 784 316 783 315 724 315ZM556 315 556 394 557 395 558 394 559 395 560 394 578 394 579 395 580 394 580 370 583 368 584 369 590 369 592 371 606 395 607 394 627 394 628 395 632 394 633 395 634 394 617 366 626 359 631 349 632 338 631 333 627 325 622 320 616 317 608 315ZM580 334 581 333 600 333 605 336 606 346 600 351 581 351 580 350ZM1216 318 1208 325 1204 334 1204 343 1207 351 1212 356 1222 361 1245 367 1248 370 1248 373 1245 376 1242 377 1235 377 1224 374 1216 368 1212 367 1199 384 1208 390 1215 393 1228 396 1248 396 1252 394 1257 394 1261 391 1263 391 1271 383 1272 378 1274 375 1274 365 1271 358 1264 351 1260 349 1233 341 1230 338 1230 336 1233 333 1244 333 1248 335 1251 335 1260 341 1272 324 1263 318 1258 317 1255 315 1248 315 1247 314 1228 314ZM1382 116 1382 276 1383 277 1471 277 1472 276 1491 274 1494 272 1499 271 1511 264 1524 250 1531 233 1532 222 1533 221 1533 168 1529 150 1521 136 1508 125 1494 119 1489 119 1487 117 1480 117 1479 116ZM1432 163 1463 162 1472 165 1480 173 1483 181 1483 210 1480 218 1475 224 1470 227 1463 229 1432 229 1431 228 1431 164ZM1206 116 1206 277 1254 277 1255 276 1255 224 1256 223 1281 223 1314 277 1370 277 1370 275 1336 219 1337 216 1345 212 1354 203 1359 194 1363 181 1364 166 1363 165 1362 152 1358 142 1347 128 1336 121 1318 116ZM1255 152 1256 151 1301 151 1307 154 1313 162 1314 165 1313 178 1305 187 1300 189 1256 189 1255 188ZM906 127 892 142 885 156 880 174 880 183 879 184 880 216 882 220 884 231 892 248 897 255 909 266 925 274 929 274 934 276 941 276 942 277 1010 277 1011 276 1010 275 1010 230 1011 229 956 229 948 227 944 225 938 219 935 213 934 203 933 202 933 192 934 191 935 178 940 170 945 166 952 163 1010 163 1010 116 934 116 924 119 920 119ZM707 116 707 276 708 277 757 277 757 196 759 195 776 219 813 276 815 277 865 277 865 116 815 116 815 197 814 198 811 195 774 138 760 119 759 116ZM410 127 401 135 391 150 385 168 384 183 383 184 383 208 384 209 385 222 390 239 398 253 414 268 427 274 431 274 436 276 443 276 444 277 513 277 514 276 514 229 458 229 449 226 443 221 438 211 437 207 437 184 442 172 447 167 455 163 513 163 514 162 514 116 438 116 420 121ZM1093 113 1072 118 1058 125 1048 132 1034 147 1025 163 1020 181 1021 216 1025 229 1035 246 1048 260 1056 266 1072 274 1082 277 1087 277 1092 279 1117 279 1122 277 1135 275 1150 268 1159 262 1173 248 1183 231 1188 215 1189 203 1190 202 1189 181 1186 168 1179 153 1172 143 1157 129 1151 125 1133 117 1113 113ZM1096 161 1112 161 1119 163 1130 171 1135 177 1139 186 1140 199 1138 207 1135 213 1127 222 1121 226 1113 229 1100 230 1089 227 1083 224 1074 215 1069 204 1068 192 1070 184 1073 178 1083 167ZM596 113 591 115 581 116 566 122 552 131 537 147 532 155 532 157 530 159 525 171 524 179 522 184 522 207 525 221 531 235 543 252 554 262 567 270 582 276 591 277 596 279 619 279 642 273 656 266 668 257 679 244 687 229 692 213 693 200 694 199 692 176 688 163 678 145 665 132 655 125 645 120 629 115 623 115 617 113ZM593 163 600 161 615 161 619 163 622 163 629 167 637 175 642 184 643 200 640 210 629 223 622 227 615 229 599 229 595 227 592 227 584 222 579 217 573 207 571 199 571 192 573 185 579 174 585 168Z"/></g>
+    <g id="logo"><path fill="#f5f7fa" d="M116 116 37 250 38 255 41 258 53 280 64 297 85 335 99 357 99 359 108 372 116 387 276 387 339 278 249 278 245 285 233 298 220 306 207 310 182 309 173 306 162 300 151 290 146 283 140 271 137 256 138 239 140 235 140 231 146 219 160 204 173 196 188 192 207 192 215 194 228 200 242 212 249 223 339 223 338 220 316 185 310 173 276 116Z"/><path fill="#f5f7fa" d="M1044 315 1043 316 1043 337 1066 337 1068 339 1067 340 1067 394 1094 394 1094 338 1095 337 1119 337 1119 315ZM876 316 876 394 878 395 879 394 902 394 902 356 903 355 932 395 933 394 939 394 940 395 941 394 957 394 957 316 956 315 932 315 931 316 931 351 930 352 906 320 904 319 903 316 900 315 880 315 879 316 878 315ZM720 316 721 317 721 391 720 394 721 395 722 394 768 394 769 395 785 394 786 395 787 394 787 375 747 375 746 374 746 365 748 363 782 363 782 347 781 346 749 347 746 345 746 336 749 334 751 335 752 334 785 334 786 335 787 334 787 316 786 315 784 316 783 315 724 315ZM556 315 556 394 557 395 558 394 559 395 560 394 578 394 579 395 580 394 580 370 583 368 584 369 590 369 592 371 606 395 607 394 627 394 628 395 632 394 633 395 634 394 617 366 626 359 631 349 632 338 631 333 627 325 622 320 616 317 608 315ZM580 334 581 333 600 333 605 336 606 346 600 351 581 351 580 350ZM1216 318 1208 325 1204 334 1204 343 1207 351 1212 356 1222 361 1245 367 1248 370 1248 373 1245 376 1242 377 1235 377 1224 374 1216 368 1212 367 1199 384 1208 390 1215 393 1228 396 1248 396 1252 394 1257 394 1261 391 1263 391 1271 383 1272 378 1274 375 1274 365 1271 358 1264 351 1260 349 1233 341 1230 338 1230 336 1233 333 1244 333 1248 335 1251 335 1260 341 1272 324 1263 318 1258 317 1255 315 1248 315 1247 314 1228 314ZM1382 116 1382 276 1383 277 1471 277 1472 276 1491 274 1494 272 1499 271 1511 264 1524 250 1531 233 1532 222 1533 221 1533 168 1529 150 1521 136 1508 125 1494 119 1489 119 1487 117 1480 117 1479 116ZM1432 163 1463 162 1472 165 1480 173 1483 181 1483 210 1480 218 1475 224 1470 227 1463 229 1432 229 1431 228 1431 164ZM1206 116 1206 277 1254 277 1255 276 1255 224 1256 223 1281 223 1314 277 1370 277 1370 275 1336 219 1337 216 1345 212 1354 203 1359 194 1363 181 1364 166 1363 165 1362 152 1358 142 1347 128 1336 121 1318 116ZM1255 152 1256 151 1301 151 1307 154 1313 162 1314 165 1313 178 1305 187 1300 189 1256 189 1255 188ZM906 127 892 142 885 156 880 174 880 183 879 184 880 216 882 220 884 231 892 248 897 255 909 266 925 274 929 274 934 276 941 276 942 277 1010 277 1011 276 1010 275 1010 230 1011 229 956 229 948 227 944 225 938 219 935 213 934 203 933 202 933 192 934 191 935 178 940 170 945 166 952 163 1010 163 1010 116 934 116 924 119 920 119ZM707 116 707 276 708 277 757 277 757 196 759 195 776 219 813 276 815 277 865 277 865 116 815 116 815 197 814 198 811 195 774 138 760 119 759 116ZM410 127 401 135 391 150 385 168 384 183 383 184 383 208 384 209 385 222 390 239 398 253 414 268 427 274 431 274 436 276 443 276 444 277 513 277 514 276 514 229 458 229 449 226 443 221 438 211 437 207 437 184 442 172 447 167 455 163 513 163 514 162 514 116 438 116 420 121ZM1093 113 1072 118 1058 125 1048 132 1034 147 1025 163 1020 181 1021 216 1025 229 1035 246 1048 260 1056 266 1072 274 1082 277 1087 277 1092 279 1117 279 1122 277 1135 275 1150 268 1159 262 1173 248 1183 231 1188 215 1189 203 1190 202 1189 181 1186 168 1179 153 1172 143 1157 129 1151 125 1133 117 1113 113ZM1096 161 1112 161 1119 163 1130 171 1135 177 1139 186 1140 199 1138 207 1135 213 1127 222 1121 226 1113 229 1100 230 1089 227 1083 224 1074 215 1069 204 1068 192 1070 184 1073 178 1083 167ZM596 113 591 115 581 116 566 122 552 131 537 147 532 155 532 157 530 159 525 171 524 179 522 184 522 207 525 221 531 235 543 252 554 262 567 270 582 276 591 277 596 279 619 279 642 273 656 266 668 257 679 244 687 229 692 213 693 200 694 199 692 176 688 163 678 145 665 132 655 125 645 120 629 115 623 115 617 113ZM593 163 600 161 615 161 619 163 622 163 629 167 637 175 642 184 643 200 640 210 629 223 622 227 615 229 599 229 595 227 592 227 584 222 579 217 573 207 571 199 571 192 573 185 579 174 585 168Z"/></g>
   </defs>
 </svg>
 
@@ -355,7 +356,7 @@
 <section class="rent-now">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:16px">
-      <span class="eyebrow" style="color:var(--amber)">In the Yard</span>
+      <span class="eyebrow" style="color:#dbe4f0">In the Yard</span>
       <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);margin:6px 0 6px">Available to Rent Right Now</h2>
       <p style="font-size:.98rem">A rolling look at machines ready for your next job — swipe through and text us about any one.</p>
     </div>
@@ -433,7 +434,7 @@
 <section class="fleet" id="fleet">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow" style="color:var(--amber)">In the Yard Now</span>
+      <span class="eyebrow" style="color:#dbe4f0">In the Yard Now</span>
       <h2>Featured Machines</h2>
       <p>A look at some of the workhorses ready to reserve today. Ask about availability for your dates.</p>
     </div>
@@ -515,7 +516,7 @@
 <section class="steps">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow" style="color:var(--amber)">Simple Process</span>
+      <span class="eyebrow" style="color:#dbe4f0">Simple Process</span>
       <h2 style="color:#fff">Renting Is Easy</h2>
     </div>
     <div class="step-grid">
@@ -554,7 +555,7 @@
   <div class="wrap">
     <div class="contact-grid">
       <div>
-        <span class="eyebrow" style="color:var(--amber)">Get a Quote</span>
+        <span class="eyebrow" style="color:#dbe4f0">Get a Quote</span>
         <h2 style="font-size:clamp(1.9rem,4vw,3rem);margin:10px 0 18px">Let's Get Your Equipment Booked</h2>
         <p style="color:#aab4c0;margin:0 0 22px">Call or text for the fastest answer on availability and pricing. Prefer to write? Send a message and we'll get right back to you.</p>
         <div class="info-list">
@@ -593,7 +594,7 @@
           <div class="row"><label for="q_msg">Project details</label><textarea id="q_msg" name="message" placeholder="Tell us about the job…"></textarea></div>
           <input type="text" name="company" id="q_company" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button class="btn btn-amber" type="submit" id="q_submit">Send Request <svg class="icon"><use href="#i-arrow"/></svg></button>
-          <p id="q_status" style="font-size:.82rem;margin:12px 0 0;text-align:center;color:#aab4c0">Fastest response: call or text <a href="tel:12486874515" style="color:var(--amber)">248-687-4515</a></p>
+          <p id="q_status" style="font-size:.82rem;margin:12px 0 0;text-align:center;color:#aab4c0">Fastest response: call or text <a href="tel:12486874515" style="color:#fff;text-decoration:underline">248-687-4515</a></p>
         </form>
       </div>
     </div>

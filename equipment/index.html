@@ -19,12 +19,12 @@
 </script>
 <title>Equipment Fleet | Concord Rents — Michigan Heavy Equipment Rentals</title>
 <meta name="description" content="Browse Concord Rents' heavy equipment fleet — telehandlers, boom lifts, dozers, excavators, forklifts and more. Request a quote, check availability, or ask about delivery across Michigan." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2010%22%3E%3Crect%20width%3D%2210%22%20height%3D%2210%22%20fill%3D%22%23ffb100%22%2F%3E%3C%2Fsvg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2237%20113%20316%20285%22%3E%3Cpath%20fill%3D%22%2312243f%22%20d%3D%22M116%20116%2037%20250%2038%20255%2041%20258%2053%20280%2064%20297%2085%20335%2099%20357%2099%20359%20108%20372%20116%20387%20276%20387%20339%20278%20249%20278%20245%20285%20233%20298%20220%20306%20207%20310%20182%20309%20173%20306%20162%20300%20151%20290%20146%20283%20140%20271%20137%20256%20138%20239%20140%20235%20140%20231%20146%20219%20160%20204%20173%20196%20188%20192%20207%20192%20215%20194%20228%20200%20242%20212%20249%20223%20339%20223%20338%20220%20316%20185%20310%20173%20276%20116Z%22%2F%3E%3C%2Fsvg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  :root{--ink:#12243f;--ink-2:#182f4f;--amber:#2f80d8;--amber-2:#1c60ad;--amber-ink:#ffffff;--paper:#f5f6f8;--card:#fff;--text:#14243f;--muted:#5b6b82;--line:#e4e7ec;--line-d:rgba(255,255,255,.12);--ring:rgba(47,128,216,.35);--shadow:0 1px 2px rgba(18,36,63,.06),0 8px 24px rgba(18,36,63,.08);--shadow-lg:0 24px 60px rgba(18,36,63,.28)}
+  :root{--ink:#12243f;--ink-2:#182f4f;--amber:#274268;--amber-2:#1d3454;--amber-ink:#ffffff;--paper:#f5f6f8;--card:#fff;--text:#14243f;--muted:#5b6b82;--line:#e4e7ec;--line-d:rgba(255,255,255,.12);--ring:rgba(39,66,104,.35);--shadow:0 1px 2px rgba(18,36,63,.06),0 8px 24px rgba(18,36,63,.08);--shadow-lg:0 24px 60px rgba(18,36,63,.28)}
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--text);font-family:'Inter',system-ui,Segoe UI,Arial,sans-serif;font-size:16px;line-height:1.6}
   h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;margin:0}
@@ -38,13 +38,13 @@
   header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line-d)}
   header .wrap{display:flex;align-items:center;gap:16px;min-height:66px}
   .brand{display:flex;align-items:center;gap:10px}
-  .brand .b{width:34px;height:34px;background:linear-gradient(180deg,var(--amber),var(--amber-2));display:grid;place-items:center;flex:none}
+  .brand .b{width:34px;height:34px;background:linear-gradient(180deg,var(--amber),var(--amber-2));border:1px solid rgba(255,255,255,.22);display:grid;place-items:center;flex:none}
   .brand .b svg{width:23px;height:23px;display:block;fill:var(--amber-ink)}
   .brand b{font-family:'Oswald';font-size:1.2rem;letter-spacing:.04em}
-  .brand span{display:block;font-size:.58rem;letter-spacing:.22em;color:var(--amber);text-transform:uppercase;font-weight:700}
+  .brand span{display:block;font-size:.58rem;letter-spacing:.22em;color:#aab7c8;text-transform:uppercase;font-weight:700}
   header .sp{margin-left:auto;display:flex;gap:10px;align-items:center}
   .hero{background:var(--ink);color:#fff;padding:46px 0 40px;border-bottom:1px solid var(--line-d)}
-  .hero .eyebrow{font-family:'Oswald';text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;color:var(--amber-2)}
+  .hero .eyebrow{font-family:'Oswald';text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;color:#dbe4f0}
   .hero h1{font-size:clamp(2rem,4.5vw,3.2rem);margin:8px 0 10px}
   .hero p{color:#aab4c0;max-width:60ch;margin:0}
   main{padding:38px 0 60px}
@@ -81,7 +81,7 @@
   .card .acts{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
   .empty{background:#fff;border:1px dashed var(--line);padding:40px;text-align:center;color:var(--muted)}
   footer{background:#0c1a30;color:#9aa5b2;padding:30px 0;text-align:center;font-size:.85rem}
-  footer a{color:var(--amber)}
+  footer a{color:#dbe4f0}
   /* modal */
   .cr-modal{position:fixed;inset:0;background:rgba(18,36,63,.62);display:none;align-items:flex-start;justify-content:center;z-index:100;overflow:auto;padding:5vh 16px}
   .cr-modal.show{display:flex}
