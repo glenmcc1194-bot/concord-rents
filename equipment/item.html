@@ -91,6 +91,25 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   .callout p{color:#c9d6e6;margin:0 0 16px}
   .callout .cta{justify-content:center}
 
+  .book{border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);padding:24px}
+  .book .bk-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+  .book h2{font-size:1.35rem}
+  .book .bk-sub{color:var(--muted);font-size:.9rem;margin:0 0 16px}
+  .book form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .book .f{display:flex;flex-direction:column;gap:5px}
+  .book .f.full{grid-column:1 / -1}
+  .book label{font-family:'Oswald';font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .book input,.book textarea{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:0;background:#fff;color:var(--text);width:100%}
+  .book input:focus,.book textarea:focus{outline:none;border-color:var(--amber-2);box-shadow:0 0 0 3px var(--ring)}
+  .book textarea{min-height:74px;resize:vertical}
+  .book .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .book .submit{grid-column:1 / -1;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .book .days{font-size:.85rem;color:var(--muted)}
+  .book .msg{grid-column:1 / -1;font-size:.92rem}
+  .book .msg.ok{color:#1c7c4a}.book .msg.err{color:#b23b3b}
+  .book .done{text-align:center;padding:14px 0}
+  .book .done .big{font-family:'Oswald';font-size:1.4rem;color:#1c7c4a;text-transform:uppercase;margin-bottom:6px}
+  @media(max-width:560px){ .book form{grid-template-columns:1fr} }
   footer{background:#0c1a30;color:#9aa5b2;padding:34px 0;border-top:1px solid var(--line-d);margin-top:30px;font-size:.9rem}
   footer a{color:#dbe4f0}
 
@@ -220,7 +239,25 @@ function render(item, ds){
 
   var callout = '<section class="block"><div class="callout"><h2>Need <span class="marker-light">this machine</span> on site?</h2><p>Tell us your dates and job location — we deliver across Michigan.</p>'+cta.replace('class="cta"','class="cta"')+'</div></section>';
 
-  document.getElementById('content').innerHTML = top + ov + sheet + callout;
+  var todayISO = new Date().toISOString().slice(0,10);
+  var booking = '<section class="block"><div class="book" id="bookCard">'+
+    '<div class="bk-head"><h2>Reserve This Machine</h2></div>'+
+    '<p class="bk-sub">Pick your dates and submit — a Concord rep confirms availability and delivery. No payment now.</p>'+
+    '<form id="bookForm" autocomplete="on">'+
+      '<div class="f"><label for="bkStart">Start date</label><input type="date" id="bkStart" min="'+todayISO+'" required></div>'+
+      '<div class="f"><label for="bkEnd">End date</label><input type="date" id="bkEnd" min="'+todayISO+'"></div>'+
+      '<div class="f"><label for="bkName">Full name</label><input type="text" id="bkName" required></div>'+
+      '<div class="f"><label for="bkPhone">Phone</label><input type="tel" id="bkPhone"></div>'+
+      '<div class="f"><label for="bkEmail">Email</label><input type="email" id="bkEmail"></div>'+
+      '<div class="f"><label for="bkLoc">Delivery location / job site</label><input type="text" id="bkLoc" placeholder="City or ZIP"></div>'+
+      '<div class="f full"><label for="bkNotes">Notes (attachments, questions, delivery details)</label><textarea id="bkNotes"></textarea></div>'+
+      '<input class="hp" type="text" id="bkCompany" tabindex="-1" autocomplete="off" aria-hidden="true" placeholder="Company">'+
+      '<div class="submit"><button type="submit" class="btn btn-amber">Submit Booking Request</button><span class="days" id="bkDays"></span></div>'+
+      '<div class="msg" id="bkMsg"></div>'+
+    '</form>'+
+  '</div></section>';
+
+  document.getElementById('content').innerHTML = top + booking + ov + sheet + callout;
 
   // gallery interactions
   var main=document.getElementById('mainImg');
@@ -233,6 +270,48 @@ function render(item, ds){
       t.classList.add('active');
     });
     t.addEventListener('dblclick',function(){lbOpen(imgs,+t.getAttribute('data-i'));});
+  });
+
+  wireBooking(item);
+}
+
+function fmtDate(iso){ if(!iso) return ''; try{ var d=new Date(iso+'T00:00:00'); return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }catch(e){ return iso; } }
+function wireBooking(item){
+  var form=document.getElementById('bookForm'); if(!form) return;
+  var s=document.getElementById('bkStart'), e=document.getElementById('bkEnd'), days=document.getElementById('bkDays'), msg=document.getElementById('bkMsg');
+  function calcDays(){
+    if(s.value){ e.min=s.value; }
+    if(s.value&&e.value){
+      var d1=new Date(s.value+'T00:00:00'), d2=new Date(e.value+'T00:00:00');
+      var n=Math.round((d2-d1)/86400000)+1;
+      days.textContent = n>0 ? (n+' day'+(n>1?'s':'')) : '';
+    } else { days.textContent=''; }
+  }
+  s.addEventListener('change',calcDays); e.addEventListener('change',calcDays);
+  form.addEventListener('submit',async function(ev){
+    ev.preventDefault();
+    msg.className='msg';
+    var name=document.getElementById('bkName').value.trim();
+    var phone=document.getElementById('bkPhone').value.trim();
+    var email=document.getElementById('bkEmail').value.trim();
+    if(!name){ msg.className='msg err'; msg.textContent='Please enter your name.'; return; }
+    if(!phone&&!email){ msg.className='msg err'; msg.textContent='Add a phone or email so we can confirm.'; return; }
+    if(!s.value){ msg.className='msg err'; msg.textContent='Please choose a start date.'; return; }
+    var datesStr = fmtDate(s.value) + (e.value ? ' to '+fmtDate(e.value) : ' onward') + (days.textContent?' ('+days.textContent+')':'');
+    var payload={ type:'booking', name:name, phone:phone, email:email,
+      equipment:item.name, dates:datesStr, location:document.getElementById('bkLoc').value.trim(),
+      message:document.getElementById('bkNotes').value.trim(), company:document.getElementById('bkCompany').value };
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true; var old=btn.textContent; btn.textContent='Sending…';
+    try{
+      var r=await fetch('/api/requests',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      var j=await r.json();
+      if(r.ok&&j.ok){
+        try{ if(window.crTrack&&window.CR_CONV) crTrack(CR_CONV.form); }catch(_){}
+        document.getElementById('bookCard').innerHTML='<div class="done"><div class="big">Request received ✓</div><p>Thanks, '+esc(name)+'. We’ve got your request for the <strong>'+esc(item.name)+'</strong> ('+esc(datesStr)+'). A Concord rep will confirm availability and delivery shortly.</p><p style="margin-top:10px"><a class="btn btn-outline" href="/equipment/">Browse more equipment ›</a></p></div>';
+      } else {
+        msg.className='msg err'; msg.textContent=(j&&j.error)||'Something went wrong. Please call 248-687-4515.'; btn.disabled=false; btn.textContent=old;
+      }
+    }catch(err){ msg.className='msg err'; msg.textContent='Network error. Please call 248-687-4515.'; btn.disabled=false; btn.textContent=old; }
   });
 }
 

@@ -2,7 +2,7 @@ import { addRequest, getRequests, setRequestStatus } from '../lib/store.js';
 import { notify } from '../lib/notify.js';
 import { isAuthed } from '../lib/auth.js';
 
-const TYPES = ['quote', 'availability', 'delivery'];
+const TYPES = ['quote', 'availability', 'delivery', 'booking'];
 
 export default async function handler(req, res) {
   // Public: submit a request
