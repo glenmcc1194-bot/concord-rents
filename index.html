@@ -75,6 +75,10 @@
   header.site .wrap{display:flex;align-items:center;gap:20px;min-height:70px}
   .brand{display:flex;align-items:center;gap:12px;color:#fff}
   .brand .logo-img{height:44px;width:auto;display:block}
+  .brand .logo-mini{display:none;align-items:center;gap:7px}
+  .brand .logo-mini svg{height:30px;width:auto;fill:#f5f7fa}
+  .brand .logo-mini b{font-family:'Oswald';font-size:1.15rem;letter-spacing:.04em;color:#fff}
+  @media(max-width:560px){ .brand .logo-img{display:none} .brand .logo-full{display:none} .brand .logo-mini{display:inline-flex} }
   nav.main{margin-left:auto;display:flex;align-items:center;gap:26px}
   nav.main a{color:#d5dce4;font-weight:600;font-size:.94rem;position:relative;padding:4px 0}
   nav.main a:hover{color:#fff}
@@ -298,9 +302,7 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Concord Rents home">
-      <svg class="logo-img" viewBox="37 113 1498 285" role="img" aria-label="Concord Rents"><use href="#logo"/></svg>
-    </a>
+    <a class="brand" href="#top" aria-label="Concord Rents home"><svg class="logo-img" viewBox="37 113 1498 285" role="img" aria-label="Concord Rents"><use href="#logo"/></svg><span class="logo-mini"><svg viewBox="37 113 316 285" aria-hidden="true"><path fill="#f5f7fa" d="M116 116 37 250 38 255 41 258 53 280 64 297 85 335 99 357 99 359 108 372 116 387 276 387 339 278 249 278 245 285 233 298 220 306 207 310 182 309 173 306 162 300 151 290 146 283 140 271 137 256 138 239 140 235 140 231 146 219 160 204 173 196 188 192 207 192 215 194 228 200 242 212 249 223 339 223 338 220 316 185 310 173 276 116Z"/></svg><b>RENTS</b></span></a>
     <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg><use href="#i-menu"/></svg></button>
     <nav class="main" id="nav">
       <a href="#equipment">Equipment</a>
