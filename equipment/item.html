@@ -51,6 +51,8 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   .gallery .thumbs{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
   .gallery .thumbs .t{width:74px;height:56px;background:#e9edf1 center/cover no-repeat;border:1px solid var(--line);cursor:pointer;opacity:.75;transition:opacity .15s,border-color .15s}
   .gallery .thumbs .t.active,.gallery .thumbs .t:hover{opacity:1;border-color:var(--amber)}
+  .gallery .gcap{display:flex;gap:7px;align-items:flex-start;margin-top:10px;padding:9px 12px;background:#eef1f5;border-left:3px solid var(--amber);font-size:.82rem;color:#41526b;font-style:italic}
+  .gallery .gcap svg{width:15px;height:15px;fill:var(--amber-2);flex:none;margin-top:2px}
 
   .sum .cat{font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--amber-2);font-weight:600}
   .sum h1{font-size:clamp(1.7rem,3.4vw,2.5rem);margin:8px 0 4px}
@@ -201,9 +203,14 @@ function render(item, ds){
 
   var thumbs = imgs.length>1 ? '<div class="thumbs">'+imgs.map(function(u,i){return '<div class="t'+(i===0?' active':'')+'" data-i="'+i+'" style="background-image:url(\''+esc(u)+'\')"></div>';}).join('')+'</div>' : '';
 
+  var isRange = !!(ds && ds.coversNote);
+  var gcap = isRange
+    ? '<div class="gcap"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg><span>Example only — this listing covers a range of comparable '+esc(cat).toLowerCase()+'. Your rental may be any model in this class; tell us your job and we’ll match the right unit.</span></div>'
+    : '';
+
   var top = '<div class="top">'+
     '<div class="gallery">'+
-      '<div class="main" id="mainImg" style="background-image:url(\''+esc(cover)+'\')"></div>'+thumbs+
+      '<div class="main" id="mainImg" style="background-image:url(\''+esc(cover)+'\')"></div>'+thumbs+gcap+
     '</div>'+
     '<div class="sum">'+
       '<div class="cat">'+esc(cat)+'</div>'+
