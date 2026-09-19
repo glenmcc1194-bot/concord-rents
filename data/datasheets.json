@@ -1,7 +1,8 @@
 {
   "_meta": {
     "note": "Deep spec sheets keyed by equipment slug. Merged client-side onto live listings by the detail page. OEM base-unit specs; actual machine may vary with options/attachments. Operational fields (year, hours, unit #) are '-' until known.",
-    "updated": "2026-09-19"
+    "updated": "2026-09-19",
+    "count": 30
   },
   "caterpillar-d4k2-bulldozer": {
     "type": "Crawler Dozer (Compact)",
@@ -10,55 +11,4476 @@
     "year": "-",
     "overview": "The Caterpillar D4K2 is a compact crawler dozer built for grading, backfilling, fine-finish work and land clearing. A 92-hp Cat C4.4 ACERT diesel paired with a hydrostatic transmission and low-ground-pressure undercarriage lets it maneuver on tight or soft sites while still moving serious material.",
     "highlights": [
-      { "k": "Net Power", "v": "92 hp" },
-      { "k": "Operating Weight", "v": "~18,100 lb" },
-      { "k": "Blade Capacity", "v": "up to 2.6 yd³" },
-      { "k": "Ground Pressure", "v": "from 4.24 psi" }
+      {
+        "k": "Net Power",
+        "v": "92 hp"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "~18,100 lb"
+      },
+      {
+        "k": "Blade Capacity",
+        "v": "up to 2.6 yd³"
+      },
+      {
+        "k": "Ground Pressure",
+        "v": "from 4.24 psi"
+      }
     ],
     "sections": [
-      { "group": "Machine", "rows": [
-        { "k": "Type", "v": "Crawler Dozer (Compact)" },
-        { "k": "Make", "v": "Caterpillar" },
-        { "k": "Model", "v": "D4K2" },
-        { "k": "Year", "v": "-" },
-        { "k": "Stock / Unit #", "v": "-" },
-        { "k": "Engine Hours", "v": "-" }
-      ]},
-      { "group": "Engine", "rows": [
-        { "k": "Engine", "v": "Cat C4.4 ACERT diesel" },
-        { "k": "Net Power", "v": "92 hp @ 2,200 rpm" },
-        { "k": "Displacement", "v": "269 cu in (4.4 L)" },
-        { "k": "Bore x Stroke", "v": "4.2 in x 5.0 in" },
-        { "k": "Fuel Tank", "v": "51.5 gal" }
-      ]},
-      { "group": "Weights & Performance", "rows": [
-        { "k": "Operating Weight", "v": "18,080 - 18,761 lb (config-dependent)" },
-        { "k": "Ground Pressure", "v": "4.24 - 5.6 psi" },
-        { "k": "Travel Speed (Forward)", "v": "5.6 mph" },
-        { "k": "Travel Speed (Reverse)", "v": "6.2 mph" },
-        { "k": "Transmission", "v": "Hydrostatic" }
-      ]},
-      { "group": "Blade", "rows": [
-        { "k": "Blade Type", "v": "VPAT (6-way angle/tilt)" },
-        { "k": "Blade Capacity", "v": "2.0 - 2.6 yd³" },
-        { "k": "Blade Width", "v": "109.5 - 124 in" },
-        { "k": "Blade Height", "v": "33.9 - 39.8 in" },
-        { "k": "Max Digging Depth", "v": "23.2 in" }
-      ]},
-      { "group": "Undercarriage", "rows": [
-        { "k": "Track Shoe Width", "v": "18 - 25 in" },
-        { "k": "Length on Ground", "v": "89 in" },
-        { "k": "Ground Contact Area", "v": "3,206 - 4,425 in²" }
-      ]},
-      { "group": "Hydraulics & Capacities", "rows": [
-        { "k": "Implement Pump Output", "v": "19.4 gal/min" },
-        { "k": "Relief Valve Setting", "v": "2,988 psi" },
-        { "k": "Cooling System", "v": "6 gal" },
-        { "k": "Hydraulic Tank", "v": "15.7 gal" }
-      ]}
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Crawler Dozer (Compact)"
+          },
+          {
+            "k": "Make",
+            "v": "Caterpillar"
+          },
+          {
+            "k": "Model",
+            "v": "D4K2"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Engine",
+            "v": "Cat C4.4 ACERT diesel"
+          },
+          {
+            "k": "Net Power",
+            "v": "92 hp @ 2,200 rpm"
+          },
+          {
+            "k": "Displacement",
+            "v": "269 cu in (4.4 L)"
+          },
+          {
+            "k": "Bore x Stroke",
+            "v": "4.2 in x 5.0 in"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "51.5 gal"
+          }
+        ]
+      },
+      {
+        "group": "Weights & Performance",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "18,080 - 18,761 lb (config-dependent)"
+          },
+          {
+            "k": "Ground Pressure",
+            "v": "4.24 - 5.6 psi"
+          },
+          {
+            "k": "Travel Speed (Forward)",
+            "v": "5.6 mph"
+          },
+          {
+            "k": "Travel Speed (Reverse)",
+            "v": "6.2 mph"
+          },
+          {
+            "k": "Transmission",
+            "v": "Hydrostatic"
+          }
+        ]
+      },
+      {
+        "group": "Blade",
+        "rows": [
+          {
+            "k": "Blade Type",
+            "v": "VPAT (6-way angle/tilt)"
+          },
+          {
+            "k": "Blade Capacity",
+            "v": "2.0 - 2.6 yd³"
+          },
+          {
+            "k": "Blade Width",
+            "v": "109.5 - 124 in"
+          },
+          {
+            "k": "Blade Height",
+            "v": "33.9 - 39.8 in"
+          },
+          {
+            "k": "Max Digging Depth",
+            "v": "23.2 in"
+          }
+        ]
+      },
+      {
+        "group": "Undercarriage",
+        "rows": [
+          {
+            "k": "Track Shoe Width",
+            "v": "18 - 25 in"
+          },
+          {
+            "k": "Length on Ground",
+            "v": "89 in"
+          },
+          {
+            "k": "Ground Contact Area",
+            "v": "3,206 - 4,425 in²"
+          }
+        ]
+      },
+      {
+        "group": "Hydraulics & Capacities",
+        "rows": [
+          {
+            "k": "Implement Pump Output",
+            "v": "19.4 gal/min"
+          },
+          {
+            "k": "Relief Valve Setting",
+            "v": "2,988 psi"
+          },
+          {
+            "k": "Cooling System",
+            "v": "6 gal"
+          },
+          {
+            "k": "Hydraulic Tank",
+            "v": "15.7 gal"
+          }
+        ]
+      }
     ],
     "attachmentsNote": "Available with ripper and winch.",
     "configNote": "Values are OEM specs for base configurations (XL / LGP); the actual machine may vary with options and attachments.",
     "source": "Manufacturer / RitchieSpecs base-unit data"
+  },
+  "cat-310-excavator-11-5-tons": {
+    "type": "Mini Hydraulic Excavator",
+    "make": "Caterpillar",
+    "model": "310",
+    "year": "-",
+    "overview": "The Cat 310 is a 10-ton-class mini hydraulic excavator built for utility, site development, and light foundation work where a full-size machine is too big. It pairs a 69.5 hp Cat C3.3B engine with a stick-mounted dozer blade for backfilling and grading, and offers strong dig depth and reach for its compact footprint. A practical, easy-to-transport digger for tight urban and residential jobs.",
+    "highlights": [
+      {
+        "k": "Operating Weight",
+        "v": "22,447 lb"
+      },
+      {
+        "k": "Engine Power",
+        "v": "69.5 hp @ 2,200 rpm"
+      },
+      {
+        "k": "Max Dig Depth",
+        "v": "17 ft (5.21 m)"
+      },
+      {
+        "k": "Max Reach",
+        "v": "24.7 ft (7.52 m)"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Mini Hydraulic Excavator"
+          },
+          {
+            "k": "Make",
+            "v": "Caterpillar"
+          },
+          {
+            "k": "Model",
+            "v": "310"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Engine Model",
+            "v": "Cat C3.3B"
+          },
+          {
+            "k": "Net Power",
+            "v": "69.5 hp @ 2,200 rpm"
+          },
+          {
+            "k": "Emissions",
+            "v": "U.S. EPA Tier 4 Final / EU Stage V"
+          }
+        ]
+      },
+      {
+        "group": "Operating Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "22,447 lb"
+          },
+          {
+            "k": "Max Dig Depth",
+            "v": "17 ft (5.21 m)"
+          },
+          {
+            "k": "Max Reach (ground)",
+            "v": "24.7 ft (7.52 m)"
+          },
+          {
+            "k": "Dozer Blade Width",
+            "v": "97 in (2,470 mm)"
+          }
+        ]
+      },
+      {
+        "group": "Undercarriage & Swing",
+        "rows": [
+          {
+            "k": "Track Shoe Width",
+            "v": "17.7 in (450 mm)"
+          },
+          {
+            "k": "Swing Speed",
+            "v": "10.6 rpm"
+          }
+        ]
+      },
+      {
+        "group": "Hydraulics & Capacities",
+        "rows": [
+          {
+            "k": "Main Pump Flow",
+            "v": "62 gal/min (233 L/min)"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "38 gal (145 L)"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures; the actual unit may vary with options, stick length, counterweight, and attachments.",
+    "source": "Cat 310 Mini Hydraulic Excavator Specalog (AEHQ8156), Caterpillar.com product page, and Construction Equipment Guide (https://www.constructionequipmentguide.com/charts/mini-excavators/caterpillar/310/30752124); teknoxgroup.com/fileadmin/user_upload/310.pdf"
+  },
+  "komatsu-pc210-lc-20-ton-excavator": {
+    "type": "Hydraulic Excavator",
+    "make": "Komatsu",
+    "model": "PC210LC-11",
+    "year": "-",
+    "overview": "The Komatsu PC210LC-11 is a 20-ton-class long-crawler hydraulic excavator suited to mass excavation, utility trenching, site prep, and heavy digging. Its 165 hp Tier 4 Final engine and load-sensing hydraulics deliver strong cycle times and fuel efficiency, while the LC undercarriage adds stability and reach. A workhorse size class for general contractors and earthmoving crews.",
+    "highlights": [
+      {
+        "k": "Operating Weight",
+        "v": "50,089 lb"
+      },
+      {
+        "k": "Engine Power",
+        "v": "165 hp @ 2,000 rpm"
+      },
+      {
+        "k": "Max Dig Depth",
+        "v": "21 ft 9 in (6,620 mm)"
+      },
+      {
+        "k": "Max Reach",
+        "v": "31 ft 10 in (9,700 mm)"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Hydraulic Excavator"
+          },
+          {
+            "k": "Make",
+            "v": "Komatsu"
+          },
+          {
+            "k": "Model",
+            "v": "PC210LC-11"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Engine Model",
+            "v": "Komatsu SAA6D107E-3"
+          },
+          {
+            "k": "Net / Gross Power",
+            "v": "165 hp @ 2,000 rpm"
+          },
+          {
+            "k": "Cylinders",
+            "v": "6"
+          },
+          {
+            "k": "Emissions",
+            "v": "U.S. EPA Tier 4 Final"
+          }
+        ]
+      },
+      {
+        "group": "Operating Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "50,089 lb"
+          },
+          {
+            "k": "Max Dig Depth",
+            "v": "21 ft 9 in (6,620 mm)"
+          },
+          {
+            "k": "Max Reach (ground)",
+            "v": "31 ft 10 in (9,700 mm)"
+          },
+          {
+            "k": "Max Loading Height",
+            "v": "22.6 ft"
+          },
+          {
+            "k": "Bucket Capacity",
+            "v": "0.66-2.0 yd3 (0.5-1.54 m3); ref 1.3 yd3"
+          }
+        ]
+      },
+      {
+        "group": "Undercarriage & Swing",
+        "rows": [
+          {
+            "k": "Track Shoe Width",
+            "v": "23.6 in (600 mm)"
+          },
+          {
+            "k": "Track Gauge",
+            "v": "7.81 ft"
+          },
+          {
+            "k": "Swing Speed",
+            "v": "12.4 rpm"
+          }
+        ]
+      },
+      {
+        "group": "Hydraulics & Capacities",
+        "rows": [
+          {
+            "k": "Pump Max Flow",
+            "v": "125.5 gal/min"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "105.7 gal"
+          },
+          {
+            "k": "Hydraulic System",
+            "v": "34.9 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures; the actual unit may vary with options, arm length, shoe width, counterweight, and attachments.",
+    "source": "RitchieSpecs Komatsu PC210LC-11 (https://www.ritchiespecs.com/model/komatsu-pc210lc-11-hydraulic-excavator); Komatsu PC210/LC-11 brochure (komatsu.eu / komatsu.com.au)"
+  },
+  "cat-305-5e2": {
+    "type": "Mini Hydraulic Excavator",
+    "make": "Caterpillar",
+    "model": "305.5E2 CR",
+    "year": "-",
+    "overview": "The Cat 305.5E2 CR is a 5.5-ton compact-radius (reduced tail-swing) mini excavator for landscaping, utility, and confined-site work close to walls and traffic. It offers an integrated dozer blade, adjustable auxiliary hydraulics for attachments, and low ground pressure for sensitive surfaces. A versatile, trailer-towable digger that balances reach with a tight working envelope.",
+    "highlights": [
+      {
+        "k": "Operating Weight",
+        "v": "11,958 lb"
+      },
+      {
+        "k": "Engine Power",
+        "v": "44.1 hp @ 2,200 rpm"
+      },
+      {
+        "k": "Max Dig Depth",
+        "v": "12 ft 8 in (3.86 m)"
+      },
+      {
+        "k": "Max Reach",
+        "v": "18 ft 6 in (5.63 m)"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Mini Hydraulic Excavator (compact radius)"
+          },
+          {
+            "k": "Make",
+            "v": "Caterpillar"
+          },
+          {
+            "k": "Model",
+            "v": "305.5E2 CR"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Engine Model",
+            "v": "Cat C2.4"
+          },
+          {
+            "k": "Net Power",
+            "v": "44.1 hp @ 2,200 rpm"
+          },
+          {
+            "k": "Displacement",
+            "v": "2.4 L (146 in3)"
+          },
+          {
+            "k": "Emissions",
+            "v": "U.S. EPA Tier 4"
+          }
+        ]
+      },
+      {
+        "group": "Operating Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "11,958 lb (cab)"
+          },
+          {
+            "k": "Max Dig Depth",
+            "v": "12 ft 8 in (3.86 m)"
+          },
+          {
+            "k": "Max Reach (ground)",
+            "v": "18 ft 6 in (5.63 m)"
+          },
+          {
+            "k": "Dozer Blade Width",
+            "v": "78 in"
+          },
+          {
+            "k": "Bucket Digging Force",
+            "v": "11,443 lbf"
+          }
+        ]
+      },
+      {
+        "group": "Undercarriage & Swing",
+        "rows": [
+          {
+            "k": "Ground Pressure",
+            "v": "4.7 psi"
+          },
+          {
+            "k": "Swing Speed",
+            "v": "10 rpm"
+          },
+          {
+            "k": "Tail Swing",
+            "v": "Compact radius (reduced tail swing)"
+          }
+        ]
+      },
+      {
+        "group": "Hydraulics & Capacities",
+        "rows": [
+          {
+            "k": "Pump Flow",
+            "v": "43.1 gal/min"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "16.6 gal (63 L)"
+          },
+          {
+            "k": "Hydraulic System",
+            "v": "20.6 gal (78 L)"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures; the actual unit may vary with options, canopy vs. cab, stick length, and attachments. Dig depth reflects the long-stick configuration.",
+    "source": "RitchieSpecs Caterpillar 305.5E2 CR (https://www.ritchiespecs.com/model/caterpillar-305-5e2-cr-tier-4-interim-mini-excavator); Cat 303.5E2-305.5E2 CR Specalog (holtcat.com); Cat 305.5E2 CR brochure (teknoxgroup.com)"
+  },
+  "hitachi-zx225uslc-5b-20-ton": {
+    "type": "Hydraulic Excavator",
+    "make": "Hitachi",
+    "model": "ZX225USLC-5B",
+    "year": "-",
+    "overview": "The Hitachi ZX225USLC-5B is a 20-ton-class reduced-tail-swing (ultra-short) hydraulic excavator that keeps the counterweight within or near the track width for work along roadways, structures, and tight lots. It combines full-size digging force and reach with a compact rotating envelope, on a long (LC) undercarriage for stability. Ideal for urban excavation, utilities, and road work.",
+    "highlights": [
+      {
+        "k": "Operating Weight",
+        "v": "53,350 lb (24,200 kg)"
+      },
+      {
+        "k": "Engine Power",
+        "v": "164 hp (122 kW)"
+      },
+      {
+        "k": "Max Dig Depth",
+        "v": "20 ft (6.1 m)"
+      },
+      {
+        "k": "Max Reach",
+        "v": "30 ft (9.1 m)"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Hydraulic Excavator (reduced tail-swing)"
+          },
+          {
+            "k": "Make",
+            "v": "Hitachi"
+          },
+          {
+            "k": "Model",
+            "v": "ZX225USLC-5B"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Engine Make",
+            "v": "Isuzu diesel"
+          },
+          {
+            "k": "Rated Power",
+            "v": "164 hp (122 kW)"
+          },
+          {
+            "k": "Emissions",
+            "v": "U.S. EPA Tier 4 Final"
+          }
+        ]
+      },
+      {
+        "group": "Operating Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "53,350 lb (24,200 kg)"
+          },
+          {
+            "k": "Max Dig Depth",
+            "v": "20 ft (6.1 m)"
+          },
+          {
+            "k": "Max Reach (ground)",
+            "v": "30 ft (9.1 m)"
+          },
+          {
+            "k": "Max Loading Height",
+            "v": "25 ft"
+          },
+          {
+            "k": "Bucket Capacity",
+            "v": "0.80-1.10 m3 (1.05-1.44 yd3), ISO heaped"
+          }
+        ]
+      },
+      {
+        "group": "Undercarriage & Swing",
+        "rows": [
+          {
+            "k": "Track Shoe Width",
+            "v": "23.6 in (600 mm)"
+          },
+          {
+            "k": "Ground Pressure",
+            "v": "approx. 7.1 psi"
+          },
+          {
+            "k": "Swing Speed",
+            "v": "13.3 rpm"
+          }
+        ]
+      },
+      {
+        "group": "Hydraulics & Capacities",
+        "rows": [
+          {
+            "k": "Pump Max Flow",
+            "v": "102.5 gal/min"
+          },
+          {
+            "k": "Relief Valve Pressure",
+            "v": "4,980 psi"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "71.4 gal"
+          },
+          {
+            "k": "Hydraulic System",
+            "v": "52.9 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures; the actual unit may vary with options, arm length, shoe width, and attachments. Weight and bucket figures are from the ZX225US-5B series spec sheet; several dig/hydraulic figures reflect the ZX225USLC (ZAXIS-5 US) base unit and may vary slightly on the -5B.",
+    "source": "RitchieSpecs Hitachi ZX225USLC (https://www.ritchiespecs.com/model/hitachi-zx225uslc-hydraulic-excavator); Hitachi ZX225US-5B / ZX225USLC-5B ZAXIS-5 series spec sheet (cableprice.co.nz, hitachicm.com.au)"
+  },
+  "hitachi-zx135us-13-5-ton": {
+    "type": "Hydraulic Excavator",
+    "make": "Hitachi",
+    "model": "ZX135US-6",
+    "year": "-",
+    "overview": "The Hitachi ZX135US-6 is a 13.5-ton-class reduced-tail-swing hydraulic excavator that delivers near-conventional digging performance with a compact rotating radius for road, utility, and confined-site work. Powered by a Tier 4 Final Isuzu engine, it offers smooth multi-function hydraulics and low emissions. A strong mid-size choice where space is tight but reach and force still matter.",
+    "highlights": [
+      {
+        "k": "Operating Weight",
+        "v": "30,644 lb"
+      },
+      {
+        "k": "Engine Power",
+        "v": "101 hp @ 2,000 rpm"
+      },
+      {
+        "k": "Max Dig Depth",
+        "v": "19 ft 7 in (5.98 m)"
+      },
+      {
+        "k": "Max Reach",
+        "v": "29 ft 1 in (8.86 m)"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Hydraulic Excavator (reduced tail-swing)"
+          },
+          {
+            "k": "Make",
+            "v": "Hitachi"
+          },
+          {
+            "k": "Model",
+            "v": "ZX135US-6"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Engine Model",
+            "v": "Isuzu 4JJ1"
+          },
+          {
+            "k": "Net Power",
+            "v": "101 hp @ 2,000 rpm"
+          },
+          {
+            "k": "Emissions",
+            "v": "U.S. EPA Tier 4 Final"
+          }
+        ]
+      },
+      {
+        "group": "Operating Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "30,644 lb (13,900 kg)"
+          },
+          {
+            "k": "Max Dig Depth",
+            "v": "19 ft 7 in (5.98 m)"
+          },
+          {
+            "k": "Max Reach (ground)",
+            "v": "29 ft 1 in (8.86 m)"
+          },
+          {
+            "k": "Max Dump Height",
+            "v": "23 ft 8 in (7.22 m)"
+          },
+          {
+            "k": "Bucket Capacity",
+            "v": "0.5 m3 (0.65 yd3)"
+          }
+        ]
+      },
+      {
+        "group": "Undercarriage & Swing",
+        "rows": [
+          {
+            "k": "Swing Speed",
+            "v": "13.3 rpm"
+          },
+          {
+            "k": "Swing Torque",
+            "v": "25,077 lb-ft"
+          }
+        ]
+      },
+      {
+        "group": "Hydraulics & Capacities",
+        "rows": [
+          {
+            "k": "Implement Operating Pressure",
+            "v": "4,975 psi"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "58.2 gal"
+          },
+          {
+            "k": "Hydraulic System",
+            "v": "41 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures; the actual unit may vary with options, arm length, shoe width, and attachments.",
+    "source": "RitchieSpecs Hitachi ZX135US-6 (https://www.ritchiespecs.com/model/hitachi-zx135us-6-hydraulic-excavator); Hitachi Construction Machinery ZX135US-6 product page (hitachicm.com/us); Construction Equipment Guide"
+  },
+  "26k-36k-heavy-forklift": {
+    "type": "Pneumatic-Tire Heavy Forklift",
+    "make": "Hyster",
+    "model": "H360-36HD (H300-360XD series)",
+    "year": "-",
+    "overview": "A purpose-built heavy-duty diesel forklift for lumber, steel, concrete and heavy cargo yards. Reinforced masts, oversized rollers and chain anchors let it cycle long, wide and heavy loads all day on rough outdoor surfaces. This class spans roughly 26,000 to 36,000 lb of rated capacity at a 36-inch load center.",
+    "highlights": [
+      {
+        "k": "Rated Capacity",
+        "v": "26,000 - 36,000 lb @ 36 in LC"
+      },
+      {
+        "k": "Max Fork Height",
+        "v": "~13 ft (12.96 ft / 155 in)"
+      },
+      {
+        "k": "Engine",
+        "v": "164 hp Cummins QSB 6.7L diesel"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "~47,186 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Pneumatic-Tire Heavy Forklift"
+          },
+          {
+            "k": "Make",
+            "v": "Hyster"
+          },
+          {
+            "k": "Model",
+            "v": "H360-36HD (H300-360XD series)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Cummins QSB 6.7L"
+          },
+          {
+            "k": "Rated Power",
+            "v": "164 hp"
+          },
+          {
+            "k": "Peak Torque",
+            "v": "540 lb-ft @ 1,500 rpm"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "Diesel"
+          },
+          {
+            "k": "Fuel Capacity",
+            "v": "54 gal"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Performance",
+        "rows": [
+          {
+            "k": "Rated Capacity",
+            "v": "26,000 - 36,000 lb (rep. 36,000 lb)"
+          },
+          {
+            "k": "Load Center",
+            "v": "36 in"
+          },
+          {
+            "k": "Max Fork Height",
+            "v": "12.96 ft (155 in)"
+          },
+          {
+            "k": "Mast Tilt (fwd / back)",
+            "v": "15 deg / 10 deg"
+          },
+          {
+            "k": "Lift Speed",
+            "v": "76 ft/min"
+          },
+          {
+            "k": "Travel Speed (max)",
+            "v": "17 mph"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Length to Fork Face",
+            "v": "17.85 ft"
+          },
+          {
+            "k": "Overall Width",
+            "v": "8.34 ft (100 in)"
+          },
+          {
+            "k": "Height, Mast Lowered",
+            "v": "12.08 ft"
+          },
+          {
+            "k": "Wheelbase",
+            "v": "12.31 ft (148 in)"
+          },
+          {
+            "k": "Max Fork Spread",
+            "v": "93.5 in"
+          },
+          {
+            "k": "Ground Clearance",
+            "v": "14.5 in"
+          }
+        ]
+      },
+      {
+        "group": "Tires",
+        "rows": [
+          {
+            "k": "Tire Type",
+            "v": "Pneumatic"
+          },
+          {
+            "k": "Tire Size (front / rear)",
+            "v": "12.00 x 20 bias"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specs are OEM base-unit figures; actual units vary with mast, forks, attachments and options. As a grouped range listing, capacity, height and weight reflect several models across the 26,000-36,000 lb class; representative figures are from the Hyster H360-36HD.",
+    "coversNote": "Covers Hyster H260XD through H360XD / H300-360XD-series heavy-duty pneumatic-tire forklifts (26,000-36,000 lb). Representative specs from the H360-36HD (36,000 lb @ 36 in).",
+    "source": "RitchieSpecs Hyster H360-36HD (https://www.ritchiespecs.com/model/hyster-h360-36hd-forklift); Hyster H300-360XD product page (https://www.hyster.com/en-us/north-america/high-capacity-internal-combustion-trucks-pneumatic-tire/h210-250xd48-h300-360xd/)"
+  },
+  "60-120k-lb-heavy-forklift": {
+    "type": "Pneumatic-Tire Heavy Forklift",
+    "make": "Hoist Liftruck",
+    "model": "P-Series (P600 - P1100)",
+    "year": "-",
+    "overview": "American-built big-truck pneumatic forklifts for handling steel coils, pipe, concrete and other extreme loads. Powered by high-output Cummins diesels through 3-speed Dana automatic powershift transmissions and load-sensing hydraulics. This class runs from 60,000 lb (P600) up to about 110,000-120,000 lb (P1100) at a 48-inch load center.",
+    "highlights": [
+      {
+        "k": "Rated Capacity",
+        "v": "60,000 - 120,000 lb @ 48 in LC"
+      },
+      {
+        "k": "Load Center",
+        "v": "48 in"
+      },
+      {
+        "k": "Engine",
+        "v": "Cummins diesel, up to 380 hp"
+      },
+      {
+        "k": "Drivetrain",
+        "v": "3-speed Dana automatic powershift"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Pneumatic-Tire Heavy Forklift"
+          },
+          {
+            "k": "Make",
+            "v": "Hoist Liftruck (Brute-class)"
+          },
+          {
+            "k": "Model",
+            "v": "P-Series (P600 - P1100)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make",
+            "v": "Cummins diesel"
+          },
+          {
+            "k": "Rated Power",
+            "v": "160 - 380 hp (by capacity)"
+          },
+          {
+            "k": "Emissions",
+            "v": "Tier 3 / Tier 4 available"
+          },
+          {
+            "k": "Transmission",
+            "v": "Dana 32,000 / 36,000 3-speed auto powershift"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "Diesel (optional GM 5.7L / 8.1L LP on some models)"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Performance",
+        "rows": [
+          {
+            "k": "Rated Capacity",
+            "v": "60,000 - 120,000 lb"
+          },
+          {
+            "k": "Load Center",
+            "v": "48 in"
+          },
+          {
+            "k": "Representative Models",
+            "v": "P600 (60,000), P800 (80,000), P1100 (110,000)"
+          },
+          {
+            "k": "Hydraulics",
+            "v": "Load-sensing with variable-flow pumps"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Wheelbase (P600 / P800 / P1100)",
+            "v": "170 in / 190 in / 288 in"
+          },
+          {
+            "k": "Overall Width (P600 / P800 / P1100)",
+            "v": "135 in / 148 in / 170 in"
+          },
+          {
+            "k": "Length to Fork Face (P600 / P800 / P1100)",
+            "v": "252 in / 284 in / 388 in"
+          }
+        ]
+      },
+      {
+        "group": "Tires",
+        "rows": [
+          {
+            "k": "Tire Type",
+            "v": "Pneumatic"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specs are OEM base-unit figures; actual units vary with capacity, mast, attachments and options. As a grouped range listing, values span multiple P-Series models across the 60,000-120,000 lb class; engine power, dimensions and weights scale with capacity. Service weight not published per model.",
+    "coversNote": "Covers Hoist Liftruck P-Series and comparable Brute-class big-truck pneumatic forklifts, 60,000-120,000 lb (P600 through P1100). Representative dimensions span the P600, P800 and P1100.",
+    "source": "Hoist P-Series basic-specs sheet (https://otaysales.s3.amazonaws.com/item/spec_file/1664/Hoist-P-Series.pdf); Hoist P-Series brochure via Doggett (https://www.doggett.com/images/doggett-toyotalift/brands-equipment/09_Hoist/01_Pneumatic/01_P-Series/Hoist_P-Series_Brochure.pdf); Hoist Material Handling P-Series (https://www.hoistlift.com/p-series-22-000-125-000-lbs-/)"
+  },
+  "15k-17-5-heavy-forklifts": {
+    "type": "Pneumatic-Tire Heavy Forklift",
+    "make": "Hyster",
+    "model": "H155FT (H135-155FT series)",
+    "year": "-",
+    "overview": "Rugged internal-combustion pneumatic-tire forklifts built for heavy, high-cycle outdoor work at lumberyards, block plants and freight docks. Diesel power with a load-sensing hydraulic mast delivers strong lift and long fork heights. This class covers roughly 15,000 to 17,500 lb rated capacity at a 24-inch load center.",
+    "highlights": [
+      {
+        "k": "Rated Capacity",
+        "v": "15,000 - 17,500 lb @ 24 in LC"
+      },
+      {
+        "k": "Max Fork Height",
+        "v": "17.7 ft (213 in)"
+      },
+      {
+        "k": "Engine",
+        "v": "105 hp Cummins 4.5L diesel"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "~20,900 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Pneumatic-Tire Heavy Forklift"
+          },
+          {
+            "k": "Make",
+            "v": "Hyster"
+          },
+          {
+            "k": "Model",
+            "v": "H155FT (H135-155FT series)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Cummins 4.5L"
+          },
+          {
+            "k": "Rated Power",
+            "v": "105 hp"
+          },
+          {
+            "k": "Displacement",
+            "v": "230 cu in"
+          },
+          {
+            "k": "Peak Torque",
+            "v": "275 lb-ft @ 1,600 rpm"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "Diesel (also LPG / gas)"
+          },
+          {
+            "k": "Fuel Capacity",
+            "v": "19.7 gal"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Performance",
+        "rows": [
+          {
+            "k": "Rated Capacity",
+            "v": "15,000 - 17,500 lb (rep. 15,500 lb)"
+          },
+          {
+            "k": "Load Center",
+            "v": "24 in"
+          },
+          {
+            "k": "Max Fork Height",
+            "v": "17.72 ft (213 in)"
+          },
+          {
+            "k": "Mast Tilt (fwd / back)",
+            "v": "5 deg / 10 deg"
+          },
+          {
+            "k": "Lift Speed",
+            "v": "96 ft/min"
+          },
+          {
+            "k": "Travel Speed (max)",
+            "v": "13.8 mph"
+          },
+          {
+            "k": "Gradeability",
+            "v": "33%"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Length to Fork Face",
+            "v": "12.04 ft"
+          },
+          {
+            "k": "Overall Width",
+            "v": "6.84 ft (82 in)"
+          },
+          {
+            "k": "Height, Mast Lowered",
+            "v": "12.28 ft"
+          },
+          {
+            "k": "Wheelbase",
+            "v": "7.34 ft (88 in)"
+          },
+          {
+            "k": "Turning Radius",
+            "v": "11.12 ft"
+          },
+          {
+            "k": "Ground Clearance",
+            "v": "10 in"
+          }
+        ]
+      },
+      {
+        "group": "Tires",
+        "rows": [
+          {
+            "k": "Tire Type",
+            "v": "Pneumatic"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specs are OEM base-unit figures; actual units vary with mast, forks, tires, fuel type and options. As a grouped range listing, capacity and height reflect several models across the 15,000-17,500 lb class; representative figures are from the Hyster H155FT diesel.",
+    "coversNote": "Covers Hyster H135FT through H170-class pneumatic-tire forklifts (15,000-17,500 lb). Representative specs from the H155FT diesel (15,500 lb @ 24 in).",
+    "source": "RitchieSpecs Hyster H155FT Diesel (https://www.ritchiespecs.com/model/hyster-h155ft-diesel-forklift); Hyster H135-155FT product page (https://www.hyster.com/en-us/north-america/internal-combustion-trucks/h135-155ft/)"
+  },
+  "40k-50k-heavy-forklifts": {
+    "type": "Pneumatic-Tire Heavy Forklift",
+    "make": "Taylor",
+    "model": "X-450M",
+    "year": "-",
+    "overview": "Purpose-built heavy-duty pneumatic forklifts for long-duty-cycle handling of steel, pipe, precast concrete and oversized loads. A Cummins QSL9 diesel drives a Dana powershift transmission and AxleTech planetary drive axle through an ULTRA-VU high-visibility mast. This class covers roughly 40,000 to 50,000 lb rated capacity at a 36-inch load center.",
+    "highlights": [
+      {
+        "k": "Rated Capacity",
+        "v": "40,000 - 50,000 lb @ 36 in LC"
+      },
+      {
+        "k": "Load Center",
+        "v": "36 in"
+      },
+      {
+        "k": "Max Lift Height",
+        "v": "~11 ft (132 in)"
+      },
+      {
+        "k": "Engine",
+        "v": "250 hp Cummins QSL9 Tier 4F diesel"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Pneumatic-Tire Heavy Forklift"
+          },
+          {
+            "k": "Make",
+            "v": "Taylor"
+          },
+          {
+            "k": "Model",
+            "v": "X-450M"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Cummins QSL9"
+          },
+          {
+            "k": "Rated Power",
+            "v": "250 hp"
+          },
+          {
+            "k": "Emissions",
+            "v": "Tier 4 Final"
+          },
+          {
+            "k": "Transmission",
+            "v": "Dana TE-17 3-speed powershift"
+          },
+          {
+            "k": "Drive Axle",
+            "v": "AxleTech PRLC1794 HD planetary"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "Diesel"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Performance",
+        "rows": [
+          {
+            "k": "Rated Capacity",
+            "v": "40,000 - 50,000 lb (rep. 45,000 lb)"
+          },
+          {
+            "k": "Load Center",
+            "v": "36 in"
+          },
+          {
+            "k": "Mast",
+            "v": "11-ft ULTRA-VU 2-stage"
+          },
+          {
+            "k": "Max Lift Height",
+            "v": "~11 ft (132 in)"
+          },
+          {
+            "k": "Mast Lowered Height",
+            "v": "155 in"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Wheelbase",
+            "v": "156 in"
+          },
+          {
+            "k": "Forks",
+            "v": "4.5 x 8.5 x 72 in"
+          }
+        ]
+      },
+      {
+        "group": "Tires",
+        "rows": [
+          {
+            "k": "Tire Type",
+            "v": "Pneumatic"
+          },
+          {
+            "k": "Tire Size",
+            "v": "14.00 x 25-20PR"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specs are OEM base-unit figures; actual units vary with mast, forks, attachments and options. As a grouped range listing, capacity reflects several models across the 40,000-50,000 lb class; representative figures are from the Taylor X-450M. Service weight not published per model.",
+    "coversNote": "Covers Taylor X-/XH-450M through X-500M heavy-duty pneumatic forklifts (40,000-50,000 lb). Representative specs from the X-450M (45,000 lb @ 36 in).",
+    "source": "Taylor X-450M product page (https://www.taylorforklifts.com/product.php?model=X-450M); Taylor International X-450M (https://www.taylorintl.com/product.php?model=X-450M)"
+  },
+  "18k-25k-heavy-forklifts": {
+    "type": "Pneumatic-Tire Heavy Forklift",
+    "make": "Yale",
+    "model": "GDP210DF (GDP190-280DF series)",
+    "year": "-",
+    "overview": "High-capacity outdoor diesel forklifts for lumber, concrete and heavy cargo handling, with strong maneuverability and support for tire handlers, paper-roll and concrete clamps. Cummins power, ZF powershift transmission and pneumatic tires deliver stable lifting on rough yards. This class covers roughly 18,000 to 25,000 lb rated capacity at a 24-inch load center.",
+    "highlights": [
+      {
+        "k": "Rated Capacity",
+        "v": "18,000 - 25,000 lb @ 24 in LC"
+      },
+      {
+        "k": "Max Fork Height",
+        "v": "~12.25 ft (147 in)"
+      },
+      {
+        "k": "Engine",
+        "v": "155-160 hp Cummins QSB diesel"
+      },
+      {
+        "k": "Service Weight",
+        "v": "~29,500 lb (21,000 lb model)"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Pneumatic-Tire Heavy Forklift"
+          },
+          {
+            "k": "Make",
+            "v": "Yale (also Toyota THD-series)"
+          },
+          {
+            "k": "Model",
+            "v": "GDP210DF (GDP190-280DF series)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Cummins QSB 6.7 (Tier 3) or QSB 4.5 (Tier 4F)"
+          },
+          {
+            "k": "Rated Power",
+            "v": "155 hp (QSB 6.7) / 160 hp (QSB 4.5)"
+          },
+          {
+            "k": "Peak Torque",
+            "v": "440 lb-ft @ 1,500 rpm (QSB 6.7)"
+          },
+          {
+            "k": "Transmission",
+            "v": "ZF WG161 powershift, 3F / 3R"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "Diesel"
+          },
+          {
+            "k": "Fuel Capacity",
+            "v": "27.5 gal"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Performance",
+        "rows": [
+          {
+            "k": "Rated Capacity",
+            "v": "18,000 - 25,000 lb (rep. 21,000 lb)"
+          },
+          {
+            "k": "Load Center",
+            "v": "24 in"
+          },
+          {
+            "k": "Max Fork Height",
+            "v": "147 in (12.25 ft), std 2-stage"
+          },
+          {
+            "k": "Mast Tilt (fwd / back)",
+            "v": "15 deg / 12 deg"
+          },
+          {
+            "k": "Lift Speed",
+            "v": "124-132 ft/min"
+          },
+          {
+            "k": "Travel Speed (laden)",
+            "v": "18.5 mph"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length",
+            "v": "218 in"
+          },
+          {
+            "k": "Length to Fork Face",
+            "v": "170 in"
+          },
+          {
+            "k": "Overall Width",
+            "v": "97 in"
+          },
+          {
+            "k": "Height, Mast Lowered",
+            "v": "129 in"
+          },
+          {
+            "k": "Height, Mast Extended",
+            "v": "201 in"
+          },
+          {
+            "k": "Wheelbase",
+            "v": "106 in"
+          },
+          {
+            "k": "Outside Turning Radius",
+            "v": "155 in"
+          }
+        ]
+      },
+      {
+        "group": "Tires",
+        "rows": [
+          {
+            "k": "Tire Type",
+            "v": "Pneumatic"
+          },
+          {
+            "k": "Tire Size (front / rear)",
+            "v": "10.00-20 16PR"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specs are OEM base-unit figures; actual units vary with mast, forks, attachments, engine tier and options. As a grouped range listing, capacity, height and weight reflect several models across the 18,000-25,000 lb class; representative figures are from the Yale GDP210DF.",
+    "coversNote": "Covers Yale GDP190-250DF and comparable Toyota THD-series pneumatic forklifts (18,000-25,000 lb). Representative specs from the Yale GDP210DF (21,000 lb @ 24 in).",
+    "source": "Yale GDP190-280DF spec sheet (https://www.yale.com/globalassets/coms/yale/north-america/documents/trucks/high-capacity-pneumatic/gdp190-280df-spec-sheet.pdf); Yale GP190-280DF product page (https://yale.com/en-us/north-america/high-capacity-internal-combustion-trucks-pneumatic-tire/gp190-280df)"
+  },
+  "8k-40-49ft-telehandlers": {
+    "type": "Rough-Terrain Telehandler",
+    "make": "Genie",
+    "model": "GTH-844 (representative)",
+    "year": "-",
+    "overview": "A full-size 8,000 lb rough-terrain telehandler for lifting and placing loads at height on job sites and yards. This class reaches roughly 42-44 ft with strong mid-range capacity, and runs full-time four-wheel drive with multiple steer modes for tight, uneven ground. Ideal for framing, masonry, roofing and general material staging.",
+    "highlights": [
+      {
+        "k": "Rated Lift Capacity",
+        "v": "8,000 lb"
+      },
+      {
+        "k": "Max Lift Height",
+        "v": "42-44 ft"
+      },
+      {
+        "k": "Max Forward Reach",
+        "v": "28-30 ft"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "22,500-25,000 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Rough-Terrain Telehandler"
+          },
+          {
+            "k": "Make",
+            "v": "Genie / JLG / Xtreme / Gehl"
+          },
+          {
+            "k": "Model",
+            "v": "GTH-844 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Deutz TCD 3.6 L (GTH-844)"
+          },
+          {
+            "k": "Gross Power",
+            "v": "74 hp"
+          },
+          {
+            "k": "Cylinders",
+            "v": "4"
+          },
+          {
+            "k": "Fuel",
+            "v": "Diesel"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Reach",
+        "rows": [
+          {
+            "k": "Rated Lift Capacity",
+            "v": "8,000 lb"
+          },
+          {
+            "k": "Max Lift Height",
+            "v": "42-44 ft (GTH-844: 43 ft 10 in)"
+          },
+          {
+            "k": "Max Forward Reach",
+            "v": "28-30 ft (GTH-844: 28 ft 2 in)"
+          },
+          {
+            "k": "Capacity at Max Height",
+            "v": "~6,000 lb (GTH-844)"
+          },
+          {
+            "k": "Capacity at Max Reach",
+            "v": "~2,000 lb (GTH-844)"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length",
+            "v": "20 ft 3 in (GTH-844)"
+          },
+          {
+            "k": "Overall Width",
+            "v": "8 ft 2 in (GTH-844)"
+          },
+          {
+            "k": "Stowed Height",
+            "v": "7 ft 10 in (GTH-844)"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "32 gal (GTH-844)"
+          },
+          {
+            "k": "Hydraulic System",
+            "v": "55 gal (GTH-844)"
+          }
+        ]
+      },
+      {
+        "group": "Drive & Tires",
+        "rows": [
+          {
+            "k": "Drive",
+            "v": "Full-time 4WD, 3 steer modes"
+          },
+          {
+            "k": "Travel Speed",
+            "v": "15 mph (GTH-844)"
+          },
+          {
+            "k": "Tires",
+            "v": "13 x 24, 12-ply (GTH-844)"
+          }
+        ]
+      }
+    ],
+    "coversNote": "Covers Genie GTH-844, JLG 8042, SkyTrak 8042, Xtreme XR842 and Gehl RS8-42 class machines (8,000 lb capacity, ~42-44 ft lift height). Ranges span these models; engine and dimension rows reflect the representative Genie GTH-844.",
+    "configNote": "Specs are OEM base-unit figures for the representative model and reflect a range across several 8k / 40-49 ft models; the actual unit may vary with options and attachments (forks, carriage, bucket, etc.).",
+    "source": "Genie GTH-844 spec sheet (genielift.com); RitchieSpecs Genie GTH844 (https://www.ritchiespecs.com/model/genie-gth844-telescopic-forklift); Conger Genie GTH-844 (https://www.conger.com/product/genie-gth-844-telehandler/)."
+  },
+  "10-12k-50ft-telehandlers": {
+    "type": "Rough-Terrain Telehandler",
+    "make": "JLG",
+    "model": "1055 (representative)",
+    "year": "-",
+    "overview": "A high-capacity rough-terrain telehandler class that lifts 10,000-12,000 lb to about 54-56 ft, the tallest and strongest telehandlers in a typical rental fleet. Built for structural steel, precast, heavy masonry and high-rise material placement, with load-sensing hydraulics and powershift drive. Outriggers are used to reach full capacity at maximum height and reach.",
+    "highlights": [
+      {
+        "k": "Rated Lift Capacity",
+        "v": "10,000-12,000 lb"
+      },
+      {
+        "k": "Max Lift Height",
+        "v": "54-56 ft"
+      },
+      {
+        "k": "Max Forward Reach",
+        "v": "~42 ft"
+      },
+      {
+        "k": "Engine Power",
+        "v": "130 hp"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Rough-Terrain Telehandler"
+          },
+          {
+            "k": "Make",
+            "v": "JCB / JLG / SkyTrak"
+          },
+          {
+            "k": "Model",
+            "v": "1055 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Cummins QSF3.8 L, Tier 4 Final (1055)"
+          },
+          {
+            "k": "Gross Power",
+            "v": "130 hp"
+          },
+          {
+            "k": "Cylinders",
+            "v": "4"
+          },
+          {
+            "k": "Fuel",
+            "v": "Diesel"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Reach",
+        "rows": [
+          {
+            "k": "Rated Lift Capacity",
+            "v": "10,000-12,000 lb (1055: 10,000 lb)"
+          },
+          {
+            "k": "Max Lift Height",
+            "v": "54-56 ft (1055: 55 ft)"
+          },
+          {
+            "k": "Max Forward Reach",
+            "v": "~42 ft (1055)"
+          },
+          {
+            "k": "Capacity at Max Reach",
+            "v": "~3,000 lb (1055)"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "~31,560 lb (1055)"
+          },
+          {
+            "k": "Overall Width",
+            "v": "8 ft 6 in (1055)"
+          },
+          {
+            "k": "Overall Height",
+            "v": "8 ft 5 in (1055)"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "38.3 gal (1055)"
+          }
+        ]
+      },
+      {
+        "group": "Drive & Tires",
+        "rows": [
+          {
+            "k": "Drive",
+            "v": "4WD, powershift transmission, selectable steer modes"
+          },
+          {
+            "k": "Aux Hydraulic Flow",
+            "v": "25 gpm (1055)"
+          },
+          {
+            "k": "Hydraulic Pump",
+            "v": "Load-sensing piston (1055)"
+          },
+          {
+            "k": "Tires",
+            "v": "400/75-28 (1055)"
+          }
+        ]
+      }
+    ],
+    "coversNote": "Covers JLG 1055 / 1255, SkyTrak 10054 / 12054 and JCB 510-56 / 512-56 class machines (10,000-12,000 lb capacity, ~54-56 ft lift height). Ranges span these models; engine and dimension rows reflect the representative JLG 1055.",
+    "configNote": "Specs are OEM base-unit figures for the representative model and reflect a range across several 10-12k / 50 ft+ models; the actual unit may vary with options and attachments. Full capacity at maximum height/reach requires outriggers.",
+    "source": "JLG 1055 (jlg.com); RitchieSpecs JLG 1055 (https://www.ritchiespecs.com/model/jlg-1055-telescopic-forklift); Conger JLG 1055 (https://www.conger.com/product/jlg-1055-telehandler/)."
+  },
+  "6-7k-42ft-telehandlers": {
+    "type": "Rough-Terrain Telehandler",
+    "make": "SkyTrak",
+    "model": "6042 (representative)",
+    "year": "-",
+    "overview": "A versatile mid-size rough-terrain telehandler class rated 6,000-7,000 lb with about 42 ft of lift height. These are among the most common general-purpose telehandlers on a job site, pairing hydrostatic drive and full-time four-wheel drive for smooth control on rough ground. Well suited to residential and commercial framing, masonry and material handling.",
+    "highlights": [
+      {
+        "k": "Rated Lift Capacity",
+        "v": "6,000-7,000 lb"
+      },
+      {
+        "k": "Max Lift Height",
+        "v": "~42 ft"
+      },
+      {
+        "k": "Max Forward Reach",
+        "v": "~29-31 ft"
+      },
+      {
+        "k": "Engine Power",
+        "v": "99-117 hp"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Rough-Terrain Telehandler"
+          },
+          {
+            "k": "Make",
+            "v": "JLG / Xtreme / SkyTrak"
+          },
+          {
+            "k": "Model",
+            "v": "6042 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Cummins 4BT3.9 (6042)"
+          },
+          {
+            "k": "Gross Power",
+            "v": "99 hp"
+          },
+          {
+            "k": "Cylinders",
+            "v": "4"
+          },
+          {
+            "k": "Fuel",
+            "v": "Diesel"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Reach",
+        "rows": [
+          {
+            "k": "Rated Lift Capacity",
+            "v": "6,000-7,000 lb (6042: 6,000 lb; 7042: 7,000 lb)"
+          },
+          {
+            "k": "Max Lift Height",
+            "v": "~42 ft (6042: 42 ft 4 in)"
+          },
+          {
+            "k": "Max Forward Reach",
+            "v": "~29-31 ft (6042: 29 ft 6 in)"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "~23,520 lb (6042)"
+          },
+          {
+            "k": "Overall Length",
+            "v": "19 ft 4 in (6042)"
+          },
+          {
+            "k": "Overall Width",
+            "v": "8 ft 0 in / 95 in (6042)"
+          },
+          {
+            "k": "Overall Height",
+            "v": "8 ft 6 in (6042)"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "34.9 gal (6042)"
+          },
+          {
+            "k": "Hydraulic System",
+            "v": "60 gal (6042)"
+          }
+        ]
+      },
+      {
+        "group": "Drive & Tires",
+        "rows": [
+          {
+            "k": "Drive",
+            "v": "Full-time 4WD, hydrostatic transmission"
+          },
+          {
+            "k": "Tires",
+            "v": "13.00 x 24, 12-ply (6042)"
+          }
+        ]
+      }
+    ],
+    "coversNote": "Covers JLG 642 / 742, SkyTrak 6042 / 7042 and Xtreme XR642 class machines (6,000-7,000 lb capacity, ~42 ft lift height). Ranges span these models; engine and dimension rows reflect the representative SkyTrak 6042.",
+    "configNote": "Specs are OEM base-unit figures for the representative model and reflect a range across several 6-7k / 42 ft models; the actual unit may vary with options and attachments.",
+    "source": "SkyTrak 6042 (jlg.com); RitchieSpecs SkyTrak 6042 (https://www.ritchiespecs.com/model/skytrak-6042-telescopic-forklift); SkyTrak 6042 spec sheet (sunbeltrentals.com)."
+  },
+  "9k-40-49ft-telehandlers": {
+    "type": "Rough-Terrain Telehandler",
+    "make": "JLG",
+    "model": "943 (representative)",
+    "year": "-",
+    "overview": "A heavy-duty 9,000 lb rough-terrain telehandler reaching about 43 ft, bridging the gap between standard 8k machines and high-capacity units. It carries strong capacity deep into its lift range - 7,000 lb still available at full height - making it a workhorse for masonry, steel and heavy material placement. Powershift drive and selectable steer modes handle demanding job-site ground.",
+    "highlights": [
+      {
+        "k": "Rated Lift Capacity",
+        "v": "9,000 lb"
+      },
+      {
+        "k": "Max Lift Height",
+        "v": "43 ft"
+      },
+      {
+        "k": "Max Forward Reach",
+        "v": "30 ft 5 in"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "24,912 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Rough-Terrain Telehandler"
+          },
+          {
+            "k": "Make",
+            "v": "JLG / Lull"
+          },
+          {
+            "k": "Model",
+            "v": "943 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Cummins QSF3.8 L, Tier 4 Final"
+          },
+          {
+            "k": "Gross Power",
+            "v": "110 hp"
+          },
+          {
+            "k": "Cylinders",
+            "v": "4"
+          },
+          {
+            "k": "Fuel",
+            "v": "Diesel"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Reach",
+        "rows": [
+          {
+            "k": "Rated Lift Capacity",
+            "v": "9,000 lb"
+          },
+          {
+            "k": "Max Lift Height",
+            "v": "43 ft"
+          },
+          {
+            "k": "Max Forward Reach",
+            "v": "30 ft 5 in"
+          },
+          {
+            "k": "Capacity at Max Height",
+            "v": "7,000 lb"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "24,912 lb"
+          },
+          {
+            "k": "Overall Length",
+            "v": "19 ft 11 in"
+          },
+          {
+            "k": "Overall Width",
+            "v": "8 ft 1 in"
+          },
+          {
+            "k": "Overall Height",
+            "v": "8 ft 2 in"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "38.3 gal"
+          }
+        ]
+      },
+      {
+        "group": "Drive & Tires",
+        "rows": [
+          {
+            "k": "Drive",
+            "v": "4WD, powershift transmission, selectable steer modes"
+          },
+          {
+            "k": "Aux Hydraulic Flow",
+            "v": "25 gpm"
+          },
+          {
+            "k": "Tires",
+            "v": "370/75-28"
+          }
+        ]
+      }
+    ],
+    "coversNote": "Covers JLG 943 and Lull 944E-42 class machines (9,000 lb capacity, ~42-43 ft lift height). Engine and dimension rows reflect the representative JLG 943.",
+    "configNote": "Specs are OEM base-unit figures for the representative JLG 943 and reflect a range across 9k / 40-49 ft models; the actual unit may vary with options and attachments.",
+    "source": "JLG 943 (jlg.com); RitchieSpecs JLG 943 (https://www.ritchiespecs.com/model/jlg-943-telescopic-forklift); JLG 943 spec sheet (acropolis-wp-content-uploads, s3-us-west-1.amazonaws.com)."
+  },
+  "6k-36ft-telehandlers": {
+    "type": "Rough-Terrain Telehandler",
+    "make": "Genie",
+    "model": "GTH-636",
+    "year": "-",
+    "overview": "A compact 6,000 lb rough-terrain telehandler reaching 36 ft, engineered to stay under 20,000 lb for easier transport while retaining full-size lifting muscle. Full-time four-wheel drive and a tight turning radius make it maneuverable in confined job sites, and it can pick and carry its full 6,000 lb capacity. A practical all-around choice for framing, roofing and material staging.",
+    "highlights": [
+      {
+        "k": "Rated Lift Capacity",
+        "v": "6,000 lb"
+      },
+      {
+        "k": "Max Lift Height",
+        "v": "36 ft"
+      },
+      {
+        "k": "Max Forward Reach",
+        "v": "21 ft 11 in"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "17,600 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Rough-Terrain Telehandler"
+          },
+          {
+            "k": "Make",
+            "v": "Genie"
+          },
+          {
+            "k": "Model",
+            "v": "GTH-636"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Turbocharged diesel"
+          },
+          {
+            "k": "Gross Power",
+            "v": "74 hp"
+          },
+          {
+            "k": "Cylinders",
+            "v": "4"
+          },
+          {
+            "k": "Fuel",
+            "v": "Diesel"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Reach",
+        "rows": [
+          {
+            "k": "Rated Lift Capacity",
+            "v": "6,000 lb"
+          },
+          {
+            "k": "Max Lift Height",
+            "v": "36 ft"
+          },
+          {
+            "k": "Max Forward Reach",
+            "v": "21 ft 11 in"
+          },
+          {
+            "k": "Capacity at Max Height",
+            "v": "5,000 lb"
+          },
+          {
+            "k": "Capacity at Max Reach",
+            "v": "1,500 lb"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "17,600 lb"
+          },
+          {
+            "k": "Overall Length",
+            "v": "17 ft 10 in"
+          },
+          {
+            "k": "Overall Width",
+            "v": "7 ft 11 in"
+          },
+          {
+            "k": "Stowed Height",
+            "v": "7 ft 10 in"
+          },
+          {
+            "k": "Outside Turning Radius",
+            "v": "13 ft 4 in"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "30.2 gal"
+          },
+          {
+            "k": "Hydraulic System",
+            "v": "50 gal"
+          }
+        ]
+      },
+      {
+        "group": "Drive & Tires",
+        "rows": [
+          {
+            "k": "Drive",
+            "v": "Full-time 4WD"
+          },
+          {
+            "k": "Travel Speed",
+            "v": "18 mph"
+          },
+          {
+            "k": "Tires",
+            "v": "13 x 28, 12-ply"
+          }
+        ]
+      }
+    ],
+    "coversNote": "Single-model class - the Genie GTH-636, Genie's compact 6,000 lb / 36 ft full-size telehandler.",
+    "configNote": "Specs are OEM base-unit figures for the Genie GTH-636; the actual unit may vary with options and attachments (forks, carriage, bucket, etc.). Operating weight reflects the current-generation model kept under 20,000 lb.",
+    "source": "Genie GTH-636 spec sheet (genielift.com); RitchieSpecs Genie GTH636 (https://www.ritchiespecs.com/model/genie-gth636-telescopic-forklift); Lift and Access, 'Genie's New 6000-lb Telehandler' (liftandaccess.com)."
+  },
+  "60ft-telescopic-boom-lifts": {
+    "type": "Telescopic Boom Lift",
+    "make": "Genie/Skyjack",
+    "model": "Genie S-60 (representative)",
+    "year": "-",
+    "overview": "A 60 ft self-propelled straight (telescopic) boom lift for high-reach exterior work such as steel erection, painting, and building maintenance. Delivers roughly 66 ft of working height with strong horizontal outreach and a rough-terrain 4WD chassis, plus a jib on most models for precise final positioning.",
+    "highlights": [
+      {
+        "k": "Max Platform Height",
+        "v": "60 ft"
+      },
+      {
+        "k": "Max Working Height",
+        "v": "~66 ft"
+      },
+      {
+        "k": "Horizontal Outreach",
+        "v": "up to 51 ft"
+      },
+      {
+        "k": "Platform Capacity",
+        "v": "500-660 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Telescopic Boom Lift"
+          },
+          {
+            "k": "Make",
+            "v": "Genie/Skyjack"
+          },
+          {
+            "k": "Model",
+            "v": "Genie S-60 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Platform",
+        "rows": [
+          {
+            "k": "Max Platform Height",
+            "v": "60 ft"
+          },
+          {
+            "k": "Max Working Height",
+            "v": "~66 ft 6 in"
+          },
+          {
+            "k": "Horizontal Outreach",
+            "v": "40-51 ft"
+          },
+          {
+            "k": "Platform Capacity",
+            "v": "500-660 lb"
+          },
+          {
+            "k": "Platform Rotation",
+            "v": "160 deg"
+          },
+          {
+            "k": "Platform Size (L x W)",
+            "v": "96 in x 36 in"
+          },
+          {
+            "k": "Jib",
+            "v": "6 ft (most models)"
+          }
+        ]
+      },
+      {
+        "group": "Engine/Power",
+        "rows": [
+          {
+            "k": "Fuel",
+            "v": "Diesel or Gas/LPG"
+          },
+          {
+            "k": "Gross Power",
+            "v": "up to 75 hp"
+          },
+          {
+            "k": "Drive",
+            "v": "4WD rough terrain"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Width",
+            "v": "8 ft 2 in"
+          },
+          {
+            "k": "Stowed Height",
+            "v": "~8 ft 11 in"
+          },
+          {
+            "k": "Turning Radius",
+            "v": "~18 ft"
+          },
+          {
+            "k": "Fuel Capacity",
+            "v": "34.9 gal"
+          }
+        ]
+      },
+      {
+        "group": "Drive",
+        "rows": [
+          {
+            "k": "Max Drive Speed",
+            "v": "~4 mph"
+          },
+          {
+            "k": "Tires",
+            "v": "Foam-filled rough terrain"
+          }
+        ]
+      }
+    ],
+    "coversNote": "Covers Genie S-60 / S-65 and Skyjack SJ63 AJ / SJ66 T class 60 ft telescopic (straight) boom lifts. Height, reach, and capacity are presented as ranges across these models.",
+    "configNote": "Specifications are OEM base-unit figures for representative 60 ft telescopic booms; because this is a grouped listing, values are ranges reflecting several models. The actual delivered unit may vary by manufacturer, model year, engine, and options/attachments.",
+    "source": "Genie S-60 J product page (genielift.com/en/aerial-lifts/telescopic-boom-lifts/s60j); RitchieSpecs Genie S60 (ritchiespecs.com/model/genie-s60-boom-lift); Conger Genie S-60 listing (conger.com/product/genie-s60-boom-lift)."
+  },
+  "85ft-telescopic-boom-lifts": {
+    "type": "Telescopic Boom Lift",
+    "make": "Genie/Snorkel",
+    "model": "Genie S-85 (representative)",
+    "year": "-",
+    "overview": "An 85 ft self-propelled telescopic boom lift built for tall exterior access work where reach and up-high capacity both matter. Provides about 91 ft of working height and roughly 75 ft of horizontal outreach, with XC (Xtra Capacity) models carrying up to 1,000 lb for two workers plus tools and materials.",
+    "highlights": [
+      {
+        "k": "Max Platform Height",
+        "v": "85 ft"
+      },
+      {
+        "k": "Max Working Height",
+        "v": "~91 ft"
+      },
+      {
+        "k": "Horizontal Outreach",
+        "v": "up to 76 ft"
+      },
+      {
+        "k": "Platform Capacity",
+        "v": "up to 1,000 lb (restricted)"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Telescopic Boom Lift"
+          },
+          {
+            "k": "Make",
+            "v": "Genie/Snorkel"
+          },
+          {
+            "k": "Model",
+            "v": "Genie S-85 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Platform",
+        "rows": [
+          {
+            "k": "Max Platform Height",
+            "v": "85 ft"
+          },
+          {
+            "k": "Max Working Height",
+            "v": "~91 ft"
+          },
+          {
+            "k": "Horizontal Outreach",
+            "v": "74-76 ft"
+          },
+          {
+            "k": "Platform Capacity",
+            "v": "500 lb unrestricted / up to 1,000 lb restricted (XC)"
+          },
+          {
+            "k": "Platform Rotation",
+            "v": "160 deg"
+          },
+          {
+            "k": "Below-Ground Reach",
+            "v": "~9 ft 6 in"
+          }
+        ]
+      },
+      {
+        "group": "Engine/Power",
+        "rows": [
+          {
+            "k": "Engine",
+            "v": "Deutz TD2.9 L4 diesel (representative)"
+          },
+          {
+            "k": "Gross Power",
+            "v": "~74 hp"
+          },
+          {
+            "k": "Drive",
+            "v": "4WD rough terrain"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Width",
+            "v": "8 ft 2 in"
+          },
+          {
+            "k": "Overall Length",
+            "v": "~40 ft 4 in"
+          },
+          {
+            "k": "Stowed Height",
+            "v": "~9 ft 2 in"
+          },
+          {
+            "k": "Turning Radius",
+            "v": "~21 ft 8 in"
+          }
+        ]
+      },
+      {
+        "group": "Drive",
+        "rows": [
+          {
+            "k": "Max Drive Speed",
+            "v": "~3.5 mph"
+          },
+          {
+            "k": "Tires",
+            "v": "Foam-filled 18-625, 16 ply"
+          }
+        ]
+      }
+    ],
+    "coversNote": "Covers Genie S-80 / S-85 (including XC and HF variants) and Snorkel A80 / TB85J class 80-85 ft telescopic boom lifts. Height, reach, and capacity are presented as ranges across these models.",
+    "configNote": "Specifications are OEM base-unit figures for representative 85 ft telescopic booms; because this is a grouped listing, values are ranges reflecting several models. The actual delivered unit may vary by manufacturer, model year, engine, and options/attachments.",
+    "source": "Genie S-85 XC product page (genielift.com/en/aerial-lifts/telescopic-boom-lifts/s-85-xcen); RitchieSpecs Genie S85 (ritchiespecs.com/model/genie-s85-boom-lift); Conger Genie S-85 listing (conger.com/product/genie-s85-boom-lift)."
+  },
+  "80ft-articulating-lifts": {
+    "type": "Articulating Boom Lift",
+    "make": "Genie",
+    "model": "Genie Z-80/60 (representative)",
+    "year": "-",
+    "overview": "An 80 ft articulating (knuckle) boom lift for high work that has to reach up and over obstacles rather than straight out. The multi-section articulating arm gives about 84 ft working height, 60 ft of horizontal reach, and roughly 29 ft of up-and-over clearance, with a 360-degree continuous-rotation turntable for positioning in tight spots.",
+    "highlights": [
+      {
+        "k": "Max Platform Height",
+        "v": "80 ft"
+      },
+      {
+        "k": "Max Working Height",
+        "v": "~84 ft 6 in"
+      },
+      {
+        "k": "Horizontal Reach",
+        "v": "60 ft"
+      },
+      {
+        "k": "Up-and-Over Clearance",
+        "v": "~29 ft"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Articulating Boom Lift"
+          },
+          {
+            "k": "Make",
+            "v": "Genie"
+          },
+          {
+            "k": "Model",
+            "v": "Genie Z-80/60 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Platform",
+        "rows": [
+          {
+            "k": "Max Platform Height",
+            "v": "78-80 ft"
+          },
+          {
+            "k": "Max Working Height",
+            "v": "~84 ft 6 in"
+          },
+          {
+            "k": "Horizontal Reach",
+            "v": "60 ft"
+          },
+          {
+            "k": "Up-and-Over Clearance",
+            "v": "~29 ft"
+          },
+          {
+            "k": "Platform Capacity",
+            "v": "500 lb"
+          },
+          {
+            "k": "Platform Rotation",
+            "v": "160 deg"
+          },
+          {
+            "k": "Turntable Rotation",
+            "v": "360 deg continuous"
+          }
+        ]
+      },
+      {
+        "group": "Engine/Power",
+        "rows": [
+          {
+            "k": "Engine",
+            "v": "Deutz TD2011 L04i diesel (Perkins / Continental gas-LPG optional)"
+          },
+          {
+            "k": "Gross Power",
+            "v": "~63-78 hp (by engine)"
+          },
+          {
+            "k": "Drive",
+            "v": "4WD, 2WS/4WS options"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Width",
+            "v": "8 ft 2 in"
+          },
+          {
+            "k": "Stowed Height",
+            "v": "~9 ft 10 in"
+          },
+          {
+            "k": "Turning Radius",
+            "v": "~24 ft 6 in"
+          },
+          {
+            "k": "Fuel Capacity",
+            "v": "34.9 gal"
+          }
+        ]
+      },
+      {
+        "group": "Drive",
+        "rows": [
+          {
+            "k": "Max Drive Speed",
+            "v": "~3 mph"
+          },
+          {
+            "k": "Tires",
+            "v": "18-625 NHS rough terrain"
+          }
+        ]
+      }
+    ],
+    "coversNote": "Covers Genie Z-80/60 class 80 ft wheeled articulating boom lifts (Deutz, Perkins, and gas/LPG engine variants). Height, reach, and capacity are presented as ranges across these configurations.",
+    "configNote": "Specifications are OEM base-unit figures for the representative Genie Z-80/60; because this is a grouped listing, values are ranges reflecting several engine/drive configurations. The actual delivered unit may vary by model year, engine, and options/attachments.",
+    "source": "Genie Z-80/60 product page (genielift.com/en/aerial-lifts/articulated-boom-lifts/z8060); RitchieSpecs Genie Z80/60 (ritchiespecs.com/model/genie-z80-60-boom-lift)."
+  },
+  "30ft-boom-lift": {
+    "type": "Articulating Boom Lift",
+    "make": "JLG",
+    "model": "E300AJP",
+    "year": "-",
+    "overview": "A compact 30 ft electric articulating boom lift designed for indoor and tight-space work with zero emissions and quiet operation. Its narrow 4 ft width, zero tail swing, and up-and-over articulation let it reach over machinery and into confined areas that a straight boom cannot, making it ideal for maintenance, electrical, and finishing work.",
+    "highlights": [
+      {
+        "k": "Max Platform Height",
+        "v": "29 ft 5 in"
+      },
+      {
+        "k": "Horizontal Outreach",
+        "v": "20 ft 1 in"
+      },
+      {
+        "k": "Platform Capacity",
+        "v": "500 lb"
+      },
+      {
+        "k": "Power",
+        "v": "48V DC electric"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Articulating Boom Lift (electric)"
+          },
+          {
+            "k": "Make",
+            "v": "JLG"
+          },
+          {
+            "k": "Model",
+            "v": "E300AJP"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Platform",
+        "rows": [
+          {
+            "k": "Max Platform Height",
+            "v": "29 ft 5 in"
+          },
+          {
+            "k": "Max Working Height",
+            "v": "~35 ft 5 in"
+          },
+          {
+            "k": "Horizontal Outreach",
+            "v": "20 ft 1 in"
+          },
+          {
+            "k": "Up-and-Over Clearance",
+            "v": "~13 ft 2 in"
+          },
+          {
+            "k": "Platform Capacity",
+            "v": "500 lb"
+          },
+          {
+            "k": "Swing",
+            "v": "350 deg non-continuous"
+          }
+        ]
+      },
+      {
+        "group": "Engine/Power",
+        "rows": [
+          {
+            "k": "Power Source",
+            "v": "48V DC electric"
+          },
+          {
+            "k": "Batteries",
+            "v": "8 x 6V, ~370 amp-hr"
+          },
+          {
+            "k": "Drive",
+            "v": "Electric, zero tail swing"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Width",
+            "v": "4 ft 0 in"
+          },
+          {
+            "k": "Stowed Height",
+            "v": "6 ft 8 in"
+          },
+          {
+            "k": "Turning Radius",
+            "v": "~10 ft 2 in"
+          },
+          {
+            "k": "Operating Weight",
+            "v": "15,649 lb"
+          },
+          {
+            "k": "Gradeability",
+            "v": "25%"
+          }
+        ]
+      },
+      {
+        "group": "Drive",
+        "rows": [
+          {
+            "k": "Max Drive Speed",
+            "v": "~3 mph"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the JLG E300AJP; the actual delivered unit may vary by model year and options/attachments (e.g., platform size, tires).",
+    "source": "JLG E300AJP product page (jlg.com/en-gb/equipment/boom-lifts/articulating/electric-hybrid/e300-series/e300ajp); RitchieSpecs JLG E300AJP (ritchiespecs.com/model/jlg-e300ajp-boom-lift)."
+  },
+  "46ft-articulating-boom-lift": {
+    "type": "Articulating Boom Lift",
+    "make": "Skyjack",
+    "model": "SJ46 AJ",
+    "year": "-",
+    "overview": "A 46 ft rough-terrain articulating boom lift with axle-based 4WD for outdoor jobsite access over uneven ground. The multi-jointed boom and 5 ft jib provide strong up-and-over clearance and horizontal outreach, letting crews position the platform around obstacles for construction, maintenance, and industrial work.",
+    "highlights": [
+      {
+        "k": "Max Platform Height",
+        "v": "46 ft 3 in"
+      },
+      {
+        "k": "Horizontal Outreach",
+        "v": "24 ft 9 in"
+      },
+      {
+        "k": "Platform Capacity",
+        "v": "500-660 lb"
+      },
+      {
+        "k": "Engine",
+        "v": "Deutz D2.9L4 diesel"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Articulating Boom Lift"
+          },
+          {
+            "k": "Make",
+            "v": "Skyjack"
+          },
+          {
+            "k": "Model",
+            "v": "SJ46 AJ"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Platform",
+        "rows": [
+          {
+            "k": "Max Platform Height",
+            "v": "46 ft 3 in"
+          },
+          {
+            "k": "Max Working Height",
+            "v": "~52 ft"
+          },
+          {
+            "k": "Horizontal Outreach",
+            "v": "24 ft 9 in"
+          },
+          {
+            "k": "Up-and-Over Clearance",
+            "v": "~24 ft 5 in"
+          },
+          {
+            "k": "Platform Capacity",
+            "v": "500-660 lb"
+          },
+          {
+            "k": "Platform Rotation",
+            "v": "170 deg"
+          },
+          {
+            "k": "Jib Length",
+            "v": "5 ft"
+          }
+        ]
+      },
+      {
+        "group": "Engine/Power",
+        "rows": [
+          {
+            "k": "Engine",
+            "v": "Deutz D2.9L4 diesel (Kubota WG2503 dual-fuel optional)"
+          },
+          {
+            "k": "Gross Power",
+            "v": "48 hp diesel / 82 hp dual-fuel"
+          },
+          {
+            "k": "Drive",
+            "v": "Axle-based 4WD"
+          },
+          {
+            "k": "Turret Rotation",
+            "v": "355 deg non-continuous"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Width",
+            "v": "7 ft 6 in"
+          },
+          {
+            "k": "Overall Length (stowed)",
+            "v": "20 ft 10 in"
+          },
+          {
+            "k": "Operating Weight",
+            "v": "~13,300 lb"
+          },
+          {
+            "k": "Turning Radius (outside)",
+            "v": "~14 ft 10 in"
+          },
+          {
+            "k": "Gradeability",
+            "v": "45%"
+          },
+          {
+            "k": "Fuel Capacity",
+            "v": "17 gal"
+          }
+        ]
+      },
+      {
+        "group": "Drive",
+        "rows": [
+          {
+            "k": "Max Drive Speed",
+            "v": "4.8 mph"
+          },
+          {
+            "k": "Tires",
+            "v": "12 x 16.5 rough terrain"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the Skyjack SJ46 AJ; the actual delivered unit may vary by model year, engine (diesel vs. dual-fuel), and options/attachments. Platform capacity varies between unrestricted and restricted ratings.",
+    "source": "Skyjack SJ46 AJ spec sheet (skyjack.com/sites/default/files/literature-library/SJ46_AJ.pdf); RitchieSpecs Skyjack SJ46 AJ (ritchiespecs.com/model/skyjack-sj46-aj-boom-lift)."
+  },
+  "case-1021f-wheel-loader-with-rockland-log-clamp-attachment": {
+    "type": "Wheel Loader",
+    "make": "Case",
+    "model": "1021F",
+    "year": "-",
+    "overview": "The Case 1021F is a full-size production wheel loader built for high-volume loading of aggregate, sand, and heavy material. This unit is fitted with a Rockland log clamp in place of a bucket, making it purpose-built for grabbing, lifting, and stacking logs and bulky debris. With a 262 hp engine and over 45,000 lb of breakout force, it delivers strong cycle times in demanding yard and forestry work.",
+    "highlights": [
+      {
+        "k": "Net Power",
+        "v": "262 hp @ 1,800 rpm"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "53,791 lb"
+      },
+      {
+        "k": "Bucket Capacity (base)",
+        "v": "5.5 yd3"
+      },
+      {
+        "k": "Breakout Force",
+        "v": "45,097 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Wheel Loader"
+          },
+          {
+            "k": "Make",
+            "v": "Case"
+          },
+          {
+            "k": "Model",
+            "v": "1021F"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          },
+          {
+            "k": "Attachment",
+            "v": "Rockland log clamp (in place of standard bucket)"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "FPT F2FE614C"
+          },
+          {
+            "k": "Net Power",
+            "v": "262 hp @ 1,800 rpm"
+          },
+          {
+            "k": "Gross Power",
+            "v": "290 hp"
+          },
+          {
+            "k": "Displacement",
+            "v": "531 cu in"
+          },
+          {
+            "k": "Cylinders",
+            "v": "6, turbocharged"
+          },
+          {
+            "k": "Max Torque",
+            "v": "1,091 lb-ft @ 1,100 rpm"
+          }
+        ]
+      },
+      {
+        "group": "Bucket & Performance",
+        "rows": [
+          {
+            "k": "Bucket Capacity, heaped (base)",
+            "v": "5.5 yd3"
+          },
+          {
+            "k": "Bucket Capacity, struck (base)",
+            "v": "4.07 yd3"
+          },
+          {
+            "k": "Operating Weight",
+            "v": "53,791 lb"
+          },
+          {
+            "k": "Breakout Force",
+            "v": "45,097 lb"
+          },
+          {
+            "k": "Static Tipping Load, full turn",
+            "v": "35,001 lb"
+          },
+          {
+            "k": "Dump Clearance",
+            "v": "10.34 ft"
+          },
+          {
+            "k": "Max Reach at Full Lift",
+            "v": "6.2 ft"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length",
+            "v": "29.18 ft"
+          },
+          {
+            "k": "Width Over Tires",
+            "v": "9.81 ft"
+          },
+          {
+            "k": "Height to Cab Top",
+            "v": "11.73 ft"
+          },
+          {
+            "k": "Wheelbase",
+            "v": "11.65 ft"
+          },
+          {
+            "k": "Turning Radius",
+            "v": "20.9 ft"
+          },
+          {
+            "k": "Tire Size",
+            "v": "26.5R25"
+          }
+        ]
+      },
+      {
+        "group": "Capacities",
+        "rows": [
+          {
+            "k": "Transmission",
+            "v": "Powershift, 4F / 3R"
+          },
+          {
+            "k": "Max Travel Speed",
+            "v": "23.6 mph"
+          },
+          {
+            "k": "Hydraulic Pump Flow",
+            "v": "93 gal/min"
+          },
+          {
+            "k": "Hydraulic System Pressure",
+            "v": "3,650 psi"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "125 gal"
+          },
+          {
+            "k": "Hydraulic Tank",
+            "v": "66 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the Case 1021F; bucket capacity, breakout, tipping load, and dump/reach dimensions reflect the standard Z-bar bucket configuration. This unit is equipped with a Rockland log clamp attachment, which changes handling capacity, reach, and weight from the base bucket figures. Actual unit may vary with options and attachments.",
+    "coversNote": "",
+    "attachmentsNote": "Fitted with a Rockland log clamp for log and bulk-material handling.",
+    "source": "RitchieSpecs (https://www.ritchiespecs.com/model/case-1021f-wheel-loader); Construction Equipment Guide (https://www.constructionequipmentguide.com/charts/wheel-loaders/case/1021f/39347); CASE Construction Equipment product data."
+  },
+  "case-721g-wheel-loader": {
+    "type": "Wheel Loader",
+    "make": "Case",
+    "model": "721G",
+    "year": "-",
+    "overview": "The Case 721G is a versatile mid-size wheel loader well suited to aggregate yards, site development, roadwork, and municipal loading. It pairs a 179 hp FPT diesel with a powershift transmission and a roughly 3.3-yard bucket for efficient truck loading and stockpiling. Strong breakout force and good visibility make it a productive all-around production loader.",
+    "highlights": [
+      {
+        "k": "Net Power",
+        "v": "179 hp @ 2,000 rpm"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "32,492 lb"
+      },
+      {
+        "k": "Bucket Capacity",
+        "v": "3.27 yd3"
+      },
+      {
+        "k": "Breakout Force",
+        "v": "32,148 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Wheel Loader"
+          },
+          {
+            "k": "Make",
+            "v": "Case"
+          },
+          {
+            "k": "Model",
+            "v": "721G"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "FPT F4HFE613T"
+          },
+          {
+            "k": "Net Power",
+            "v": "179 hp @ 2,000 rpm"
+          },
+          {
+            "k": "Displacement",
+            "v": "411 cu in"
+          },
+          {
+            "k": "Aspiration",
+            "v": "Turbocharged"
+          }
+        ]
+      },
+      {
+        "group": "Bucket & Performance",
+        "rows": [
+          {
+            "k": "Bucket Capacity",
+            "v": "3.27 yd3"
+          },
+          {
+            "k": "Operating Weight",
+            "v": "32,492 lb"
+          },
+          {
+            "k": "Breakout Force",
+            "v": "32,148 lb"
+          },
+          {
+            "k": "Static Tipping Load, full turn",
+            "v": "23,651 lb"
+          },
+          {
+            "k": "Max Hinge Pin Height",
+            "v": "13.05 ft"
+          },
+          {
+            "k": "Max Reach at Full Lift & Dump",
+            "v": "5.43 ft"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length (bucket on ground)",
+            "v": "25.34 ft"
+          },
+          {
+            "k": "Width Over Tires",
+            "v": "8.4 ft"
+          },
+          {
+            "k": "Height to Cab Top",
+            "v": "11.09 ft"
+          },
+          {
+            "k": "Wheelbase",
+            "v": "10.68 ft"
+          }
+        ]
+      },
+      {
+        "group": "Capacities",
+        "rows": [
+          {
+            "k": "Transmission",
+            "v": "Powershift, 4F / 3R"
+          },
+          {
+            "k": "Max Travel Speed",
+            "v": "23.5 mph"
+          },
+          {
+            "k": "Hydraulic Pump Flow",
+            "v": "31.8 gal/min"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "65 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the Case 721G with the standard bucket. Actual unit may vary with bucket type, options, and attachments.",
+    "coversNote": "",
+    "source": "RitchieSpecs (https://www.ritchiespecs.com/model/case-721g-wheel-loader); CASE Construction Equipment (https://www.casece.com/en-us/northamerica/products/wheel-loaders/large-wheel-loaders/721g); Construction Equipment Guide (https://www.constructionequipmentguide.com/charts/wheel-loaders/case/721g/30703828)."
+  },
+  "john-deere-444k-wheel-loader-2y-bucket": {
+    "type": "Wheel Loader",
+    "make": "John Deere",
+    "model": "444K",
+    "year": "-",
+    "overview": "The John Deere 444K is a compact-to-mid production wheel loader ideal for landscaping, small aggregate work, snow handling, and general site loading. Configured here with an approximately 2-yard bucket, it offers nimble maneuverability, good breakout for its class, and low operating costs. A PowerTech diesel and powershift transmission keep cycles quick and fuel use efficient.",
+    "highlights": [
+      {
+        "k": "Net Power",
+        "v": "123 hp @ 2,100 rpm"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "25,023 lb"
+      },
+      {
+        "k": "Bucket Capacity",
+        "v": "2.5 yd3 (approx. 2-yd config)"
+      },
+      {
+        "k": "Breakout Force",
+        "v": "17,549 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Wheel Loader"
+          },
+          {
+            "k": "Make",
+            "v": "John Deere"
+          },
+          {
+            "k": "Model",
+            "v": "444K"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          },
+          {
+            "k": "Bucket",
+            "v": "Approx. 2-yard bucket"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "John Deere PowerTech PSS 4045"
+          },
+          {
+            "k": "Net Power",
+            "v": "123.4 hp @ 2,100 rpm"
+          },
+          {
+            "k": "Displacement",
+            "v": "275 cu in"
+          },
+          {
+            "k": "Max Torque",
+            "v": "374 lb-ft (34% torque rise)"
+          }
+        ]
+      },
+      {
+        "group": "Bucket & Performance",
+        "rows": [
+          {
+            "k": "Bucket Capacity (range offered)",
+            "v": "2.49 - 4.06 yd3"
+          },
+          {
+            "k": "Operating Weight",
+            "v": "25,023 lb"
+          },
+          {
+            "k": "Breakout Force",
+            "v": "17,549 lb"
+          },
+          {
+            "k": "Static Tipping Load, full turn",
+            "v": "16,400 lb"
+          },
+          {
+            "k": "Max Lift Height, hinge pin",
+            "v": "11.82 ft"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length (bucket on ground)",
+            "v": "22.51 ft"
+          },
+          {
+            "k": "Width Over Tires",
+            "v": "7.93 ft"
+          },
+          {
+            "k": "Height Over Cab",
+            "v": "10.41 ft"
+          },
+          {
+            "k": "Wheelbase",
+            "v": "9.06 ft"
+          },
+          {
+            "k": "Turning Circle",
+            "v": "38.23 ft"
+          },
+          {
+            "k": "Tire Size",
+            "v": "17.5R25"
+          }
+        ]
+      },
+      {
+        "group": "Capacities",
+        "rows": [
+          {
+            "k": "Transmission",
+            "v": "Powershift"
+          },
+          {
+            "k": "Hydraulic Pump Flow",
+            "v": "37 gal/min"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "58.2 gal"
+          },
+          {
+            "k": "Hydraulic Tank",
+            "v": "31.4 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the John Deere 444K. Bucket capacity varies with configuration; this listing is fitted with an approximately 2-yard bucket, while Deere offers 2.49-4.06 yd3 options. Actual unit may vary with options and attachments.",
+    "coversNote": "",
+    "source": "RitchieSpecs (https://www.ritchiespecs.com/model/john-deere-444k-wheel-loader); Construction Equipment Guide (https://www.constructionequipmentguide.com/charts/wheel-loaders/john-deere/444k/18551); John Deere product data."
+  },
+  "volvo-l70h-wheel-loader": {
+    "type": "Wheel Loader",
+    "make": "Volvo",
+    "model": "L70H",
+    "year": "-",
+    "overview": "The Volvo L70H is a fuel-efficient mid-size wheel loader known for strong lifting stability and operator comfort. Its H-Series Torque Parallel linkage keeps loads level through the full lift range while delivering high breakout and tear-out forces. At about 170 hp with a roughly 2.4-yard bucket, it is well matched to aggregate loading, material rehandling, and general construction.",
+    "highlights": [
+      {
+        "k": "Net Power",
+        "v": "170 hp @ 1,800 rpm"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "30,880 lb"
+      },
+      {
+        "k": "Bucket Capacity",
+        "v": "2.4 yd3 (typical)"
+      },
+      {
+        "k": "Breakout Force",
+        "v": "22,480 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Wheel Loader"
+          },
+          {
+            "k": "Make",
+            "v": "Volvo"
+          },
+          {
+            "k": "Model",
+            "v": "L70H"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Volvo D6J"
+          },
+          {
+            "k": "Net Power",
+            "v": "170 hp @ 1,800 rpm"
+          },
+          {
+            "k": "Displacement",
+            "v": "348 cu in"
+          },
+          {
+            "k": "Cylinders",
+            "v": "6, turbocharged"
+          },
+          {
+            "k": "Max Torque",
+            "v": "627 lb-ft @ 1,400 rpm"
+          }
+        ]
+      },
+      {
+        "group": "Bucket & Performance",
+        "rows": [
+          {
+            "k": "Bucket Capacity (typical)",
+            "v": "2.4 yd3"
+          },
+          {
+            "k": "Bucket Capacity (range offered)",
+            "v": "2.4 - 8.4 yd3"
+          },
+          {
+            "k": "Operating Weight",
+            "v": "30,880 lb"
+          },
+          {
+            "k": "Breakout Force",
+            "v": "22,480 lb"
+          },
+          {
+            "k": "Static Tipping Load, full turn",
+            "v": "19,180 lb"
+          },
+          {
+            "k": "Dump Clearance at Full Lift",
+            "v": "10.75 ft"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length",
+            "v": "24.64 ft"
+          },
+          {
+            "k": "Width Over Tires",
+            "v": "8.08 ft"
+          },
+          {
+            "k": "Height to Cab Top",
+            "v": "10.77 ft"
+          },
+          {
+            "k": "Wheelbase",
+            "v": "9.85 ft"
+          },
+          {
+            "k": "Ground Clearance",
+            "v": "1.55 ft"
+          },
+          {
+            "k": "Tire Size",
+            "v": "20.5R25"
+          }
+        ]
+      },
+      {
+        "group": "Capacities",
+        "rows": [
+          {
+            "k": "Transmission",
+            "v": "Volvo HTE 125 (lock-up available)"
+          },
+          {
+            "k": "Max Travel Speed",
+            "v": "31.1 mph"
+          },
+          {
+            "k": "Hydraulic System",
+            "v": "23.8 gal"
+          },
+          {
+            "k": "Fuel Tank",
+            "v": "58.7 gal"
+          },
+          {
+            "k": "DEF Tank",
+            "v": "5.3 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the Volvo L70H. Operating weight, bucket capacity, tipping load, and dump clearance vary with bucket selection and options; figures shown reflect a typical general-purpose bucket configuration. Actual unit may vary with options and attachments.",
+    "coversNote": "",
+    "source": "RitchieSpecs (https://www.ritchiespecs.com/model/volvo-l70h-wheel-loader); Volvo Construction Equipment (https://www.volvoce.com/united-states/en-us/products/wheel-loaders/l70h/); Volvo L70H product guide brochure."
+  },
+  "5-8k-forklifts": {
+    "type": "Cushion/Pneumatic-Tire Forklift",
+    "make": "Toyota / Yale",
+    "model": "8FGCU25 (representative); GC-GLC050-070VX class",
+    "year": "-",
+    "overview": "The 5,000-8,000 lb forklift class covers sit-down counterbalanced trucks from Toyota and Yale used for general warehouse, dock, and yard material handling. Cushion-tire units run indoors on smooth floors while pneumatic-tire versions handle rougher outdoor surfaces, and most are offered in LP gas, gasoline, or diesel. Three-stage masts reach roughly 199 in to stack loads up to four tons.",
+    "coversNote": "Covers Toyota 8FGCU25/8FGU30 and Yale GC050VX-GLC070VX class cushion trucks plus 8,000 lb pneumatic units (e.g. Toyota 8FG35U); 5,000-8,000 lb capacity.",
+    "highlights": [
+      {
+        "k": "Rated Capacity",
+        "v": "5,000-8,000 lb @ 24 in"
+      },
+      {
+        "k": "Max Lift Height",
+        "v": "up to 199 in (3-stage)"
+      },
+      {
+        "k": "Engine Power",
+        "v": "51 hp (Toyota 4Y)"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "8,000-12,900 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Cushion/Pneumatic-Tire Forklift"
+          },
+          {
+            "k": "Make",
+            "v": "Toyota / Yale"
+          },
+          {
+            "k": "Model",
+            "v": "8FGCU25 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Toyota 4Y-ECS"
+          },
+          {
+            "k": "Cylinders",
+            "v": "4"
+          },
+          {
+            "k": "Displacement",
+            "v": "136 cu in"
+          },
+          {
+            "k": "Horsepower",
+            "v": "51 hp"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "LP gas (gasoline / diesel available)"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Performance",
+        "rows": [
+          {
+            "k": "Rated Capacity (class range)",
+            "v": "5,000-8,000 lb @ 24 in load center"
+          },
+          {
+            "k": "Rated Capacity (8FGCU25)",
+            "v": "5,000 lb"
+          },
+          {
+            "k": "Max Lift Height",
+            "v": "up to 199 in (3-stage mast)"
+          },
+          {
+            "k": "Mast Type",
+            "v": "2-stage / 3-stage triple, full free-lift"
+          },
+          {
+            "k": "Travel Speed",
+            "v": "10.6 mph (8FGCU25)"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "LP gas, gasoline, or diesel"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length (to fork face)",
+            "v": "93.7 in (8FGCU25)"
+          },
+          {
+            "k": "Overall Width",
+            "v": "42 in (8FGCU25)"
+          },
+          {
+            "k": "Height to Overhead Guard",
+            "v": "80.7 in (8FGCU25)"
+          },
+          {
+            "k": "Turning Radius",
+            "v": "77.6 in (8FGCU25)"
+          },
+          {
+            "k": "Fuel Tank Capacity",
+            "v": "11.9 gal"
+          },
+          {
+            "k": "Hydraulic Capacity",
+            "v": "20 gal"
+          }
+        ]
+      },
+      {
+        "group": "Tires",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Cushion (indoor) or pneumatic (outdoor)"
+          },
+          {
+            "k": "Front (cushion)",
+            "v": "21 x 7 x 15"
+          },
+          {
+            "k": "Rear (cushion)",
+            "v": "16 x 5 x 10.5"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specs are OEM base-unit figures; the actual unit may vary with mast, tire type, and attachments. Ranges reflect several models across the 5,000-8,000 lb class; the 8FGCU25 is shown as the representative unit.",
+    "source": "RitchieSpecs - Toyota 8FGCU25 (https://www.ritchiespecs.com/model/toyota-8fgcu25-forklift), Yale GC050VX (https://www.ritchiespecs.com/model/yale-gc050vx-forklift), Toyota 8FGU25 (https://www.ritchiespecs.com/model/toyota-8fgu25-forklift); Toyota Mid IC Pneumatic (8000-11000 lb) spec sheet (https://www.toyotaforklift.com/content/dam/tmh/marketing/en/pdf/product-spec-brochures/2024_Mid%20IC%20Pneumatic_Spec%20Sheet_Digital.pdf)"
+  },
+  "3k-4k-forklifts": {
+    "type": "Cushion-Tire Forklift",
+    "make": "Yale / Toyota / Hyster",
+    "model": "8FGCU18 (representative); GC030-040VX / S30-40FT class",
+    "year": "-",
+    "overview": "The 3,000-4,000 lb forklift class covers compact sit-down counterbalanced trucks from Yale, Toyota, and Hyster built for tight-aisle indoor warehousing and light dock work. Their short wheelbase and roughly 70 in turning radius make them highly maneuverable, while three-stage masts lift to about 189 in. Most run on LP gas or gasoline with cushion tires for smooth-floor operation.",
+    "coversNote": "Covers Toyota 8FGCU15-8FGCU20, Yale GC030VX-GC040VX, and Hyster S30FT-S40FT class cushion trucks; 3,000-4,000 lb capacity.",
+    "highlights": [
+      {
+        "k": "Rated Capacity",
+        "v": "3,000-4,000 lb @ 24 in"
+      },
+      {
+        "k": "Max Lift Height",
+        "v": "up to 189 in (3-stage)"
+      },
+      {
+        "k": "Engine Power",
+        "v": "44-48 hp"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "6,150-6,900 lb"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Cushion-Tire Forklift"
+          },
+          {
+            "k": "Make",
+            "v": "Yale / Toyota / Hyster"
+          },
+          {
+            "k": "Model",
+            "v": "8FGCU18 (representative)"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Make / Model",
+            "v": "Toyota 4Y-ECS (Hyster: PSI 2.0L)"
+          },
+          {
+            "k": "Cylinders",
+            "v": "4"
+          },
+          {
+            "k": "Displacement",
+            "v": "136 cu in (8FGCU18)"
+          },
+          {
+            "k": "Horsepower",
+            "v": "48 hp (8FGCU18); 44 hp (Hyster S30FT)"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "LP gas (gasoline available)"
+          }
+        ]
+      },
+      {
+        "group": "Capacity & Performance",
+        "rows": [
+          {
+            "k": "Rated Capacity (class range)",
+            "v": "3,000-4,000 lb @ 24 in load center"
+          },
+          {
+            "k": "Rated Capacity (8FGCU18)",
+            "v": "3,500 lb"
+          },
+          {
+            "k": "Max Lift Height",
+            "v": "up to 189 in (3-stage; 179 in on 8FGCU18)"
+          },
+          {
+            "k": "Mast Type",
+            "v": "2-stage / 3-stage triple, side shift"
+          },
+          {
+            "k": "Travel Speed",
+            "v": "10.9 mph (8FGCU18)"
+          },
+          {
+            "k": "Fuel Type",
+            "v": "LP gas or gasoline"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length (to fork face)",
+            "v": "84.7 in (8FGCU18)"
+          },
+          {
+            "k": "Overall Width",
+            "v": "37.3 in (8FGCU18)"
+          },
+          {
+            "k": "Height to Overhead Guard",
+            "v": "80.2 in (8FGCU18)"
+          },
+          {
+            "k": "Turning Radius",
+            "v": "70.1 in (8FGCU18); 77 in (Hyster S30FT)"
+          },
+          {
+            "k": "Fuel Tank Capacity",
+            "v": "7.2 gal"
+          },
+          {
+            "k": "Hydraulic Capacity",
+            "v": "16 gal"
+          }
+        ]
+      },
+      {
+        "group": "Tires",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Cushion"
+          },
+          {
+            "k": "Front",
+            "v": "18 x 6 x 12-1/8 (8FGCU18)"
+          },
+          {
+            "k": "Rear",
+            "v": "14 x 4-1/2 x 8 (8FGCU18)"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specs are OEM base-unit figures; the actual unit may vary with mast, tire type, and attachments. Ranges reflect several models across the 3,000-4,000 lb class; the Toyota 8FGCU18 is shown as the representative unit.",
+    "source": "RitchieSpecs - Toyota 8FGCU18 (https://www.ritchiespecs.com/model/toyota-8fgcu18-forklift), Hyster S30FT LP (https://www.ritchiespecs.com/model/hyster-s30ft-lp-forklift); Yale Veracitor GC-VX series brochure (https://www.yale.com/globalassets/coms/yale/north-america/documents/trucks/ic-cushion/gc040-070vx-spec-view.pdf); Hyster S30-40FT technical guide (https://www.hyster.com/globalassets/coms/hyster/north-america/documents/trucks/ic-cushion/s30-40ft-techguide.pdf)"
+  },
+  "john-deere-550k-crawler-bulldozer": {
+    "type": "Crawler Dozer",
+    "make": "John Deere",
+    "model": "550K",
+    "year": "-",
+    "overview": "The John Deere 550K is a compact-to-mid-size hydrostatic crawler dozer built for grading, backfilling, site prep, and finish dozing on residential and light-commercial jobs. Its ~92 hp Tier 4 Final PowerTech engine and dual-path hydrostatic drive deliver smooth, precise blade control and full counter-rotation in tight areas. A low ground pressure and six-way PAT blade make it a versatile all-around dozer for contractors.",
+    "highlights": [
+      {
+        "k": "Net Power",
+        "v": "92 hp @ 2,200 rpm"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "19,800 lb"
+      },
+      {
+        "k": "Blade Width",
+        "v": "8 ft 10 in"
+      },
+      {
+        "k": "Ground Pressure",
+        "v": "6.4 psi"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Crawler Dozer"
+          },
+          {
+            "k": "Make",
+            "v": "John Deere"
+          },
+          {
+            "k": "Model",
+            "v": "550K"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Engine Model",
+            "v": "John Deere PowerTech PWS 4045"
+          },
+          {
+            "k": "Cylinders",
+            "v": "4"
+          },
+          {
+            "k": "Displacement",
+            "v": "4.5 L (276 cu in)"
+          },
+          {
+            "k": "Net Power",
+            "v": "92 hp (69 kW) @ 2,200 rpm"
+          },
+          {
+            "k": "Emissions",
+            "v": "EPA Tier 4 Final"
+          }
+        ]
+      },
+      {
+        "group": "Weights & Performance",
+        "rows": [
+          {
+            "k": "Operating Weight",
+            "v": "19,800 lb"
+          },
+          {
+            "k": "Ground Pressure",
+            "v": "6.4 psi"
+          },
+          {
+            "k": "Drive",
+            "v": "Dual-path hydrostatic"
+          },
+          {
+            "k": "Length (w/ PAT blade, straight)",
+            "v": "13.2 ft"
+          },
+          {
+            "k": "Height (max)",
+            "v": "9.2 ft"
+          }
+        ]
+      },
+      {
+        "group": "Blade",
+        "rows": [
+          {
+            "k": "Blade Type",
+            "v": "6-Way PAT (Power-Angle-Tilt)"
+          },
+          {
+            "k": "Blade Width",
+            "v": "8 ft 10 in (105.7 in)"
+          },
+          {
+            "k": "Blade Dig Depth",
+            "v": "20.6 in"
+          }
+        ]
+      },
+      {
+        "group": "Undercarriage",
+        "rows": [
+          {
+            "k": "Track Gauge",
+            "v": "61 in"
+          },
+          {
+            "k": "Length of Track on Ground",
+            "v": "86 in"
+          },
+          {
+            "k": "Ground Clearance",
+            "v": "13.3 in"
+          }
+        ]
+      },
+      {
+        "group": "Hydraulics & Capacities",
+        "rows": [
+          {
+            "k": "Fuel Tank",
+            "v": "53.4 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the John Deere 550K (Tier 4 Final). The actual unit may vary with blade choice, track shoe width, and installed options.",
+    "source": "John Deere 550K/650K Crawler Dozers brochure (deere.com/assets/pdfs/common/products/dozers/dozers-crawler-dozers-550k-650k-it4-dkakudzr.pdf); RitchieSpecs John Deere 550K Crawler Tractor (ritchiespecs.com/model/john-deere-550k-crawler-tractor)"
+  },
+  "cat-d6k2-bulldozer": {
+    "type": "Crawler Dozer",
+    "make": "Caterpillar",
+    "model": "D6K2",
+    "year": "-",
+    "overview": "The Cat D6K2 is a mid-size medium dozer built for dozing, grading, spreading, and finish work on commercial site development, road building, and landscaping. With ~130 hp and available VPAT (six-way) blades up to 4.38 yd3, it pairs strong production with fine grade accuracy. Low ground pressure LGP undercarriage options and available Cat GRADE technology make it a productive choice for a wide range of earthmoving jobs.",
+    "highlights": [
+      {
+        "k": "Net Power",
+        "v": "130 hp (ISO 9249)"
+      },
+      {
+        "k": "Operating Weight",
+        "v": "29,346 lb (XL)"
+      },
+      {
+        "k": "Blade Capacity",
+        "v": "up to 4.38 yd3"
+      },
+      {
+        "k": "Ground Pressure",
+        "v": "4.45 psi (LGP)"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Crawler Dozer"
+          },
+          {
+            "k": "Make",
+            "v": "Caterpillar"
+          },
+          {
+            "k": "Model",
+            "v": "D6K2"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Engine Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Engine",
+        "rows": [
+          {
+            "k": "Engine Model",
+            "v": "Cat C6.6 ACERT"
+          },
+          {
+            "k": "Displacement",
+            "v": "6.6 L (402.8 cu in)"
+          },
+          {
+            "k": "Net Power (ISO 9249)",
+            "v": "130 hp (97 kW)"
+          },
+          {
+            "k": "Net Power (SAE J1349)",
+            "v": "128 hp (95 kW)"
+          },
+          {
+            "k": "Emissions",
+            "v": "EPA Tier 4 Interim / EU Stage IIIB"
+          }
+        ]
+      },
+      {
+        "group": "Weights & Performance",
+        "rows": [
+          {
+            "k": "Operating Weight (XL)",
+            "v": "29,346 lb"
+          },
+          {
+            "k": "Operating Weight (LGP)",
+            "v": "30,750 lb"
+          },
+          {
+            "k": "Max Drawbar Pull",
+            "v": "~40,000 lb"
+          },
+          {
+            "k": "Travel Speed",
+            "v": "0-6.2 mph, forward & reverse"
+          },
+          {
+            "k": "Ground Clearance",
+            "v": "14 in"
+          },
+          {
+            "k": "Length (basic tractor)",
+            "v": "181 in (15.1 ft)"
+          },
+          {
+            "k": "Height (ROPS cab)",
+            "v": "117 in (9 ft 9 in)"
+          }
+        ]
+      },
+      {
+        "group": "Blade",
+        "rows": [
+          {
+            "k": "Blade Type",
+            "v": "VPAT (Variable-Pitch Power-Angle-Tilt), 6-way"
+          },
+          {
+            "k": "Blade Capacity - XL",
+            "v": "4.01 yd3"
+          },
+          {
+            "k": "Blade Width - XL",
+            "v": "10 ft 6 in (126 in)"
+          },
+          {
+            "k": "Blade Capacity - LGP",
+            "v": "4.38 yd3"
+          },
+          {
+            "k": "Blade Width - LGP",
+            "v": "12 ft (144 in)"
+          }
+        ]
+      },
+      {
+        "group": "Undercarriage",
+        "rows": [
+          {
+            "k": "Track Gauge (LGP)",
+            "v": "79 in"
+          },
+          {
+            "k": "Length of Track on Ground (LGP)",
+            "v": "104 in"
+          },
+          {
+            "k": "Ground Pressure (LGP)",
+            "v": "4.45 psi"
+          }
+        ]
+      },
+      {
+        "group": "Hydraulics & Capacities",
+        "rows": [
+          {
+            "k": "Fuel Tank",
+            "v": "77.9 gal"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the Cat D6K2 (Tier 4 Interim). Weights, blade capacity, track gauge, and ground pressure differ between XL and LGP configurations as noted; the actual unit may vary with blade choice, track shoe width, and installed options.",
+    "source": "RitchieSpecs Caterpillar D6K2 (Tier 4 Interim/Stage IIIB) Crawler Tractor (ritchiespecs.com/model/caterpillar-d6k2-tier-4-interim-stage-iiib-crawler-tractor); Cat D6K2 Track-Type Tractor specification sheet (Caterpillar); LECTURA Specs Caterpillar D6K2 XL/LGP"
+  },
+  "19ft-scissor-lift": {
+    "type": "Scissor Lift",
+    "make": "Genie",
+    "model": "GS-1930",
+    "year": "-",
+    "overview": "The Genie GS-1930 is a compact self-propelled electric scissor lift that reaches a 25 ft working height while fitting through a standard doorway at just 2 ft 6 in wide. Its non-marking tires and zero-emission drive make it ideal for indoor construction, maintenance, and installation work on finished floors. A 36 in roll-out deck extension adds reach without moving the machine.",
+    "highlights": [
+      {
+        "k": "Working Height",
+        "v": "25 ft"
+      },
+      {
+        "k": "Platform Capacity",
+        "v": "500 lb"
+      },
+      {
+        "k": "Platform Height",
+        "v": "19 ft"
+      },
+      {
+        "k": "Stowed Width",
+        "v": "2 ft 6 in"
+      }
+    ],
+    "sections": [
+      {
+        "group": "Machine",
+        "rows": [
+          {
+            "k": "Type",
+            "v": "Electric Slab Scissor Lift"
+          },
+          {
+            "k": "Make",
+            "v": "Genie"
+          },
+          {
+            "k": "Model",
+            "v": "GS-1930"
+          },
+          {
+            "k": "Year",
+            "v": "-"
+          },
+          {
+            "k": "Stock / Unit #",
+            "v": "-"
+          },
+          {
+            "k": "Hours",
+            "v": "-"
+          }
+        ]
+      },
+      {
+        "group": "Platform",
+        "rows": [
+          {
+            "k": "Working Height",
+            "v": "25 ft"
+          },
+          {
+            "k": "Platform Height",
+            "v": "19 ft"
+          },
+          {
+            "k": "Platform Capacity",
+            "v": "500 lb"
+          },
+          {
+            "k": "Roll-Out Deck Extension",
+            "v": "36 in (250 lb capacity)"
+          },
+          {
+            "k": "Platform Size (L x W)",
+            "v": "64 x 29 in"
+          },
+          {
+            "k": "Max Occupants (Indoor)",
+            "v": "2"
+          }
+        ]
+      },
+      {
+        "group": "Power",
+        "rows": [
+          {
+            "k": "Power Source",
+            "v": "24V DC electric"
+          },
+          {
+            "k": "Batteries",
+            "v": "Four 6V, 225 Ah"
+          },
+          {
+            "k": "Hydraulic Reservoir",
+            "v": "3.8 gal"
+          },
+          {
+            "k": "Drive Speed (Stowed)",
+            "v": "2.5 mph"
+          },
+          {
+            "k": "Lift / Lower Time",
+            "v": "16 s / 25 s"
+          }
+        ]
+      },
+      {
+        "group": "Dimensions",
+        "rows": [
+          {
+            "k": "Overall Length",
+            "v": "6 ft"
+          },
+          {
+            "k": "Overall Width",
+            "v": "2 ft 6 in"
+          },
+          {
+            "k": "Stowed Height (Rails Up)",
+            "v": "6 ft 7 in"
+          },
+          {
+            "k": "Stowed Height (Rails Folded)",
+            "v": "5 ft 9 in"
+          },
+          {
+            "k": "Wheelbase",
+            "v": "4 ft 4 in"
+          },
+          {
+            "k": "Ground Clearance",
+            "v": "2.4 in"
+          },
+          {
+            "k": "Outside Turning Radius",
+            "v": "5 ft 1 in"
+          },
+          {
+            "k": "Operating Weight",
+            "v": "2,703 lb"
+          },
+          {
+            "k": "Tires",
+            "v": "12 x 4.5 x 8 solid non-marking"
+          }
+        ]
+      }
+    ],
+    "configNote": "Specifications are OEM base-unit figures for the Genie GS-1930; the actual rental unit may vary with options, accessories, and model year. Verify critical dimensions with Concord Rents before scheduling.",
+    "source": "Genie GS-1930 product specifications (genielift.com); RitchieSpecs (ritchiespecs.com/model/genie-gs1930-scissor-lift); dealer listing scissorliftoutlet.com."
   }
 }
