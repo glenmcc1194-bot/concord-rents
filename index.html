@@ -89,11 +89,26 @@
   .menu-btn svg{width:22px;height:22px;fill:#fff;display:block}
 
   .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
-  .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.34;filter:grayscale(.15) contrast(1.05)}
-  .hero::after{content:"";position:absolute;inset:0;background:
-     radial-gradient(1200px 600px at 78% -10%,rgba(60,90,130,.22),transparent 60%),
-     linear-gradient(90deg,rgba(18,36,63,.96) 0%,rgba(18,36,63,.82) 42%,rgba(18,36,63,.42) 100%)}
-  .hero .wrap{position:relative;z-index:2;padding:clamp(24px,4vw,48px) 22px clamp(20px,2.5vw,32px)}
+  .hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease}
+  .hero-slide.active{position:relative;opacity:1;visibility:visible}
+  .hero-slide .bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.34;filter:grayscale(.15) contrast(1.05)}
+  .hero-slide::after{content:"";position:absolute;inset:0;z-index:1}
+  .hero-slide.dark::after{background:radial-gradient(1200px 600px at 78% -10%,rgba(60,90,130,.22),transparent 60%),linear-gradient(90deg,rgba(18,36,63,.96) 0%,rgba(18,36,63,.82) 42%,rgba(18,36,63,.42) 100%)}
+  .hero-slide.promo .bg{opacity:.5;background-position:right center}
+  .hero-slide.promo::after{background:linear-gradient(90deg,rgba(18,36,63,.97) 0%,rgba(18,36,63,.9) 42%,rgba(18,36,63,.35) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding:clamp(24px,4vw,48px) 22px clamp(34px,3vw,46px)}
+  .promo-inner{max-width:660px}
+  .promo .eyebrow{color:#f5c518}
+  .promo-h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(2.2rem,5.2vw,3.7rem);line-height:1.04;letter-spacing:.01em;margin:6px 0 0}
+  .promo-h1 .y{color:#f5c518}
+  .promo-tag{display:inline-block;background:#f5c518;color:#12243f;font-family:'Oswald';font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:9px 16px;margin:18px 0 22px;font-size:1.05rem}
+  .promo-tag b{font-size:1.3em}.promo-tag b span{font-size:.6em;font-weight:600}
+  .btn-yellow{background:#f5c518;color:#12243f;border-color:#f5c518;font-weight:700}
+  .btn-yellow:hover{background:#e6b70f}
+  .promo-foot{margin-top:16px;color:#c9d2dd;font-size:.82rem;font-family:'Oswald';letter-spacing:.05em;text-transform:uppercase}
+  .hero-dots{position:absolute;bottom:14px;left:0;right:0;z-index:6;display:flex;gap:8px;justify-content:center}
+  .hero-dots .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);border:0;cursor:pointer;padding:0;transition:width .2s,background .2s}
+  .hero-dots .dot.active{background:#fff;width:26px;border-radius:5px}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
   .hero h1{font-size:clamp(2rem,4.3vw,3.2rem);letter-spacing:.005em;line-height:1.42}
   .hero h1 .hl{color:#fff}
@@ -317,37 +332,58 @@
   </div>
 </header>
 
-<section class="hero" id="top" style="padding:0">
-  <div class="bg" style="background-image:url('/img/hero.webp')"></div>
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow">Madison Heights · Metro Detroit · Statewide</span>
-        <h1>Heavy Equipment,<br><span class="marker-light">Ready When You Are</span></h1>
-        <p class="lead">Telehandlers, boom lifts, dozers, excavators and forklifts — well-maintained machines from brands you trust, delivered on time and priced to win your project.</p>
-        <div class="hero-cta">
-          <a class="btn btn-amber btn-lg" id="heroTextBtn" href="sms:+12486874515?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20equipment."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
-          <button type="button" class="btn btn-outline btn-lg" onclick="openReq('quote')"><svg class="icon"><use href="#i-arrow"/></svg> Request a Quote</button>
-          <a class="btn btn-ghost btn-lg" href="/equipment/"><svg class="icon"><use href="#i-truck"/></svg> Browse Equipment</a>
+<section class="hero" id="top">
+  <div class="hero-slide dark active" data-slide="0">
+    <div class="bg" style="background-image:url('/img/hero.webp')"></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Madison Heights · Metro Detroit · Statewide</span>
+          <h1>Heavy Equipment,<br><span class="marker-light">Ready When You Are</span></h1>
+          <p class="lead">Telehandlers, boom lifts, dozers, excavators and forklifts — well-maintained machines from brands you trust, delivered on time and priced to win your project.</p>
+          <div class="hero-cta">
+            <a class="btn btn-amber btn-lg" id="heroTextBtn" href="sms:+12486874515?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20equipment."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
+            <button type="button" class="btn btn-outline btn-lg" onclick="openReq('quote')"><svg class="icon"><use href="#i-arrow"/></svg> Request a Quote</button>
+            <a class="btn btn-ghost btn-lg" href="/equipment/"><svg class="icon"><use href="#i-truck"/></svg> Browse Equipment</a>
+          </div>
+          <div class="hero-badges">
+            <div class="b"><svg><use href="#i-truck"/></svg> Delivery statewide</div>
+            <div class="b"><svg><use href="#i-cal"/></svg> Daily · Weekly · Monthly</div>
+            <div class="b"><svg><use href="#i-shield"/></svg> Fleet-maintained machines</div>
+          </div>
         </div>
-        <div class="hero-badges">
-          <div class="b"><svg><use href="#i-truck"/></svg> Delivery statewide</div>
-          <div class="b"><svg><use href="#i-cal"/></svg> Daily · Weekly · Monthly</div>
-          <div class="b"><svg><use href="#i-shield"/></svg> Fleet-maintained machines</div>
-        </div>
+        <aside class="hero-card">
+          <h3>Rent by Category</h3>
+          <div class="sub">Jump straight to the machine you need.</div>
+          <div class="quick-list">
+            <a href="/equipment/#telehandlers"><span class="ic"><svg><use href="#e-telehandler"/></svg></span> Telehandlers <span class="go">›</span></a>
+            <a href="/equipment/#boom-lifts"><span class="ic"><svg><use href="#e-boom"/></svg></span> Boom Lifts <span class="go">›</span></a>
+            <a href="/equipment/#bulldozers"><span class="ic"><svg><use href="#e-dozer"/></svg></span> Bulldozers <span class="go">›</span></a>
+            <a href="/equipment/#heavy-forklifts"><span class="ic"><svg><use href="#e-heavyfork"/></svg></span> Heavy Forklifts <span class="go">›</span></a>
+            <a href="/equipment/"><span class="ic"><svg><use href="#i-arrow"/></svg></span> View Full Fleet <span class="go">›</span></a>
+          </div>
+        </aside>
       </div>
-      <aside class="hero-card">
-        <h3>Rent by Category</h3>
-        <div class="sub">Jump straight to the machine you need.</div>
-        <div class="quick-list">
-          <a href="/equipment/#telehandlers"><span class="ic"><svg><use href="#e-telehandler"/></svg></span> Telehandlers <span class="go">›</span></a>
-          <a href="/equipment/#boom-lifts"><span class="ic"><svg><use href="#e-boom"/></svg></span> Boom Lifts <span class="go">›</span></a>
-          <a href="/equipment/#bulldozers"><span class="ic"><svg><use href="#e-dozer"/></svg></span> Bulldozers <span class="go">›</span></a>
-          <a href="/equipment/#heavy-forklifts"><span class="ic"><svg><use href="#e-heavyfork"/></svg></span> Heavy Forklifts <span class="go">›</span></a>
-          <a href="/equipment/"><span class="ic"><svg><use href="#i-arrow"/></svg></span> View Full Fleet <span class="go">›</span></a>
-        </div>
-      </aside>
     </div>
+  </div>
+  <div class="hero-slide promo" data-slide="1">
+    <div class="bg" style="background-image:url('/img/inv-jlg-6042-6000lb-42ft-telehandler.jpg')"></div>
+    <div class="wrap">
+      <div class="promo-inner">
+        <span class="eyebrow">Metro Detroit&rsquo;s Telehandler Specialists</span>
+        <h1 class="promo-h1"><span class="y">Rentals</span> Ready<br>When You Are!</h1>
+        <div class="promo-tag">Telehandlers &mdash; only <b>$2,200<span>/mo</span></b></div>
+        <div class="hero-cta">
+          <a class="btn btn-yellow btn-lg" href="sms:+12486874515?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20a%20telehandler."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
+          <a class="btn btn-ghost btn-lg" href="/equipment/#telehandlers"><svg class="icon"><use href="#i-truck"/></svg> View Telehandlers</a>
+        </div>
+        <div class="promo-foot">Call or text 248-687-4515 &middot; www.concordrents.co &middot; Delivered across Michigan</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-dots">
+    <button class="dot active" data-i="0" aria-label="Show main slide"></button>
+    <button class="dot" data-i="1" aria-label="Show telehandler promo"></button>
   </div>
 </section>
 
@@ -363,9 +399,9 @@
 <section class="rent-now">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:16px">
-      <span class="eyebrow" style="color:#dbe4f0">In the Yard</span>
-      <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);margin:6px 0 6px">Available to Rent Right Now</h2>
-      <p style="font-size:.98rem">A rolling look at machines ready for your next job — swipe through and text us about any one.</p>
+      <span class="eyebrow" style="color:#dbe4f0">Our Specialty</span>
+      <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);margin:6px 0 6px">Telehandlers Available to Rent Right Now</h2>
+      <p style="font-size:.98rem">Reach forklifts from 6k–12k lb and up to 56 ft — Metro Detroit's telehandler specialists. Swipe through and text us about any one.</p>
     </div>
   </div>
   <div class="carousel-wrap"><div class="carousel" id="rentCarousel"><p style="padding:0 22px;color:#8ea0b4">Loading fleet…</p></div></div>
@@ -711,7 +747,7 @@
     if(!el) return;
     try{
       var d = await (await fetch('/api/equipment')).json();
-      var items = (d.equipment||[]).filter(function(e){ return e.status!=='unavailable' && e.image; }).slice(0,14);
+      var items = (d.equipment||[]).filter(function(e){ return e.status!=='unavailable' && e.image && e.category==='Telehandlers'; }).slice(0,14);
       if(!items.length){ el.innerHTML=''; return; }
       el.innerHTML = items.map(function(e){
         var r = e.rates||{};
@@ -731,6 +767,20 @@
     }catch(e){ el.innerHTML=''; }
   }
   initTextAndFleet();
+
+  (function initHeroCarousel(){
+    var slides=[].slice.call(document.querySelectorAll('.hero .hero-slide'));
+    var dots=[].slice.call(document.querySelectorAll('.hero-dots .dot'));
+    if(slides.length<2) return;
+    var i=0, timer=null;
+    function go(n){ i=(n+slides.length)%slides.length; slides.forEach(function(s,k){ s.classList.toggle('active',k===i); }); dots.forEach(function(d,k){ d.classList.toggle('active',k===i); }); }
+    function start(){ stop(); timer=setInterval(function(){ go(i+1); }, 7000); }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    dots.forEach(function(d,k){ d.addEventListener('click',function(){ go(k); start(); }); });
+    var hero=document.querySelector('.hero');
+    if(hero){ hero.addEventListener('mouseenter',stop); hero.addEventListener('mouseleave',start); }
+    start();
+  })();
 
   function openReq(type, equipment){
     type = type || 'quote';
