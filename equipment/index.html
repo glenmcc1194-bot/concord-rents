@@ -54,7 +54,7 @@
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .card{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;transition:transform .15s,box-shadow .15s}
   .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
-  .card .ph{aspect-ratio:16/10;background:#e9edf1 center/cover no-repeat;position:relative}
+  .card .ph{display:block;aspect-ratio:16/10;background:#e9edf1 center/cover no-repeat;position:relative}
   .card .ph.ph-empty{display:grid;place-items:center;background:radial-gradient(120% 120% at 50% 0%,#2a3f61,#12243f);color:#8ea0b4;font-family:'Oswald';letter-spacing:.14em;font-size:.7rem;text-transform:uppercase}
   .card .ph[role=button]{cursor:zoom-in}
   .pcount{position:absolute;top:10px;right:10px;display:inline-flex;align-items:center;gap:4px;font-family:'Oswald';font-size:.64rem;letter-spacing:.04em;background:rgba(18,36,63,.82);color:#fff;padding:3px 7px}
@@ -99,7 +99,7 @@
 <body>
 <header>
   <div class="wrap">
-    <a class="brand" href="/"><span class="b"><svg viewBox="37 113 316 285" aria-hidden="true"><path d="M116 116 37 250 38 255 41 258 53 280 64 297 85 335 99 357 99 359 108 372 116 387 276 387 339 278 249 278 245 285 233 298 220 306 207 310 182 309 173 306 162 300 151 290 146 283 140 271 137 256 138 239 140 235 140 231 146 219 160 204 173 196 188 192 207 192 215 194 228 200 242 212 249 223 339 223 338 220 316 185 310 173 276 116Z"/></svg></span><span><b>CONCORD RENTS</b><span>Heavy Equipment Rental</span></span></a>
+    <a class="brand" href="/"><span class="b"><svg viewBox="37 113 316 285" aria-hidden="true"><path d="M116 116 37 250 38 255 41 258 53 280 64 297 85 335 99 357 99 359 108 372 116 387 276 387 339 278 249 278 245 285 233 298 220 306 207 310 182 309 173 306 162 300 151 290 146 283 140 271 137 256 138 239 140 235 140 231 146 219 160 204 173 196 188 192 207 192 215 194 228 200 242 212 249 223 339 223 338 220 316 185 310 173 276 116Z"/></svg></span></a>
     <div class="sp">
       <button class="btn btn-amber" onclick="openReq('quote')">Request a Quote</button>
       <a class="btn btn-ghost" href="tel:12486874515">248-687-4515</a>
@@ -180,9 +180,10 @@ function cardHTML(e){
   var out = e.status==='unavailable';
   var imgs = (Array.isArray(e.gallery)&&e.gallery.length)?e.gallery:(e.image?[e.image]:[]);
   var cover = e.image || imgs[0] || '';
+  var detailUrl = '/equipment/'+encodeURIComponent(e.slug||e.id);
   var ph = cover
-    ? '<div class="ph" role="button" tabindex="0" aria-label="View photos" data-imgs="'+esc(JSON.stringify(imgs))+'" style="background-image:url(\''+esc(cover)+'\')">'+(imgs.length>1?'<span class="pcount">📷 '+imgs.length+'</span>':'')
-    : '<div class="ph ph-empty">'+esc(e.category||'Equipment');
+    ? '<a class="ph" href="'+detailUrl+'" aria-label="View '+esc(e.name)+' details" style="background-image:url(\''+esc(cover)+'\')">'+(imgs.length>1?'<span class="pcount">📷 '+imgs.length+'</span>':'')
+    : '<a class="ph ph-empty" href="'+detailUrl+'">'+esc(e.category||'Equipment');
   var badge = out ? '<span class="badge out">Currently Out</span>' : (e.featured?'<span class="badge">Featured</span>':'');
   var chips = (e.specs||[]).slice(0,3).map(function(s){ return '<span>'+esc((s.k?s.k+': ':'')+s.v)+'</span>'; }).join('');
   var r = e.rates||{};
@@ -192,12 +193,11 @@ function cardHTML(e){
   if(r.month) bits.push('<span><span class="amt">'+esc(r.month)+'</span> <span class="per">/month</span></span>');
   var price = bits.length ? '<div class="price">'+bits.join('<span class="sep">·</span>')+'</div>' : '<div class="price call">Call for pricing</div>';
   var smsBody = encodeURIComponent("Hi Concord Rents, I'd like to check availability on the "+e.name+".");
-  var detailUrl = '/equipment/'+encodeURIComponent(e.slug||e.id);
   var acts = '<a class="btn btn-amber" href="sms:'+SMS_NUMBER+'?body='+smsBody+'"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="flex:none"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 6v2h10V9zm0 4v2h7v-2z"/></svg> Text About This</a>'+
     '<a class="btn btn-outline" href="'+detailUrl+'">Details &amp; Specs ›</a>'+
     '<button class="btn btn-outline" data-avail="'+esc(e.name)+'">Check Availability</button>'+
     (e.bookUrl?'<a class="btn btn-outline" href="'+esc(e.bookUrl)+'" target="_blank" rel="noopener">Reserve ›</a>':'');
-  return '<div class="card">'+ph+badge+'</div><div class="bd">'+
+  return '<div class="card">'+ph+badge+'</a><div class="bd">'+
     (e.brand?'<span class="brand-t">'+esc(e.brand)+'</span>':'')+
     '<h3><a href="'+detailUrl+'" style="color:inherit">'+esc(e.name)+'</a></h3>'+
     (e.shortDesc?'<p>'+esc(e.shortDesc)+'</p>':'')+
