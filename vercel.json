@@ -5,5 +5,8 @@
     { "source": "/products/:path*", "destination": "/equipment", "permanent": true },
     { "source": "/pages/:path*", "destination": "/", "permanent": true },
     { "source": "/blog/:path*", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/equipment/:slug", "destination": "/equipment/item.html" }
   ]
 }

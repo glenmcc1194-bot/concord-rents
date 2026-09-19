@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "note": "Deep spec sheets keyed by equipment slug. Merged client-side onto live listings by the detail page. OEM base-unit specs; actual machine may vary with options/attachments. Operational fields (year, hours, unit #) are '-' until known.",
+    "updated": "2026-09-19"
+  },
+  "caterpillar-d4k2-bulldozer": {
+    "type": "Crawler Dozer (Compact)",
+    "make": "Caterpillar",
+    "model": "D4K2",
+    "year": "-",
+    "overview": "The Caterpillar D4K2 is a compact crawler dozer built for grading, backfilling, fine-finish work and land clearing. A 92-hp Cat C4.4 ACERT diesel paired with a hydrostatic transmission and low-ground-pressure undercarriage lets it maneuver on tight or soft sites while still moving serious material.",
+    "highlights": [
+      { "k": "Net Power", "v": "92 hp" },
+      { "k": "Operating Weight", "v": "~18,100 lb" },
+      { "k": "Blade Capacity", "v": "up to 2.6 yd³" },
+      { "k": "Ground Pressure", "v": "from 4.24 psi" }
+    ],
+    "sections": [
+      { "group": "Machine", "rows": [
+        { "k": "Type", "v": "Crawler Dozer (Compact)" },
+        { "k": "Make", "v": "Caterpillar" },
+        { "k": "Model", "v": "D4K2" },
+        { "k": "Year", "v": "-" },
+        { "k": "Stock / Unit #", "v": "-" },
+        { "k": "Engine Hours", "v": "-" }
+      ]},
+      { "group": "Engine", "rows": [
+        { "k": "Engine", "v": "Cat C4.4 ACERT diesel" },
+        { "k": "Net Power", "v": "92 hp @ 2,200 rpm" },
+        { "k": "Displacement", "v": "269 cu in (4.4 L)" },
+        { "k": "Bore x Stroke", "v": "4.2 in x 5.0 in" },
+        { "k": "Fuel Tank", "v": "51.5 gal" }
+      ]},
+      { "group": "Weights & Performance", "rows": [
+        { "k": "Operating Weight", "v": "18,080 - 18,761 lb (config-dependent)" },
+        { "k": "Ground Pressure", "v": "4.24 - 5.6 psi" },
+        { "k": "Travel Speed (Forward)", "v": "5.6 mph" },
+        { "k": "Travel Speed (Reverse)", "v": "6.2 mph" },
+        { "k": "Transmission", "v": "Hydrostatic" }
+      ]},
+      { "group": "Blade", "rows": [
+        { "k": "Blade Type", "v": "VPAT (6-way angle/tilt)" },
+        { "k": "Blade Capacity", "v": "2.0 - 2.6 yd³" },
+        { "k": "Blade Width", "v": "109.5 - 124 in" },
+        { "k": "Blade Height", "v": "33.9 - 39.8 in" },
+        { "k": "Max Digging Depth", "v": "23.2 in" }
+      ]},
+      { "group": "Undercarriage", "rows": [
+        { "k": "Track Shoe Width", "v": "18 - 25 in" },
+        { "k": "Length on Ground", "v": "89 in" },
+        { "k": "Ground Contact Area", "v": "3,206 - 4,425 in²" }
+      ]},
+      { "group": "Hydraulics & Capacities", "rows": [
+        { "k": "Implement Pump Output", "v": "19.4 gal/min" },
+        { "k": "Relief Valve Setting", "v": "2,988 psi" },
+        { "k": "Cooling System", "v": "6 gal" },
+        { "k": "Hydraulic Tank", "v": "15.7 gal" }
+      ]}
+    ],
+    "attachmentsNote": "Available with ripper and winch.",
+    "configNote": "Values are OEM specs for base configurations (XL / LGP); the actual machine may vary with options and attachments.",
+    "source": "Manufacturer / RitchieSpecs base-unit data"
+  }
+}
