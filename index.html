@@ -18,10 +18,10 @@
   },true);
 </script>
 <title>Concord Rents | Heavy Equipment Rentals Across Michigan | Madison Heights, MI</title>
-<meta name="description" content="Concord Rents delivers telehandlers, boom lifts, bulldozers, excavators, forklifts and more across all of Michigan. Well-maintained fleet, flexible daily/weekly/monthly terms, on-time delivery. Call or text 248-687-4515." />
+<meta name="description" content="Concord Rents delivers telehandlers, boom lifts, bulldozers, excavators, forklifts and more across all of Michigan. Well-maintained fleet, flexible daily/weekly/monthly terms, on-time delivery. Call or text 313-572-6300." />
 <meta name="theme-color" content="#12243f" />
 <meta property="og:title" content="Concord Rents | Heavy Equipment Rentals Across Michigan" />
-<meta property="og:description" content="Telehandlers, boom lifts, dozers, excavators, forklifts & more — delivered across Michigan. Call or text 248-687-4515." />
+<meta property="og:description" content="Telehandlers, boom lifts, dozers, excavators, forklifts & more — delivered across Michigan. Call or text 313-572-6300." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2237%20113%20316%20285%22%3E%3Cpath%20fill%3D%22%2312243f%22%20d%3D%22M116%20116%2037%20250%2038%20255%2041%20258%2053%20280%2064%20297%2085%20335%2099%20357%2099%20359%20108%20372%20116%20387%20276%20387%20339%20278%20249%20278%20245%20285%20233%20298%20220%20306%20207%20310%20182%20309%20173%20306%20162%20300%20151%20290%20146%20283%20140%20271%20137%20256%20138%20239%20140%20235%20140%20231%20146%20219%20160%20204%20173%20196%20188%20192%20207%20192%20215%20194%20228%20200%20242%20212%20249%20223%20339%20223%20338%20220%20316%20185%20310%20173%20276%20116Z%22%2F%3E%3C%2Fsvg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -94,18 +94,24 @@
   .hero-slide .bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.34;filter:grayscale(.15) contrast(1.05)}
   .hero-slide::after{content:"";position:absolute;inset:0;z-index:1}
   .hero-slide.dark::after{background:radial-gradient(1200px 600px at 78% -10%,rgba(60,90,130,.22),transparent 60%),linear-gradient(90deg,rgba(18,36,63,.96) 0%,rgba(18,36,63,.82) 42%,rgba(18,36,63,.42) 100%)}
-  .hero-slide.promo .bg{opacity:.5;background-position:right center}
-  .hero-slide.promo::after{background:linear-gradient(90deg,rgba(18,36,63,.97) 0%,rgba(18,36,63,.9) 42%,rgba(18,36,63,.35) 100%)}
-  .hero .wrap{position:relative;z-index:2;padding:clamp(24px,4vw,48px) 22px clamp(34px,3vw,46px)}
-  .promo-inner{max-width:660px}
+  .hero-slide.promo{background:linear-gradient(120deg,#16294a 0%,#0b1830 100%)}
+  .hero-slide.promo::after{background:none}
+  .hero .wrap{position:relative;z-index:2;padding:clamp(22px,3.5vw,40px) 22px clamp(30px,3vw,44px)}
   .promo .eyebrow{color:#f5c518}
-  .promo-h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(2.2rem,5.2vw,3.7rem);line-height:1.04;letter-spacing:.01em;margin:6px 0 0}
+  .promo-top{position:relative;z-index:2}
+  .promo-h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(1.7rem,3.8vw,2.9rem);line-height:1.03;letter-spacing:.01em;margin:6px 0 0}
   .promo-h1 .y{color:#f5c518}
-  .promo-tag{display:inline-block;background:#f5c518;color:#12243f;font-family:'Oswald';font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:9px 16px;margin:18px 0 22px;font-size:1.05rem}
-  .promo-tag b{font-size:1.3em}.promo-tag b span{font-size:.6em;font-weight:600}
+  .promo-main{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;margin-top:10px}
+  .promo-cut{width:100%;max-width:640px;height:auto;display:block;filter:drop-shadow(0 20px 34px rgba(0,0,0,.5))}
+  .promo-price{display:flex;flex-direction:column;align-items:flex-start}
+  .pl-top{font-family:'Oswald';font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#fff;font-size:clamp(1.1rem,2.1vw,1.7rem)}
+  .pl-big{font-family:'Oswald';font-weight:700;color:#f5c518;line-height:.92;font-size:clamp(3.2rem,7.5vw,5.8rem);display:inline-flex;align-items:flex-start;margin:2px 0}
+  .pl-big .cur{font-size:.46em;margin-top:.14em;margin-right:.02em}
+  .pl-big .per{font-size:.28em;color:#fff;align-self:flex-end;margin-bottom:.55em;margin-left:.12em;font-weight:600}
+  .pl-sub{color:#c9d2dd;font-size:.92rem;margin:2px 0 16px;max-width:34ch}
   .btn-yellow{background:#f5c518;color:#12243f;border-color:#f5c518;font-weight:700}
   .btn-yellow:hover{background:#e6b70f}
-  .promo-foot{margin-top:16px;color:#c9d2dd;font-size:.82rem;font-family:'Oswald';letter-spacing:.05em;text-transform:uppercase}
+  @media(max-width:760px){ .promo-main{grid-template-columns:1fr;gap:6px} .promo-cut{margin:0 auto;max-width:460px} .promo-price{align-items:center;text-align:center} .promo-price .hero-cta{justify-content:center} .pl-sub{max-width:none} }
   .hero-dots{position:absolute;bottom:14px;left:0;right:0;z-index:6;display:flex;gap:8px;justify-content:center}
   .hero-dots .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);border:0;cursor:pointer;padding:0;transition:width .2s,background .2s}
   .hero-dots .dot.active{background:#fff;width:26px;border-radius:5px}
@@ -310,8 +316,8 @@
 
 <div class="util">
   <div class="wrap">
-    <a class="u-cta" id="utilTextBtn" href="sms:+12486874515?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20equipment."><svg><use href="#i-chat"/></svg> Text Us Now</a>
-    <a class="u-call" href="tel:12486874515"><svg><use href="#i-phone"/></svg> 248-687-4515</a>
+    <a class="u-cta" id="utilTextBtn" href="sms:+13135726300?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20equipment."><svg><use href="#i-chat"/></svg> Text Us Now</a>
+    <a class="u-call" href="tel:13135726300"><svg><use href="#i-phone"/></svg> 313-572-6300</a>
   </div>
 </div>
 
@@ -327,7 +333,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-amber" href="tel:12486874515"><svg class="icon"><use href="#i-phone"/></svg> Call / Text</a>
+      <a class="btn btn-amber" href="tel:13135726300"><svg class="icon"><use href="#i-phone"/></svg> Call / Text</a>
     </div>
   </div>
 </header>
@@ -342,7 +348,7 @@
           <h1>Heavy Equipment,<br><span class="marker-light">Ready When You Are</span></h1>
           <p class="lead">Telehandlers, boom lifts, dozers, excavators and forklifts — well-maintained machines from brands you trust, delivered on time and priced to win your project.</p>
           <div class="hero-cta">
-            <a class="btn btn-amber btn-lg" id="heroTextBtn" href="sms:+12486874515?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20equipment."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
+            <a class="btn btn-amber btn-lg" id="heroTextBtn" href="sms:+13135726300?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20equipment."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
             <button type="button" class="btn btn-outline btn-lg" onclick="openReq('quote')"><svg class="icon"><use href="#i-arrow"/></svg> Request a Quote</button>
             <a class="btn btn-ghost btn-lg" href="/equipment/"><svg class="icon"><use href="#i-truck"/></svg> Browse Equipment</a>
           </div>
@@ -367,17 +373,22 @@
     </div>
   </div>
   <div class="hero-slide promo" data-slide="1">
-    <div class="bg" style="background-image:url('/img/inv-jlg-6042-6000lb-42ft-telehandler.jpg')"></div>
     <div class="wrap">
-      <div class="promo-inner">
+      <div class="promo-top">
         <span class="eyebrow">Metro Detroit&rsquo;s Telehandler Specialists</span>
-        <h1 class="promo-h1"><span class="y">Rentals</span> Ready<br>When You Are!</h1>
-        <div class="promo-tag">Telehandlers &mdash; only <b>$2,200<span>/mo</span></b></div>
-        <div class="hero-cta">
-          <a class="btn btn-yellow btn-lg" href="sms:+12486874515?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20a%20telehandler."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
-          <a class="btn btn-ghost btn-lg" href="/equipment/#telehandlers"><svg class="icon"><use href="#i-truck"/></svg> View Telehandlers</a>
+        <h1 class="promo-h1"><span class="y">Rentals</span> Ready When You Are!</h1>
+      </div>
+      <div class="promo-main">
+        <img class="promo-cut" src="/img/telehandler-cutout.png" alt="Concord Rents branded telehandler" />
+        <div class="promo-price">
+          <span class="pl-top">Telehandlers</span>
+          <span class="pl-big"><span class="cur">$</span>2,200<span class="per">/mo</span></span>
+          <span class="pl-sub">Reach forklifts · 6k&ndash;12k lb · up to 56 ft · delivered statewide</span>
+          <div class="hero-cta">
+            <a class="btn btn-yellow btn-lg" href="sms:+13135726300?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20a%20telehandler."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
+            <a class="btn btn-ghost btn-lg" href="/equipment/#telehandlers"><svg class="icon"><use href="#i-truck"/></svg> View Telehandlers</a>
+          </div>
         </div>
-        <div class="promo-foot">Call or text 248-687-4515 &middot; www.concordrents.co &middot; Delivered across Michigan</div>
       </div>
     </div>
   </div>
@@ -602,7 +613,7 @@
         <p style="color:#aab4c0;margin:0 0 22px">Call or text for the fastest answer on availability and pricing. Prefer to write? Send a message and we'll get right back to you.</p>
         <div class="info-list">
           <div class="info"><span class="ic"><svg><use href="#i-headset"/></svg></span><div><h4>Fleet Rental Manager</h4><p>Carlton Hewines</p></div></div>
-          <div class="info"><span class="ic"><svg><use href="#i-phone"/></svg></span><div><h4>Call or Text</h4><a href="tel:12486874515">248-687-4515</a></div></div>
+          <div class="info"><span class="ic"><svg><use href="#i-phone"/></svg></span><div><h4>Call or Text</h4><a href="tel:13135726300">313-572-6300</a></div></div>
           <div class="info"><span class="ic"><svg><use href="#i-mail"/></svg></span><div><h4>Email</h4><a href="mailto:ch@concord-equipment.com">ch@concord-equipment.com</a></div></div>
           <div class="info"><span class="ic"><svg><use href="#i-pin"/></svg></span><div><h4>Yard / Location</h4><p>31440 Stephenson Hwy, Madison Heights, MI 48071</p></div></div>
           <div class="info"><span class="ic"><svg><use href="#i-clock"/></svg></span><div><h4>Hours</h4><p>Mon–Fri, 9:00 AM – 5:00 PM · Showroom by appointment</p></div></div>
@@ -636,7 +647,7 @@
           <div class="row"><label for="q_msg">Project details</label><textarea id="q_msg" name="message" placeholder="Tell us about the job…"></textarea></div>
           <input type="text" name="company" id="q_company" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button class="btn btn-amber" type="submit" id="q_submit">Send Request <svg class="icon"><use href="#i-arrow"/></svg></button>
-          <p id="q_status" style="font-size:.82rem;margin:12px 0 0;text-align:center;color:#aab4c0">Fastest response: call or text <a href="tel:12486874515" style="color:#fff;text-decoration:underline">248-687-4515</a></p>
+          <p id="q_status" style="font-size:.82rem;margin:12px 0 0;text-align:center;color:#aab4c0">Fastest response: call or text <a href="tel:13135726300" style="color:#fff;text-decoration:underline">313-572-6300</a></p>
         </form>
       </div>
     </div>
@@ -674,7 +685,7 @@
       <div>
         <h5>Get In Touch</h5>
         <ul>
-          <li><a href="tel:12486874515">📞 248-687-4515</a></li>
+          <li><a href="tel:13135726300">📞 313-572-6300</a></li>
           <li><a href="mailto:ch@concord-equipment.com">✉ ch@concord-equipment.com</a></li>
           <li>📍 31440 Stephenson Hwy,<br>Madison Heights, MI 48071</li>
           <li>🕘 Mon–Fri, 9AM–5PM</li>
@@ -730,7 +741,7 @@
   document.getElementById('yr').textContent = new Date().getFullYear();
   document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
 
-  var SMS_NUMBER = '+12486874515';
+  var SMS_NUMBER = '+13135726300';
   function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
 
   async function initTextAndFleet(){
@@ -820,10 +831,10 @@
         if(window.crTrack) crTrack(CR_CONV.form);
         if(statusEl){ statusEl.style.color='#8fe3a6'; statusEl.textContent='✓ Thanks! Carlton will get right back to you.'; }
       } else {
-        if(statusEl){ statusEl.style.color='#ffcaca'; statusEl.textContent=(d && d.error) || 'Something went wrong — please call 248-687-4515.'; }
+        if(statusEl){ statusEl.style.color='#ffcaca'; statusEl.textContent=(d && d.error) || 'Something went wrong — please call 313-572-6300.'; }
       }
     }catch(e){
-      if(statusEl){ statusEl.style.color='#ffcaca'; statusEl.textContent='Network error — please call 248-687-4515.'; }
+      if(statusEl){ statusEl.style.color='#ffcaca'; statusEl.textContent='Network error — please call 313-572-6300.'; }
     }finally{
       if(btn){ btn.disabled=false; btn.innerHTML=btn.dataset.t || 'Send Request'; }
     }

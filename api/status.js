@@ -8,6 +8,6 @@ export default async function handler(req, res) {
     email: Boolean(env.RESEND_API_KEY),
     sms: Boolean(env.TWILIO_ACCOUNT_SID && env.TWILIO_AUTH_TOKEN && env.TWILIO_FROM),
     notifyEmail: env.NOTIFY_EMAIL || 'ch@concord-equipment.com',
-    notifySms: env.NOTIFY_SMS || '+12486874515'
+    notifySms: env.NOTIFY_SMS || '+13135726300'
   });
 }
