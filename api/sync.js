@@ -15,11 +15,30 @@ export default async function handler(req, res) {
   if (_cache && !force && (now - _cacheAt) < 120000) {
     return res.status(200).json({ ..._cache, cached: true });
   }
+  let data;
   try {
-    const data = await scrapeConcordEquipment();
-    _cache = data; _cacheAt = now;
-    return res.status(200).json({ ...data, cached: false, fetchedAt: new Date().toISOString() });
+    data = await scrapeConcordEquipment();
   } catch (e) {
-    return res.status(502).json({ error: String(e.message || e), listings: [], count: 0 });
+    data = { listings: [], count: 0, blocked: true, error: String(e.message || e) };
   }
+  // Vercel's datacenter IP is Cloudflare-challenged, so a live server fetch is often blocked.
+  // Fall back to the committed snapshot so the admin Sync tool still works.
+  if (data.blocked || !data.count) {
+    try {
+      const proto = (req.headers['x-forwarded-proto'] || 'https');
+      const host = req.headers.host;
+      const snapRes = await fetch(`${proto}://${host}/data/sandhills-snapshot.json`);
+      if (snapRes.ok) {
+        const snap = await snapRes.json();
+        const out = { ...snap, source: 'snapshot', liveBlocked: !!data.blocked, fetchedAt: snap.fetchedAt || null };
+        _cache = out; _cacheAt = now;
+        return res.status(200).json({ ...out, cached: false });
+      }
+    } catch (e) { /* fall through */ }
+    return res.status(200).json({ ...data, source: 'live-blocked', listings: data.listings || [], count: data.count || 0, cached: false });
+  }
+  data.source = 'live';
+  data.fetchedAt = new Date().toISOString();
+  _cache = data; _cacheAt = now;
+  return res.status(200).json({ ...data, cached: false });
 }

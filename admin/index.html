@@ -94,6 +94,7 @@
   <div class="tabs">
     <div class="tab active" data-tab="equipment" onclick="switchTab('equipment')">Equipment</div>
     <div class="tab" data-tab="requests" onclick="switchTab('requests')">Requests</div>
+    <div class="tab" data-tab="sync" onclick="switchTab('sync')">Sync</div>
     <div class="tab" data-tab="setup" onclick="switchTab('setup')">Setup</div>
   </div>
 
@@ -123,6 +124,20 @@
     </div>
     <h2 style="margin:20px 0 12px">Configuration Status</h2>
     <div class="card" id="setupBody"></div>
+  </div>
+
+  <!-- SYNC -->
+  <div id="tab-sync" class="hidden">
+    <div class="flex" style="margin-bottom:12px">
+      <h2>Sync from Concord Equipment</h2>
+      <button class="btn btn-outline right" onclick="loadSync(true)">↻ Refresh</button>
+    </div>
+    <div class="note">Pull the sales listings from concordequipment.com and push any of them onto the rentals site. Rental prices, hours and photos come straight from the source listing — review the category before pushing.</div>
+    <div class="flex" style="margin-bottom:10px">
+      <label class="small" style="display:flex;gap:6px;align-items:center;text-transform:none;letter-spacing:0"><input type="checkbox" id="syncOnlyRent" checked style="width:auto" onchange="renderSync()"> Only show listings with rental prices</label>
+      <span id="syncStatus" class="small muted right"></span>
+    </div>
+    <div class="card"><table><thead><tr><th></th><th>Listing</th><th>Rental</th><th>On site?</th><th></th></tr></thead><tbody id="syncBody"><tr><td colspan="5" class="muted">Click <b>Sync</b> to load listings.</td></tr></tbody></table></div>
   </div>
 </div>
 
@@ -221,7 +236,8 @@ async function saveTextNumber(){
 }
 function switchTab(t){
   document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===t));
-  ['equipment','requests','setup'].forEach(x=>document.getElementById('tab-'+x).classList.toggle('hidden',x!==t));
+  ['equipment','requests','sync','setup'].forEach(x=>document.getElementById('tab-'+x).classList.toggle('hidden',x!==t));
+  if(t==='sync' && !SYNC_LOADED) loadSync();
 }
 
 // ---- Equipment ----
@@ -338,6 +354,64 @@ function renderSetup(){
       ${item(STATUS.email,'Email alerts (Resend)','RESEND_API_KEY (+ optional RESEND_FROM)')}
       ${item(STATUS.sms,'SMS alerts (Twilio)','TWILIO_ACCOUNT_SID + TWILIO_AUTH_TOKEN + TWILIO_FROM')}
     </tbody></table>`;
+}
+
+// ---- Sandhills Sync ----
+let SYNC_LOADED=false, SYNC=[];
+function slugish(s){ return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+function onSite(l){ const s=slugish(l.name); return EQUIP.some(e=>slugish(e.name)===s); }
+function fmtRates(r){ r=r||{}; const b=[]; if(r.day)b.push(esc(r.day)+'/day'); if(r.week)b.push(esc(r.week)+'/wk'); if(r.month)b.push(esc(r.month)+'/mo'); return b.join(' · ')||'<span class="muted">—</span>'; }
+function yearOf(name){ const m=/\b(19|20)\d\d\b/.exec(name||''); return m?m[0]:''; }
+async function loadSync(force){
+  SYNC_LOADED=true;
+  const el=document.getElementById('syncBody'), st=document.getElementById('syncStatus');
+  st.textContent='Loading from Concord Equipment…'; el.innerHTML='<tr><td colspan="5" class="muted">Loading…</td></tr>';
+  try{
+    if(!EQUIP.length){ try{ await loadEquipment(); }catch(e){} }
+    const d = await (await fetch('/api/sync'+(force?'?force=1':''))).json();
+    SYNC = d.listings||[];
+    const src = d.source==='live' ? 'live from the source' : 'latest saved snapshot';
+    const when = d.fetchedAt ? (' · '+new Date(d.fetchedAt).toLocaleDateString()) : '';
+    st.innerHTML = SYNC.length
+      ? `<b>${SYNC.length}</b> listings (${src}${when}).` + (d.liveBlocked?' <span class="muted">Live refresh is blocked from the server; using the saved snapshot.</span>':'')
+      : 'No listings found.';
+    renderSync();
+  }catch(e){ st.textContent='Could not load: '+e.message; el.innerHTML='<tr><td colspan="5" class="muted">Load failed.</td></tr>'; }
+}
+function renderSync(){
+  const onlyRent=document.getElementById('syncOnlyRent').checked;
+  let list=SYNC.map((l,i)=>({l,i}));
+  if(onlyRent) list=list.filter(x=>x.l.rates&&Object.keys(x.l.rates).length);
+  document.getElementById('syncBody').innerHTML = list.map(({l,i})=>{
+    const here=onSite(l);
+    return `<tr>
+      <td>${l.image?`<img class="thumb" src="${esc(l.image)}" alt="">`:'<div class="thumb"></div>'}</td>
+      <td><b>${esc(l.name)}</b><div class="muted small">${esc(l.category||l.sourceCategory||'')}${l.hours?(' · '+esc(l.hours)+' hrs'):''}${l.salePrice?(' · sale '+esc(l.salePrice)):''}</div></td>
+      <td class="small">${fmtRates(l.rates)}</td>
+      <td>${here?'<span class="tag" style="color:#1c7c4a;border-color:#a7d8bf">On site</span>':'<span class="muted small">—</span>'}</td>
+      <td>${here?'<button class="btn btn-outline small" disabled>On site ✓</button>':`<button class="btn btn-amber small" onclick="pushListing(${i},this)">Push to Rentals ›</button>`}</td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="5" class="muted">No listings match this filter.</td></tr>';
+}
+function buildEquip(l){
+  const specs=[]; const yr=yearOf(l.name); if(yr) specs.push({k:'Year',v:yr});
+  specs.push({k:'Hours',v:l.hours||'-'});
+  if(l.make) specs.push({k:'Make',v:l.make});
+  if(l.model) specs.push({k:'Model',v:l.model});
+  const r=l.rates||{};
+  return { name:l.name, category:l.category||'Forklifts', brand:l.make||'', status:'available', featured:false,
+    shortDesc:(l.description||'').slice(0,140), description:l.description||'', image:l.image||'', gallery:l.image?[l.image]:[],
+    rates:{day:r.day||'',week:r.week||'',month:r.month||''}, specs };
+}
+async function pushListing(idx,btn){
+  const l=SYNC[idx]; if(!l) return;
+  if(!TOKEN){ alert('Please log in first.'); return; }
+  if(btn){ btn.disabled=true; btn.textContent='Pushing…'; }
+  try{
+    const r = await api('/api/equipment',{method:'POST',headers:authHeaders(),body:JSON.stringify(buildEquip(l))});
+    if(r && r.ok!==false){ await loadEquipment(); renderSync(); }
+    else { alert('Push failed: '+((r&&r.error)||'unknown')); if(btn){ btn.disabled=false; btn.textContent='Push to Rentals ›'; } }
+  }catch(e){ alert('Push failed: '+e.message); if(btn){ btn.disabled=false; btn.textContent='Push to Rentals ›'; } }
 }
 
 function esc(s){ return String(s==null?'':s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
