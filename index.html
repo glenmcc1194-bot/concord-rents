@@ -385,7 +385,7 @@
           <span class="pl-big"><span class="cur">$</span>2,200<span class="per">/mo</span></span>
           <span class="pl-sub">Reach forklifts · 6k&ndash;12k lb · up to 56 ft · delivered statewide</span>
           <div class="hero-cta">
-            <a class="btn btn-yellow btn-lg" href="sms:+13135726300?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20a%20telehandler."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
+            <a class="btn btn-yellow btn-lg" id="promoTextBtn" href="sms:+13135726300?body=Hi%20Concord%20Rents%2C%20I'd%20like%20to%20rent%20a%20telehandler."><svg class="icon"><use href="#i-chat"/></svg> Text Us to Rent</a>
             <a class="btn btn-ghost btn-lg" href="/equipment/#telehandlers"><svg class="icon"><use href="#i-truck"/></svg> View Telehandlers</a>
           </div>
         </div>
@@ -751,6 +751,8 @@
     if(hb) hb.href = 'sms:'+SMS_NUMBER+'?body='+body;
     var ub = document.getElementById('utilTextBtn');
     if(ub) ub.href = 'sms:'+SMS_NUMBER+'?body='+body;
+    var pb = document.getElementById('promoTextBtn');
+    if(pb) pb.href = 'sms:'+SMS_NUMBER+'?body='+encodeURIComponent("Hi Concord Rents, I'd like to rent a telehandler.");
     loadRentCarousel();
   }
   async function loadRentCarousel(){
