@@ -200,7 +200,9 @@
   .cat.model .ph svg.big{width:54%;height:54%;fill:#fff;opacity:.92;position:relative;z-index:1}
   .cat.model .ph::before{content:"MODEL VIEW";position:absolute;bottom:12px;left:14px;z-index:2;font-family:'Oswald';font-size:.66rem;letter-spacing:.2em;color:#8ea0b4}
   .cat .badge{position:absolute;top:12px;left:12px;z-index:3;width:46px;height:46px;border-radius:0;background:rgba(18,36,63,.72);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.18);display:grid;place-items:center}
-  .cat .badge svg{width:30px;height:30px;fill:#fff}
+  .cat .badge svg{width:30px;height:30px;fill:#fff;transition:fill .18s}
+  .cat:hover .badge{border-color:rgba(245,197,24,.6)}
+  .cat:hover .badge svg{fill:#f5c518}
   .cat .body{padding:16px 18px 18px}
   .cat h3{font-size:1.22rem;letter-spacing:.03em}
   .cat p{color:var(--muted);font-size:.9rem;margin:6px 0 14px;min-height:2.4em}
