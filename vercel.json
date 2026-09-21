@@ -7,6 +7,7 @@
     { "source": "/blog/:path*", "destination": "/", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/equipment/category/:slug", "destination": "/equipment/category.html" },
     { "source": "/equipment/:slug", "destination": "/equipment/item.html" }
   ]
 }
