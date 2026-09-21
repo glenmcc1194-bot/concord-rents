@@ -200,9 +200,10 @@
   .cat.model .ph svg.big{width:54%;height:54%;fill:#fff;opacity:.92;position:relative;z-index:1}
   .cat.model .ph::before{content:"MODEL VIEW";position:absolute;bottom:12px;left:14px;z-index:2;font-family:'Oswald';font-size:.66rem;letter-spacing:.2em;color:#8ea0b4}
   .cat .badge{position:absolute;top:12px;left:12px;z-index:3;width:46px;height:46px;border-radius:0;background:rgba(18,36,63,.72);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.18);display:grid;place-items:center}
-  .cat .badge svg{width:30px;height:30px;fill:#fff;transition:fill .18s}
-  .cat:hover .badge{border-color:rgba(245,197,24,.6)}
-  .cat:hover .badge svg{fill:#f5c518}
+  .cat .badge svg{width:30px;height:30px;fill:#fff}
+  /* big illustration swaps to a yellow+navy version on hover */
+  .cat .ph::before{content:"";position:absolute;inset:0;z-index:1;background-image:var(--hover);background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity .25s ease}
+  .cat:hover .ph::before{opacity:1}
   .cat .body{padding:16px 18px 18px}
   .cat h3{font-size:1.22rem;letter-spacing:.03em}
   .cat p{color:var(--muted);font-size:.9rem;margin:6px 0 14px;min-height:2.4em}
@@ -504,55 +505,55 @@
     </div>
     <div class="cat-grid">
       <a class="cat" href="/equipment/category/telehandlers">
-        <div class="ph" style="background-image:url('/img/cat-telehandlers.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-telehandlers.jpg?v=ill');--hover:url('/img/cat-telehandlers-hover.jpg')">
           <span class="badge"><svg><use href="#e-telehandler"/></svg></span><span class="cap">6K – 10K lb · up to 56 ft</span>
         </div>
         <div class="body"><h3>Telehandlers</h3><p>Reach forklifts for lifting and placing loads at height on site.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
       <a class="cat" href="/equipment/category/boom-lifts">
-        <div class="ph" style="background-image:url('/img/cat-boom.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-boom.jpg?v=ill');--hover:url('/img/cat-boom-hover.jpg')">
           <span class="badge"><svg><use href="#e-boom"/></svg></span><span class="cap">Articulating & straight</span>
         </div>
         <div class="body"><h3>Boom Lifts</h3><p>Elevated access for maintenance, install and hard-to-reach work.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
       <a class="cat" href="/equipment/category/bulldozers">
-        <div class="ph" style="background-image:url('/img/cat-bulldozers.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-bulldozers.jpg?v=ill');--hover:url('/img/cat-bulldozers-hover.jpg')">
           <span class="badge"><svg><use href="#e-dozer"/></svg></span><span class="cap">Grading & pushing</span>
         </div>
         <div class="body"><h3>Bulldozers</h3><p>Move earth, clear sites and grade with dependable dozer power.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
       <a class="cat" href="/equipment/category/excavators">
-        <div class="ph" style="background-image:url('/img/cat-excavators.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-excavators.jpg?v=ill');--hover:url('/img/cat-excavators-hover.jpg')">
           <span class="badge"><svg><use href="#e-excavator"/></svg></span><span class="cap">Digging & trenching</span>
         </div>
         <div class="body"><h3>Excavators</h3><p>Dig footings, trenches and utilities with precision and reach.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
       <a class="cat" href="/equipment/category/heavy-forklifts">
-        <div class="ph" style="background-image:url('/img/cat-heavyfork.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-heavyfork.jpg?v=ill');--hover:url('/img/cat-heavyfork-hover.jpg')">
           <span class="badge"><svg><use href="#e-heavyfork"/></svg></span><span class="cap">Up to 120,000 lb</span>
         </div>
         <div class="body"><h3>Heavy Forklifts</h3><p>High-capacity forklifts for industrial loads and steel handling.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
       <a class="cat" href="/equipment/category/forklifts">
-        <div class="ph" style="background-image:url('/img/cat-forklifts.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-forklifts.jpg?v=ill');--hover:url('/img/cat-forklifts-hover.jpg')">
           <span class="badge"><svg><use href="#e-forklift"/></svg></span><span class="cap">Warehouse & yard</span>
         </div>
         <div class="body"><h3>Forklifts</h3><p>Standard-capacity forklifts for material handling and logistics.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
       <a class="cat" href="/equipment/category/scissor-lifts">
-        <div class="ph" style="background-image:url('/img/cat-scissor.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-scissor.jpg?v=ill');--hover:url('/img/cat-scissor-hover.jpg')">
           <span class="badge"><svg><use href="#e-scissor"/></svg></span><span class="cap">Vertical platform</span>
         </div>
         <div class="body"><h3>Scissor Lifts</h3><p>Stable elevated platforms for indoor and outdoor access work.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
       <a class="cat" href="/equipment/category/graders">
-        <div class="ph" style="background-image:url('/img/cat-graders.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-graders.jpg?v=ill');--hover:url('/img/cat-graders-hover.jpg')">
           <span class="badge"><svg><use href="#e-grader"/></svg></span><span class="cap">Precision grading</span>
         </div>
         <div class="body"><h3>Graders</h3><p>Fine-grade roads, pads and lots to spec with motor graders.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
       </a>
       <a class="cat" href="/equipment/category/wheel-loaders">
-        <div class="ph" style="background-image:url('/img/cat-wheelloaders.jpg?v=ill')">
+        <div class="ph" style="background-image:url('/img/cat-wheelloaders.jpg?v=ill');--hover:url('/img/cat-wheelloaders-hover.jpg')">
           <span class="badge"><svg><use href="#e-loader"/></svg></span><span class="cap">Loading & hauling</span>
         </div>
         <div class="body"><h3>Wheel Loaders</h3><p>Scoop, carry and load material fast across the job site.</p><span class="go">View & Reserve <svg><use href="#i-arrow"/></svg></span></div>
